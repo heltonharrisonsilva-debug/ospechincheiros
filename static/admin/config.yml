@@ -1,6 +1,5 @@
 backend:
-  name: github
-  repo: heltonharrisonsilva-debug/ospechincheiros
+  name: git-gateway
   branch: main
 
 media_folder: static/images/produtos
