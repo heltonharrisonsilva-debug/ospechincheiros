@@ -1,0 +1,35 @@
+baseURL = 'http://localhost/'
+languageCode = 'pt-br'
+title = 'Os Pechincheiros'
+
+[params]
+  description = "Os melhores produtos e ofertas da Shopee, Mercado Livre, Magazine Luiza e muito mais!"
+  keywords = ["afiliados", "ofertas", "shopee", "mercado livre", "magazine luiza", "pechincha"]
+  defaultTheme = "auto"
+  disableThemeToggle = false
+  ShowReadingTime = false
+  ShowShareButtons = false
+  ShowPostNavLinks = true
+  homeInfoParams = {Title = "🛍️ Os Pechincheiros", Content = "Garimpamos as melhores ofertas da Shopee, Mercado Livre, Magazine Luiza e muito mais. Economize com quem entende de pechincha!"}
+
+[menu]
+  [[menu.main]]
+    name = "Início"
+    url = "/"
+    weight = 10
+  [[menu.main]]
+    name = "Produtos"
+    url = "/produtos/"
+    weight = 20
+  [[menu.main]]
+    name = "Categorias"
+    url = "/categories/"
+    weight = 30
+
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+
+[module]
+  [[module.imports]]
+    path = "github.com/adityatelange/hugo-PaperMod"
