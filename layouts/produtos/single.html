@@ -1,0 +1,84 @@
+{{ define "main" }}
+<style>
+  .produto-single {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1.5rem 3rem;
+  }
+  .produto-single-img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 16px;
+    margin-bottom: 1.5rem;
+  }
+  .produto-single-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, #f97316, #ef4444);
+    color: #fff;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.3rem 0.8rem;
+    border-radius: 999px;
+    margin-bottom: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  .produto-single h1 {
+    font-size: 1.8rem;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+  }
+  .produto-single-desc {
+    font-size: 1rem;
+    color: var(--secondary);
+    margin-bottom: 1.5rem;
+  }
+  .produto-single-btn {
+    display: inline-block;
+    background: linear-gradient(135deg, #f97316, #ef4444);
+    color: #fff !important;
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 0.9rem 2rem;
+    border-radius: 12px;
+    text-decoration: none !important;
+    transition: opacity 0.2s;
+    margin-bottom: 2rem;
+  }
+  .produto-single-btn:hover {
+    opacity: 0.9;
+  }
+  .produto-single-content {
+    border-top: 1px solid var(--border);
+    padding-top: 1.5rem;
+    line-height: 1.8;
+  }
+</style>
+
+<div class="produto-single">
+  {{ if .Params.coverImage }}
+  <img class="produto-single-img" src="{{ .Params.coverImage }}" alt="{{ .Title }}" />
+  {{ end }}
+
+  {{ if .Params.store }}
+  <span class="produto-single-badge">{{ .Params.store }}</span>
+  {{ end }}
+
+  <h1>{{ .Title }}</h1>
+
+  {{ if .Description }}
+  <p class="produto-single-desc">{{ .Description }}</p>
+  {{ end }}
+
+  {{ if .Params.affiliateLink }}
+  <a class="produto-single-btn" href="{{ .Params.affiliateLink }}" target="_blank" rel="noopener">
+    🛒 Comprar Agora →
+  </a>
+  {{ end }}
+
+  <div class="produto-single-content">
+    {{ .Content }}
+  </div>
+</div>
+{{ end }}
