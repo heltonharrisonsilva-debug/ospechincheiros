@@ -1,0 +1,82 @@
+<header class="header">
+  <nav class="nav">
+    <div class="logo">
+      <a href="{{ .Site.BaseURL }}">
+        <img src="/images/logo.jpg" alt="{{ .Site.Title }}" height="48" style="border-radius: 50%;" />
+        <span>{{ .Site.Title }}</span>
+      </a>
+    </div>
+    <ul class="menu">
+      {{- range .Site.Menus.main }}
+      <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+      {{- end }}
+    </ul>
+  </nav>
+</header>
+
+<style>
+  :root {
+    --laranja: #f97316;
+    --laranja-escuro: #ea580c;
+    --dourado: #fbbf24;
+    --dourado-escuro: #f59e0b;
+    --gradiente: linear-gradient(135deg, #f97316, #ea580c);
+    --gradiente-dourado: linear-gradient(135deg, #fbbf24, #f97316);
+  }
+
+  .header {
+    background: #fff;
+    border-bottom: 3px solid var(--laranja);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 12px rgba(249,115,22,0.15);
+  }
+
+  .nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0.7rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .logo a {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    text-decoration: none !important;
+  }
+
+  .logo span {
+    font-size: 1.2rem;
+    font-weight: 800;
+    background: var(--gradiente);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .menu {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+  }
+
+  .menu a {
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: #333 !important;
+    text-decoration: none !important;
+    padding: 0.4rem 0.8rem;
+    border-radius: 8px;
+    transition: all 0.2s;
+  }
+
+  .menu a:hover {
+    background: var(--gradiente);
+    color: #fff !important;
+  }
+</style>

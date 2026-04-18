@@ -12,6 +12,8 @@ title = 'Os Pechincheiros'
   ShowPostNavLinks = true
   homeInfoParams = {Title = "🛍️ Os Pechincheiros", Content = "Garimpamos as melhores ofertas da Shopee, Mercado Livre, Magazine Luiza e muito mais. Economize com quem entende de pechincha!"}
   disableGoogleAnalytics = true
+  logo = "/images/logo.jpg"
+  logoText = "Os Pechincheiros"
 
 [menu]
   [[menu.main]]
