@@ -1,0 +1,25 @@
+backend:
+  name: github
+  repo: heltonharrisonsilva-debug/ospechincheiros
+  branch: main
+
+media_folder: static/images/produtos
+public_folder: /images/produtos
+
+collections:
+  - name: produtos
+    label: Produtos
+    folder: content/produtos
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Título", name: "title", widget: "string" }
+      - { label: "Data", name: "date", widget: "datetime" }
+      - { label: "Rascunho", name: "draft", widget: "boolean", default: false }
+      - { label: "Descrição", name: "description", widget: "string" }
+      - { label: "Imagem de Capa (URL)", name: "coverImage", widget: "string", required: false }
+      - { label: "Link de Afiliado", name: "affiliateLink", widget: "string" }
+      - { label: "Loja", name: "store", widget: "select", options: ["Shopee", "Mercado Livre", "Magazine Luiza", "Amazon", "Outro"] }
+      - { label: "Categorias", name: "categories", widget: "list", required: false }
+      - { label: "Tags", name: "tags", widget: "list", required: false }
+      - { label: "Conteúdo", name: "body", widget: "markdown" }
