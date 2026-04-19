@@ -18,7 +18,10 @@ collections:
       - { label: "Descrição", name: "description", widget: "string" }
       - { label: "Imagem de Capa (URL)", name: "coverImage", widget: "string", required: false }
       - { label: "Link de Afiliado", name: "affiliateLink", widget: "string" }
+      - { label: "Preço Atual (ex: 199.90)", name: "price", widget: "string", required: false }
+      - { label: "Preço Antigo (ex: 299.90)", name: "oldPrice", widget: "string", required: false }
+      - { label: "Badge (ex: Mais vendido, Novo, Oferta)", name: "badge", widget: "string", required: false }
       - { label: "Loja", name: "store", widget: "select", options: ["Shopee", "Mercado Livre", "Magazine Luiza", "Amazon", "Outro"] }
-      - { label: "Categorias", name: "categories", widget: "list", required: false }
+      - { label: "Categoria", name: "categories", widget: "select", options: ["Eletrônicos", "Casa & Cozinha", "Moda", "Beleza", "Esporte", "Livros"], multiple: true, required: false }
       - { label: "Tags", name: "tags", widget: "list", required: false }
       - { label: "Conteúdo", name: "body", widget: "markdown" }

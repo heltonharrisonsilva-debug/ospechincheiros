@@ -1,69 +1,227 @@
 {{ define "main" }}
 <style>
-  .home-hero {
-    background: linear-gradient(135deg, #f97316, #ea580c);
-    padding: 2.5rem 1.5rem;
+  * { box-sizing: border-box; }
+  body { background: #f8f8f8 !important; font-family: 'Inter', sans-serif; }
+
+  /* HERO */
+  .hero {
+    background: linear-gradient(135deg, #fff8f0 0%, #fff3e0 50%, #ffe8cc 100%);
+    padding: 4rem 1.5rem 3rem;
     text-align: center;
-    color: #fff;
+    position: relative;
+    overflow: hidden;
   }
-  .home-hero h1 {
-    font-size: 2rem;
-    font-weight: 800;
+  .hero-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, #f97316, #ea580c);
+    color: #fff;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.3rem 1rem;
+    border-radius: 999px;
+    margin-bottom: 1rem;
+    letter-spacing: 0.05em;
+  }
+  .hero h1 {
+    font-size: 3rem;
+    font-weight: 900;
+    line-height: 1.1;
+    color: #1a1a1a;
     margin-bottom: 0.5rem;
   }
-  .home-hero p {
+  .hero h1 span {
+    background: linear-gradient(135deg, #f97316, #ea580c);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .hero p {
+    color: #666;
     font-size: 1rem;
-    opacity: 0.9;
+    max-width: 500px;
+    margin: 0 auto 1.5rem;
+  }
+  .hero-btns {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .btn-primary {
+    background: linear-gradient(135deg, #f97316, #ea580c);
+    color: #fff !important;
+    font-weight: 700;
+    padding: 0.8rem 1.8rem;
+    border-radius: 999px;
+    text-decoration: none !important;
+    transition: opacity 0.2s;
+    font-size: 0.95rem;
+  }
+  .btn-primary:hover { opacity: 0.9; }
+  .btn-secondary {
+    background: transparent;
+    color: #f97316 !important;
+    font-weight: 700;
+    padding: 0.8rem 1.8rem;
+    border-radius: 999px;
+    text-decoration: none !important;
+    border: 2px solid #f97316;
+    transition: all 0.2s;
+    font-size: 0.95rem;
+  }
+  .btn-secondary:hover { background: #f97316; color: #fff !important; }
+
+  /* STATS */
+  .stats {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    padding: 2rem 1.5rem;
+    background: #fff;
+    border-bottom: 1px solid #f0f0f0;
+    flex-wrap: wrap;
+  }
+  .stat { text-align: center; }
+  .stat-num {
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: #1a1a1a;
+  }
+  .stat-label {
+    font-size: 0.75rem;
+    color: #888;
+    margin-top: 0.2rem;
   }
 
-  .section-title {
+  /* CATEGORIAS */
+  .categorias-section {
     max-width: 1200px;
-    margin: 2rem auto 1rem;
+    margin: 2.5rem auto 0;
     padding: 0 1.5rem;
-    font-size: 1.3rem;
+    text-align: center;
+  }
+  .section-label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #f97316;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 0.3rem;
+  }
+  .section-title {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #1a1a1a;
+    margin-bottom: 1.5rem;
+  }
+  .categorias-grid {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .categoria-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 1.5rem;
+    background: #fff;
+    border-radius: 16px;
+    border: 1px solid #f0f0f0;
+    text-decoration: none !important;
+    transition: all 0.2s;
+    min-width: 90px;
+  }
+  .categoria-item:hover {
+    border-color: #f97316;
+    box-shadow: 0 4px 16px rgba(249,115,22,0.15);
+    transform: translateY(-2px);
+  }
+  .categoria-icon { font-size: 1.8rem; }
+  .categoria-nome { font-size: 0.8rem; font-weight: 600; color: #333; }
+
+  /* PRODUTOS */
+  .produtos-section {
+    max-width: 1200px;
+    margin: 2.5rem auto 0;
+    padding: 0 1.5rem;
+  }
+  .produtos-section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.2rem;
+  }
+  .produtos-section-header h2 {
+    font-size: 1.4rem;
     font-weight: 800;
     color: #1a1a1a;
     display: flex;
     align-items: center;
     gap: 0.5rem;
   }
-  .section-title span {
+  .produtos-section-header h2::before {
+    content: '';
     display: inline-block;
     width: 4px;
-    height: 1.3rem;
+    height: 1.2rem;
     background: linear-gradient(135deg, #f97316, #ea580c);
     border-radius: 4px;
   }
+  .ver-todos {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #f97316 !important;
+    text-decoration: none !important;
+  }
+  .ver-todos:hover { text-decoration: underline !important; }
 
   .produtos-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 1rem;
-    padding: 0 1.5rem 3rem;
-    max-width: 1200px;
-    margin: 0 auto;
+    margin-bottom: 3rem;
   }
-
   .produto-card {
     background: #fff;
     border-radius: 16px;
     overflow: hidden;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
     border: 1px solid #f0f0f0;
     transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
     display: flex;
     flex-direction: column;
-    cursor: pointer;
+    position: relative;
   }
   .produto-card:hover {
     transform: translateY(-4px);
     box-shadow: 0 8px 24px rgba(249,115,22,0.15);
     border-color: #f97316;
   }
-  .produto-card img {
+  .produto-card-img {
+    position: relative;
+    overflow: hidden;
+  }
+  .produto-card-img img {
     width: 100%;
     height: 160px;
     object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  .produto-card:hover .produto-card-img img {
+    transform: scale(1.05);
+  }
+  .produto-badge {
+    position: absolute;
+    top: 0.5rem;
+    left: 0.5rem;
+    background: linear-gradient(135deg, #f97316, #ea580c);
+    color: #fff;
+    font-size: 0.65rem;
+    font-weight: 700;
+    padding: 0.2rem 0.5rem;
+    border-radius: 999px;
+    text-transform: uppercase;
   }
   .produto-card-body {
     padding: 0.8rem;
@@ -72,20 +230,18 @@
     flex-direction: column;
     gap: 0.3rem;
   }
-  .produto-card-tag {
+  .produto-store-tag {
     display: inline-block;
-    background: linear-gradient(135deg, #f97316, #ea580c);
-    color: #fff !important;
+    background: #fff3e0;
+    color: #ea580c;
     font-size: 0.65rem;
     font-weight: 700;
     padding: 0.15rem 0.5rem;
     border-radius: 999px;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
     width: fit-content;
   }
   .produto-card-title {
-    font-size: 0.9rem;
+    font-size: 0.88rem;
     font-weight: 700;
     color: #1a1a1a;
     line-height: 1.3;
@@ -95,13 +251,21 @@
     overflow: hidden;
     flex: 1;
   }
-  .produto-card-desc {
+  .produto-preco {
+    display: flex;
+    align-items: baseline;
+    gap: 0.4rem;
+    margin-top: 0.3rem;
+  }
+  .produto-preco-atual {
+    font-size: 1.1rem;
+    font-weight: 900;
+    color: #f97316;
+  }
+  .produto-preco-antigo {
     font-size: 0.78rem;
-    color: #888;
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
+    color: #aaa;
+    text-decoration: line-through;
   }
   .produto-card-btn {
     display: block;
@@ -116,52 +280,294 @@
     margin-top: 0.5rem;
     transition: opacity 0.2s;
   }
-  .produto-card-btn:hover {
-    opacity: 0.9;
+  .produto-card-btn:hover { opacity: 0.9; }
+
+  /* BANNER OFERTA */
+  .banner-oferta {
+    max-width: 1200px;
+    margin: 0 auto 3rem;
+    padding: 0 1.5rem;
+  }
+  .banner-oferta-inner {
+    background: #1a1a1a;
+    border-radius: 24px;
+    padding: 2.5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: center;
+  }
+  .banner-oferta-texto .badge-oferta {
+    display: inline-block;
+    background: #f97316;
+    color: #fff;
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 0.2rem 0.7rem;
+    border-radius: 999px;
+    margin-bottom: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  .banner-oferta-texto h2 {
+    font-size: 2rem;
+    font-weight: 900;
+    color: #fff;
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+  }
+  .banner-oferta-texto h2 span {
+    color: #f97316;
+  }
+  .banner-oferta-texto p {
+    color: #aaa;
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+  }
+  .banner-cats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.8rem;
+  }
+  .banner-cat {
+    background: #2a2a2a;
+    border-radius: 12px;
+    padding: 1rem;
+    text-align: center;
+    color: #fff;
+    font-size: 0.85rem;
+  }
+  .banner-cat-discount {
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: #f97316;
   }
 
-  body { background: #f9f9f9 !important; }
+  /* FOOTER */
+  .site-footer {
+    background: #1a1a1a;
+    color: #aaa;
+    padding: 3rem 1.5rem 1.5rem;
+    margin-top: 2rem;
+  }
+  .footer-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+  .footer-brand img {
+    height: 40px;
+    border-radius: 50%;
+    margin-bottom: 0.8rem;
+  }
+  .footer-brand p {
+    font-size: 0.85rem;
+    line-height: 1.6;
+    max-width: 280px;
+  }
+  .footer-col h4 {
+    color: #fff;
+    font-size: 0.9rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+  .footer-col ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .footer-col ul li a {
+    color: #aaa !important;
+    text-decoration: none !important;
+    font-size: 0.85rem;
+    transition: color 0.2s;
+  }
+  .footer-col ul li a:hover { color: #f97316 !important; }
+  .footer-bottom {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 1.5rem;
+    border-top: 1px solid #2a2a2a;
+    text-align: center;
+    font-size: 0.8rem;
+  }
+
+  @media (max-width: 768px) {
+    .hero h1 { font-size: 2rem; }
+    .banner-oferta-inner { grid-template-columns: 1fr; }
+    .footer-inner { grid-template-columns: 1fr; }
+    .stats { gap: 1.5rem; }
+  }
 </style>
 
-{{ $homePage := .Site.GetPage "/" }}
-{{ if $homePage }}
-<div class="home-hero">
-  <h1>{{ $homePage.Params.heroTitle | default "🛍️ Os Pechincheiros" }}</h1>
-  <p>{{ $homePage.Params.heroSubtitle | default "Garimpamos as melhores ofertas para você economizar de verdade!" }}</p>
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-badge">✨ Novas ofertas toda semana</div>
+  <h1>Produtos que<br><span>você vai amar.</span></h1>
+  <p>Uma curadoria das melhores ofertas em tech, beleza, moda, casa e mais. Tudo garimpado, tudo aprovado.</p>
+  <div class="hero-btns">
+    <a href="/produtos/" class="btn-primary">Explorar produtos →</a>
+    <a href="/categories/" class="btn-secondary">Ver categorias</a>
+  </div>
+</div>
+
+<!-- STATS -->
+<div class="stats">
+  <div class="stat">
+    <div class="stat-num">500+</div>
+    <div class="stat-label">Produtos</div>
+  </div>
+  <div class="stat">
+    <div class="stat-num">50k+</div>
+    <div class="stat-label">Clientes</div>
+  </div>
+  <div class="stat">
+    <div class="stat-num">4.9★</div>
+    <div class="stat-label">Avaliação</div>
+  </div>
+</div>
+
+<!-- CATEGORIAS -->
+<div class="categorias-section">
+  <div class="section-label">NAVEGUE</div>
+  <div class="section-title">Categorias</div>
+  <div class="categorias-grid">
+    <a href="/categories/eletronicos/" class="categoria-item">
+      <span class="categoria-icon">💻</span>
+      <span class="categoria-nome">Eletrônicos</span>
+    </a>
+    <a href="/categories/beleza/" class="categoria-item">
+      <span class="categoria-icon">✨</span>
+      <span class="categoria-nome">Beleza</span>
+    </a>
+    <a href="/categories/moda/" class="categoria-item">
+      <span class="categoria-icon">👗</span>
+      <span class="categoria-nome">Moda</span>
+    </a>
+    <a href="/categories/casa-cozinha/" class="categoria-item">
+      <span class="categoria-icon">🏠</span>
+      <span class="categoria-nome">Casa</span>
+    </a>
+    <a href="/categories/esporte/" class="categoria-item">
+      <span class="categoria-icon">🏋️</span>
+      <span class="categoria-nome">Esporte</span>
+    </a>
+    <a href="/categories/livros/" class="categoria-item">
+      <span class="categoria-icon">📚</span>
+      <span class="categoria-nome">Livros</span>
+    </a>
+  </div>
+</div>
+
+<!-- PRODUTOS -->
+{{ $produtos := where .Site.RegularPages "Section" "produtos" }}
+{{ if $produtos }}
+<div class="produtos-section">
+  <div class="produtos-section-header">
+    <h2>Os mais desejados</h2>
+    <a href="/produtos/" class="ver-todos">Ver todos →</a>
+  </div>
+  <div class="produtos-grid">
+    {{ range $produtos }}
+    <div class="produto-card">
+      <div class="produto-card-img">
+        {{ if .Params.coverImage }}
+        <img src="{{ .Params.coverImage }}" alt="{{ .Title }}" loading="lazy" />
+        {{ else }}
+        <img src="https://placehold.co/400x300/f97316/white?text=Produto" alt="{{ .Title }}" loading="lazy" />
+        {{ end }}
+        {{ if .Params.badge }}
+        <span class="produto-badge">{{ .Params.badge }}</span>
+        {{ end }}
+      </div>
+      <div class="produto-card-body">
+        {{ if .Params.store }}
+        <span class="produto-store-tag">{{ .Params.store }}</span>
+        {{ end }}
+        <div class="produto-card-title">{{ .Title }}</div>
+        {{ if .Params.price }}
+        <div class="produto-preco">
+          <span class="produto-preco-atual">R$ {{ .Params.price }}</span>
+          {{ if .Params.oldPrice }}
+          <span class="produto-preco-antigo">R$ {{ .Params.oldPrice }}</span>
+          {{ end }}
+        </div>
+        {{ end }}
+        {{ if .Params.affiliateLink }}
+        <a class="produto-card-btn" href="{{ .Params.affiliateLink }}" target="_blank" rel="noopener">
+          🛒 Ver Oferta →
+        </a>
+        {{ else }}
+        <a class="produto-card-btn" href="{{ .Permalink }}">
+          Ver Detalhes →
+        </a>
+        {{ end }}
+      </div>
+    </div>
+    {{ end }}
+  </div>
 </div>
 {{ end }}
 
-{{ $produtos := where .Site.RegularPages "Section" "produtos" }}
-{{ if $produtos }}
-<div class="section-title">
-  <span></span> Ofertas em Destaque
-</div>
-<div class="produtos-grid">
-  {{ range $produtos }}
-  <div class="produto-card">
-    {{ if .Params.coverImage }}
-    <img src="{{ .Params.coverImage }}" alt="{{ .Title }}" loading="lazy" />
-    {{ else }}
-    <img src="https://placehold.co/400x300/f97316/white?text=Produto" alt="{{ .Title }}" loading="lazy" />
-    {{ end }}
-    <div class="produto-card-body">
-      {{ if .Params.store }}
-      <span class="produto-card-tag">{{ .Params.store }}</span>
-      {{ end }}
-      <div class="produto-card-title">{{ .Title }}</div>
-      <div class="produto-card-desc">{{ .Description }}</div>
-      {{ if .Params.affiliateLink }}
-      <a class="produto-card-btn" href="{{ .Params.affiliateLink }}" target="_blank" rel="noopener">
-        🛒 Ver Oferta →
-      </a>
-      {{ else }}
-      <a class="produto-card-btn" href="{{ .Permalink }}">
-        Ver Detalhes →
-      </a>
-      {{ end }}
+<!-- BANNER OFERTA -->
+<div class="banner-oferta">
+  <div class="banner-oferta-inner">
+    <div class="banner-oferta-texto">
+      <span class="badge-oferta">Drop da semana</span>
+      <h2>Até <span>40% off</span><br>em selecionados.</h2>
+      <p>Ofertas relâmpago atualizadas toda semana. Não perca o próximo drop.</p>
+      <a href="/produtos/" class="btn-primary">Ver ofertas →</a>
+    </div>
+    <div class="banner-cats">
+      <div class="banner-cat">
+        <div>Tech</div>
+        <div class="banner-cat-discount">-35%</div>
+      </div>
+      <div class="banner-cat">
+        <div>Beleza</div>
+        <div class="banner-cat-discount">-28%</div>
+      </div>
+      <div class="banner-cat">
+        <div>Moda</div>
+        <div class="banner-cat-discount">-40%</div>
+      </div>
+      <div class="banner-cat">
+        <div>Casa</div>
+        <div class="banner-cat-discount">-22%</div>
+      </div>
     </div>
   </div>
-  {{ end }}
 </div>
-{{ end }}
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <img src="/images/logo.jpg" alt="Os Pechincheiros" />
+      <p>Marketplace de produtos selecionados. Cada link é uma indicação curada da nossa curadoria.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Explorar</h4>
+      <ul>
+        <li><a href="/produtos/">Produtos</a></li>
+        <li><a href="/categories/">Categorias</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Sobre</h4>
+      <ul>
+        <li><a href="/sobre/">Quem somos</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© {{ now.Year }} Os Pechincheiros. Todos os direitos reservados.</p>
+  </div>
+</footer>
 {{ end }}
