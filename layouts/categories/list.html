@@ -1,0 +1,96 @@
+{{ define "main" }}
+<style>
+  * { box-sizing: border-box; }
+  body { background: #f8f8f8 !important; }
+
+  .cats-header {
+    text-align: center;
+    padding: 3rem 1.5rem 2rem;
+  }
+  .cats-header .section-label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #f97316;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 0.3rem;
+  }
+  .cats-header h1 {
+    font-size: 2.2rem;
+    font-weight: 900;
+    color: #1a1a1a;
+    margin-bottom: 0.5rem;
+  }
+  .cats-header p {
+    color: #666;
+    font-size: 1rem;
+  }
+
+  .cats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 1rem;
+    max-width: 1200px;
+    margin: 0 auto 3rem;
+    padding: 0 1.5rem;
+  }
+
+  .cat-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 1.5rem 1rem;
+    text-align: center;
+    border: 1px solid #f0f0f0;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    text-decoration: none !important;
+    transition: all 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.6rem;
+  }
+  .cat-card:hover {
+    border-color: #f97316;
+    box-shadow: 0 8px 24px rgba(249,115,22,0.15);
+    transform: translateY(-4px);
+  }
+  .cat-icon {
+    font-size: 2.5rem;
+    line-height: 1;
+  }
+  .cat-name {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #1a1a1a;
+  }
+  .cat-count {
+    font-size: 0.75rem;
+    color: #aaa;
+  }
+</style>
+
+<div class="cats-header">
+  <div class="section-label">NAVEGUE</div>
+  <h1>Categorias</h1>
+  <p>Encontre produtos por categoria e descubra as melhores ofertas</p>
+</div>
+
+<div class="cats-grid">
+  {{ range .Data.Terms.Alphabetical }}
+  <a class="cat-card" href="{{ .Page.Permalink }}">
+    <span class="cat-icon">
+      {{ if eq .Page.Title "Eletrônicos" }}💻
+      {{ else if eq .Page.Title "Beleza" }}✨
+      {{ else if eq .Page.Title "Moda" }}👗
+      {{ else if eq .Page.Title "Casa & Cozinha" }}🏠
+      {{ else if eq .Page.Title "Esporte" }}🏋️
+      {{ else if eq .Page.Title "Livros" }}📚
+      {{ else }}🛍️
+      {{ end }}
+    </span>
+    <span class="cat-name">{{ .Page.Title }}</span>
+    <span class="cat-count">{{ .Count }} {{ if eq .Count 1 }}produto{{ else }}produtos{{ end }}</span>
+  </a>
+  {{ end }}
+</div>
+{{ end }}
