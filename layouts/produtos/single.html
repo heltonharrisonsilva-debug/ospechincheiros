@@ -12,8 +12,6 @@
     gap: 2.5rem;
     align-items: start;
   }
-
-  /* IMAGEM */
   .produto-single-img-wrap {
     position: sticky;
     top: 80px;
@@ -35,8 +33,6 @@
     justify-content: center;
     font-size: 5rem;
   }
-
-  /* INFO */
   .produto-single-info {
     display: flex;
     flex-direction: column;
@@ -97,14 +93,6 @@
     color: #aaa;
     text-decoration: line-through;
   }
-  .preco-desconto {
-    font-size: 0.8rem;
-    font-weight: 700;
-    background: #dcfce7;
-    color: #16a34a;
-    padding: 0.2rem 0.6rem;
-    border-radius: 999px;
-  }
   .produto-single-btn {
     display: flex;
     align-items: center;
@@ -131,8 +119,6 @@
     font-size: 0.8rem;
     color: #888;
   }
-
-  /* CONTEÚDO */
   .produto-single-content {
     max-width: 1100px;
     margin: 0 auto 4rem;
@@ -147,17 +133,6 @@
     line-height: 1.8;
     color: #333;
   }
-  .produto-single-content-inner h2 {
-    font-size: 1.2rem;
-    font-weight: 800;
-    color: #1a1a1a;
-    margin-bottom: 1rem;
-    padding-bottom: 0.5rem;
-    border-bottom: 2px solid #f97316;
-    display: inline-block;
-  }
-
-  /* PRODUTOS RELACIONADOS */
   .relacionados {
     max-width: 1100px;
     margin: 0 auto 4rem;
@@ -225,23 +200,14 @@
     color: #f97316;
     margin-top: 0.4rem;
   }
-
   @media (max-width: 768px) {
-    .produto-single-wrapper {
-      grid-template-columns: 1fr;
-    }
-    .produto-single-img-wrap {
-      position: static;
-    }
-    .produto-single-title {
-      font-size: 1.4rem;
-    }
+    .produto-single-wrapper { grid-template-columns: 1fr; }
+    .produto-single-img-wrap { position: static; }
+    .produto-single-title { font-size: 1.4rem; }
   }
 </style>
 
-<!-- PRODUTO PRINCIPAL -->
 <div class="produto-single-wrapper">
-  <!-- IMAGEM -->
   <div class="produto-single-img-wrap">
     {{ if .Params.coverImage }}
     <img src="{{ .Params.coverImage }}" alt="{{ .Title }}" />
@@ -250,7 +216,6 @@
     {{ end }}
   </div>
 
-  <!-- INFO -->
   <div class="produto-single-info">
     <div class="produto-single-badges">
       {{ if .Params.store }}
@@ -288,5 +253,37 @@
   </div>
 </div>
 
-<!-- CONTEÚDO -->
-{
+{{ if .Content }}
+<div class="produto-single-content">
+  <div class="produto-single-content-inner">
+    {{ .Content }}
+  </div>
+</div>
+{{ end }}
+
+{{ $current := . }}
+{{ $relacionados := where .Site.RegularPages "Section" "produtos" }}
+{{ $relacionados = first 4 (where $relacionados "Permalink" "ne" $current.Permalink) }}
+{{ if $relacionados }}
+<div class="relacionados">
+  <div class="relacionados-title">Você também pode gostar</div>
+  <div class="relacionados-grid">
+    {{ range $relacionados }}
+    <a class="rel-card" href="{{ .Permalink }}">
+      {{ if .Params.coverImage }}
+      <img src="{{ .Params.coverImage }}" alt="{{ .Title }}" loading="lazy" />
+      {{ else }}
+      <img src="https://placehold.co/400x300/f97316/white?text=Produto" alt="{{ .Title }}" loading="lazy" />
+      {{ end }}
+      <div class="rel-card-body">
+        <div class="rel-card-title">{{ .Title }}</div>
+        {{ if .Params.price }}
+        <div class="rel-card-price">R$ {{ .Params.price }}</div>
+        {{ end }}
+      </div>
+    </a>
+    {{ end }}
+  </div>
+</div>
+{{ end }}
+{{ end }}
