@@ -164,7 +164,7 @@
     {{ end }}
     {{ .Title }}
   </h1>
-  <p>{{ .Count }} {{ if eq .Count 1 }}produto encontrado{{ else }}produtos encontrados{{ end }}</p>
+  <p>{{ len .Pages }} {{ if eq (len .Pages) 1 }}produto encontrado{{ else }}produtos encontrados{{ end }}</p>
 </div>
 
 <div class="produtos-grid">
