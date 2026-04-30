@@ -435,30 +435,21 @@
   <div class="section-label">NAVEGUE</div>
   <div class="section-title">Categorias</div>
   <div class="categorias-grid">
-    <a href="/categories/eletronicos/" class="categoria-item">
-      <span class="categoria-icon">💻</span>
-      <span class="categoria-nome">Eletrônicos</span>
+    {{ range .Site.Taxonomies.categories }}
+    <a href="{{ .Page.Permalink }}" class="categoria-item">
+      <span class="categoria-icon">
+        {{ if eq .Page.Title "Eletrônicos" }}💻
+        {{ else if eq .Page.Title "Beleza" }}✨
+        {{ else if eq .Page.Title "Moda" }}👗
+        {{ else if eq .Page.Title "Casa & Cozinha" }}🏠
+        {{ else if eq .Page.Title "Esporte" }}🏋️
+        {{ else if eq .Page.Title "Livros" }}📚
+        {{ else }}🛍️
+        {{ end }}
+      </span>
+      <span class="categoria-nome">{{ .Page.Title }}</span>
     </a>
-    <a href="/categories/beleza/" class="categoria-item">
-      <span class="categoria-icon">✨</span>
-      <span class="categoria-nome">Beleza</span>
-    </a>
-    <a href="/categories/moda/" class="categoria-item">
-      <span class="categoria-icon">👗</span>
-      <span class="categoria-nome">Moda</span>
-    </a>
-    <a href="/categories/casa-cozinha/" class="categoria-item">
-      <span class="categoria-icon">🏠</span>
-      <span class="categoria-nome">Casa</span>
-    </a>
-    <a href="/categories/esporte/" class="categoria-item">
-      <span class="categoria-icon">🏋️</span>
-      <span class="categoria-nome">Esporte</span>
-    </a>
-    <a href="/categories/livros/" class="categoria-item">
-      <span class="categoria-icon">📚</span>
-      <span class="categoria-nome">Livros</span>
-    </a>
+    {{ end }}
   </div>
 </div>
 
