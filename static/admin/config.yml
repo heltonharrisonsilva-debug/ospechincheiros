@@ -1,6 +1,9 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: heltonharrisonsilva-debug/ospechincheiros
   branch: main
+  base_url: https://www.ospechincheiros.com.br
+  auth_endpoint: /oauth/callback
 
 media_folder: static/images/produtos
 public_folder: /images/produtos

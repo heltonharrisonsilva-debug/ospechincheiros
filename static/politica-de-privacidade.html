@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Política de Privacidade — Os Pechincheiros</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #0e0e0e;
+      --surface: #161616;
+      --border: #2a2a2a;
+      --accent: #e8b84b;
+      --text: #d4d0c8;
+      --muted: #6b6760;
+      --heading: #f5f2ec;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 300;
+      line-height: 1.8;
+      min-height: 100vh;
+    }
+
+    /* grain overlay */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 0;
+      opacity: 0.6;
+    }
+
+    header {
+      position: relative;
+      z-index: 1;
+      border-bottom: 1px solid var(--border);
+      padding: 2.5rem 2rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      animation: fadeDown 0.6s ease both;
+    }
+
+    .logo-mark {
+      width: 42px;
+      height: 42px;
+      background: var(--accent);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem;
+      color: #0e0e0e;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    .logo-text {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem;
+      color: var(--heading);
+      letter-spacing: 0.02em;
+    }
+
+    .logo-text span {
+      color: var(--accent);
+    }
+
+    main {
+      position: relative;
+      z-index: 1;
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 4rem 2rem 6rem;
+      animation: fadeUp 0.7s ease 0.1s both;
+    }
+
+    .page-label {
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--accent);
+      font-weight: 500;
+      margin-bottom: 1rem;
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 5vw, 3rem);
+      color: var(--heading);
+      line-height: 1.2;
+      margin-bottom: 0.5rem;
+    }
+
+    .updated {
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-bottom: 3rem;
+      padding-bottom: 3rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    section {
+      margin-bottom: 2.5rem;
+    }
+
+    h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.25rem;
+      color: var(--heading);
+      margin-bottom: 0.75rem;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    h2::before {
+      content: '';
+      display: inline-block;
+      width: 4px;
+      height: 1.1em;
+      background: var(--accent);
+      border-radius: 2px;
+      flex-shrink: 0;
+    }
+
+    p {
+      margin-bottom: 0.75rem;
+      color: var(--text);
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+
+    a:hover { border-color: var(--accent); }
+
+    .highlight-box {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--accent);
+      border-radius: 4px;
+      padding: 1.25rem 1.5rem;
+      margin: 1.5rem 0;
+      font-size: 0.9rem;
+    }
+
+    footer {
+      position: relative;
+      z-index: 1;
+      border-top: 1px solid var(--border);
+      padding: 2rem;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.8rem;
+    }
+
+    @keyframes fadeDown {
+      from { opacity: 0; transform: translateY(-12px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(16px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo-mark">P</div>
+    <div class="logo-text">Os <span>Pechincheiros</span></div>
+  </header>
+
+  <main>
+    <p class="page-label">Documento Legal</p>
+    <h1>Política de Privacidade</h1>
+    <p class="updated">Última atualização: 18 de abril de 2026</p>
+
+    <section>
+      <h2>1. Introdução</h2>
+      <p>
+        Esta Política de Privacidade descreve como <strong>Os Pechincheiros</strong>
+        ("nós", "nosso") coleta, usa e protege as informações obtidas por meio de
+        nossa plataforma e de integrações com redes sociais, incluindo o Instagram.
+      </p>
+      <p>
+        Ao interagir com nossa conta ou utilizar nossos serviços, você concorda com
+        os termos descritos neste documento.
+      </p>
+    </section>
+
+    <section>
+      <h2>2. Informações Coletadas</h2>
+      <p>Podemos coletar as seguintes informações:</p>
+      <div class="highlight-box">
+        <strong>Via Instagram / Facebook API:</strong> nome de usuário público, comentários
+        feitos em nossas publicações e interações com mensagens diretas iniciadas pelo
+        usuário.<br><br>
+        <strong>Via navegação:</strong> dados de acesso como endereço IP, tipo de
+        navegador e páginas visitadas, coletados automaticamente por servidores de hospedagem.
+      </div>
+      <p>
+        Não coletamos senhas, dados bancários ou informações sensíveis de nenhuma natureza.
+      </p>
+    </section>
+
+    <section>
+      <h2>3. Uso das Informações</h2>
+      <p>As informações coletadas são utilizadas exclusivamente para:</p>
+      <p>— Responder automaticamente a comentários e mensagens em nossa conta do Instagram;</p>
+      <p>— Enviar links de produtos afiliados solicitados pelos próprios usuários;</p>
+      <p>— Melhorar a qualidade do conteúdo e das recomendações de produtos;</p>
+      <p>— Cumprir obrigações legais quando aplicável.</p>
+    </section>
+
+    <section>
+      <h2>4. Compartilhamento de Dados</h2>
+      <p>
+        Não vendemos, alugamos ou compartilhamos suas informações pessoais com terceiros
+        para fins comerciais. Os dados podem ser processados por ferramentas de automação
+        (como n8n) e APIs de terceiros (Meta/Instagram, Google) exclusivamente para
+        operação dos serviços descritos nesta política.
+      </p>
+    </section>
+
+    <section>
+      <h2>5. Retenção de Dados</h2>
+      <p>
+        As informações de comentários e interações são mantidas apenas pelo tempo necessário
+        para a entrega do serviço solicitado (envio do link). Registros de postagens são
+        mantidos em planilhas internas para controle de desempenho e não são compartilhados.
+      </p>
+    </section>
+
+    <section>
+      <h2>6. Seus Direitos</h2>
+      <p>Você tem direito a:</p>
+      <p>— Solicitar acesso às informações que temos sobre você;</p>
+      <p>— Solicitar a exclusão de seus dados;</p>
+      <p>— Revogar consentimento a qualquer momento parando de interagir com nossa conta.</p>
+      <p>
+        Para exercer esses direitos, entre em contato pelo e-mail abaixo.
+      </p>
+    </section>
+
+    <section>
+      <h2>7. Cookies e Rastreamento</h2>
+      <p>
+        Este site pode utilizar cookies básicos de sessão para funcionamento técnico.
+        Não utilizamos cookies de rastreamento publicitário ou pixels de terceiros
+        nesta página.
+      </p>
+    </section>
+
+    <section>
+      <h2>8. Integrações com Terceiros</h2>
+      <p>
+        Utilizamos a API da Meta (Facebook/Instagram) para automação de publicações e
+        respostas. O uso dessas plataformas está sujeito também às políticas de
+        privacidade da <a href="https://www.facebook.com/privacy/policy/" target="_blank">Meta</a>.
+        Somos afiliados Shopee — links de produtos redirecionam para a plataforma Shopee,
+        cuja política de privacidade é independente da nossa.
+      </p>
+    </section>
+
+    <section>
+      <h2>9. Alterações nesta Política</h2>
+      <p>
+        Reservamo-nos o direito de atualizar esta política periodicamente. Alterações
+        relevantes serão comunicadas por nossos canais. A data de última atualização
+        sempre constará no topo deste documento.
+      </p>
+    </section>
+
+    <section>
+      <h2>10. Contato</h2>
+      <p>
+        Dúvidas, solicitações ou reclamações relacionadas à privacidade podem ser
+        enviadas para:
+        <a href="mailto:contato@ospechincheiros.com.br">contato@ospechincheiros.com.br</a>
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2026 Os Pechincheiros — ospechincheiros.com.br
+  </footer>
+
+</body>
+</html>
