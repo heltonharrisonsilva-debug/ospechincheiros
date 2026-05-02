@@ -1,6 +1,6 @@
 ---
 title: "Omo sabão em pó lavagem perfeita ativo concentrado pacote com 2,4kg"
-date: 2026-04-29T19:40:27.120Z
+date: 2026-05-02T17:54:10.455Z
 draft: false
 description: "Confira essa oferta incrível na Shopee!"
 coverImage: "https://http2.mlstatic.com/D_NQ_NP_731561-MLA99452016820_112025-F.jpg"
