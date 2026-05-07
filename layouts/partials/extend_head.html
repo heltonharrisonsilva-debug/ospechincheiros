@@ -1,49 +1,61 @@
-<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-<script>
-  if (window.netlifyIdentity) {
-    window.netlifyIdentity.on("init", user => {
-      if (!user) {
-        window.netlifyIdentity.on("login", () => {
-          document.location.href = "/admin/";
-        });
-      }
-    });
-  }
+<!-- SEO Meta Tags -->
+<meta name="description" content="{{ if .Description }}{{ .Description }}{{ else }}{{ .Site.Params.description }}{{ end }}" />
+<meta name="author" content="{{ .Site.Params.author }}" />
+<meta name="robots" content="index, follow" />
 
-  window.addEventListener("load", () => {
-    if (window.netlifyIdentity) {
-      const hash = window.location.hash;
-      if (hash && hash.includes("invite_token")) {
-        window.netlifyIdentity.open("signup");
-      }
-    }
-  });
+<!-- Open Graph (Facebook, WhatsApp, Instagram) -->
+<meta property="og:title" content="{{ if .Title }}{{ .Title }} — Os Pechincheiros{{ else }}Os Pechincheiros{{ end }}" />
+<meta property="og:description" content="{{ if .Description }}{{ .Description }}{{ else }}{{ .Site.Params.description }}{{ end }}" />
+<meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}" />
+<meta property="og:url" content="{{ .Permalink }}" />
+<meta property="og:site_name" content="Os Pechincheiros" />
+<meta property="og:locale" content="pt_BR" />
+{{ if .Params.coverImage }}
+<meta property="og:image" content="{{ .Params.coverImage }}" />
+{{ else }}
+<meta property="og:image" content="{{ .Site.BaseURL }}images/logo.jpg" />
+{{ end }}
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="{{ if .Title }}{{ .Title }} — Os Pechincheiros{{ else }}Os Pechincheiros{{ end }}" />
+<meta name="twitter:description" content="{{ if .Description }}{{ .Description }}{{ else }}{{ .Site.Params.description }}{{ end }}" />
+{{ if .Params.coverImage }}
+<meta name="twitter:image" content="{{ .Params.coverImage }}" />
+{{ else }}
+<meta name="twitter:image" content="{{ .Site.BaseURL }}images/logo.jpg" />
+{{ end }}
+
+<!-- Canonical URL -->
+<link rel="canonical" href="{{ .Permalink }}" />
+
+<!-- Schema.org JSON-LD -->
+{{ if .IsPage }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "{{ .Title }}",
+  "description": "{{ .Description }}",
+  "url": "{{ .Permalink }}"
+  {{ if .Params.coverImage }}, "image": "{{ .Params.coverImage }}"{{ end }}
+  {{ if .Params.price }}, "offers": {
+    "@type": "Offer",
+    "price": "{{ .Params.price | replaceRE "," "." }}",
+    "priceCurrency": "BRL",
+    "availability": "https://schema.org/InStock",
+    "url": "{{ .Params.affiliateLink }}"
+  }{{ end }}
+}
 </script>
+{{ end }}
+
+<!-- Identidade visual -->
 <style>
-  body { background: #f9f9f9 !important; }
-  
+  body { background: #f8f8f8 !important; }
   .home-info h1 {
     background: linear-gradient(135deg, #f97316, #ea580c) !important;
     -webkit-background-clip: text !important;
     -webkit-text-fill-color: transparent !important;
-  }
-</style>
-
-<style>
-  /* Remove o container padrão do PaperMod na home */
-  .main {
-    max-width: 100% !important;
-    padding: 0 !important;
-  }
-  
-  /* Remove padding do post-single na home */
-  body .post-single {
-    max-width: 100% !important;
-    padding: 0 !important;
-  }
-
-  /* Garante que o body não tenha margens extras */
-  body {
-    background: #f8f8f8 !important;
   }
 </style>
