@@ -111,10 +111,19 @@
     margin-bottom: 1.5rem;
   }
   .categorias-grid {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     gap: 1rem;
     justify-content: center;
-    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto 2rem;
+    padding: 0 1.5rem;
+  }
+
+  @media (max-width: 640px) {
+    .categorias-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
   .categoria-item {
     display: flex;
@@ -423,11 +432,15 @@
     {{ range .Site.Taxonomies.categories }}
     <a href="{{ .Page.Permalink }}" class="categoria-item">
       <span class="categoria-icon">
-        {{ if eq .Page.Title "Eletrônicos" }}💻
-        {{ else if eq .Page.Title "Beleza" }}✨
-        {{ else if eq .Page.Title "Moda" }}👗
+        {{ if eq .Page.Title "Beleza" }}✨
+        {{ else if eq .Page.Title "Brinquedos" }}🧸
         {{ else if eq .Page.Title "Casa & Cozinha" }}🏠
         {{ else if eq .Page.Title "Esporte" }}🏋️
+        {{ else if eq .Page.Title "Ferramentas" }}🔧
+        {{ else if eq .Page.Title "Informática" }}💻
+        {{ else if eq .Page.Title "Moda" }}👗
+        {{ else if eq .Page.Title "Tecnologia" }}📱
+        {{ else if eq .Page.Title "Eletrônicos" }}🖥️
         {{ else if eq .Page.Title "Livros" }}📚
         {{ else }}🛍️
         {{ end }}
