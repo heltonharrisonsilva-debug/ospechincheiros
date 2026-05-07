@@ -154,17 +154,18 @@
 <div class="cat-header">
   <div class="section-label">CATEGORIA</div>
   <h1>
-    {{ if eq .Page.Title "Eletrônicos" }}💻
-    {{ else if eq .Page.Title "Beleza" }}✨
-    {{ else if eq .Page.Title "Moda" }}👗
-    {{ else if eq .Page.Title "Casa & Cozinha" }}🏠
-    {{ else if eq .Page.Title "Esporte" }}🏋️
-    {{ else if eq .Page.Title "Livros" }}📚
-    {{ else if eq .Page.Title "Brinquedos" }}🧸
-    {{ else if eq .Page.Title "Ferramentas" }}🔧
-    {{ else if eq .Page.Title "Informática" }}💻
-    {{ else if eq .Page.Title "Tecnologia" }}📱
+    {{ if eq .Title "Eletrônicos" }}💻
+    {{ else if eq .Title "Beleza" }}✨
+    {{ else if eq .Title "Moda" }}👗
+    {{ else if eq .Title "Casa & Cozinha" }}🏠
+    {{ else if eq .Title "Esporte" }}🏋️
+    {{ else if eq .Title "Livros" }}📚
+    {{ else if eq .Title "Brinquedos" }}🧸
+    {{ else if eq .Title "Ferramentas" }}🔧
+    {{ else if eq .Title "Informática" }}💻
+    {{ else if eq .Title "Tecnologia" }}📱
     {{ else }}🛍️
+    {{ end }}
     {{ .Title }}
   </h1>
   <p>{{ len .Pages }} {{ if eq (len .Pages) 1 }}produto encontrado{{ else }}produtos encontrados{{ end }}</p>
