@@ -1,0 +1,19 @@
+---
+title: "Mesa Portátil Dobrável Multiuso – Ideal para Cama e Sofá, Notebook, Tablet, Refeições e Leitura"
+date: 2026-05-07T00:00:00Z
+draft: false
+description: "Confira essa oferta incrível na Shopee!"
+coverImage: "https://cf.shopee.com.br/file/sg-11134201-821ff-mgmq7nmqg0eg09"
+affiliateLink: "https://s.shopee.com.br/6AhegoUSj7"
+price: "41,99"
+store: "Shopee"
+categories: ["Casa & Cozinha"]
+tags: ["shopee", "oferta", "pechincheiros"]
+badge: "Novo"
+---
+
+## Mesa Portátil Dobrável Multiuso – Ideal para Cama e Sofá, Notebook, Tablet, Refeições e Leitura
+
+Encontramos essa oferta incrível para você! Clique no botão abaixo e aproveite antes que acabe.
+
+👉 [Comprar agora na Shopee](https://s.shopee.com.br/6AhegoUSj7)

@@ -1,0 +1,19 @@
+---
+title: "Moto G15 Dual SIM 256 GB laranja 4 GB RAM"
+date: 2026-05-07T00:00:00Z
+draft: false
+description: "Confira essa oferta incrível no Mercado Livre!"
+coverImage: "https://http2.mlstatic.com/D_NQ_NP_660081-MLA99874667621_112025-F.jpg"
+affiliateLink: "https://www.mercadolivre.com.br/p/MLB49740252"
+price: "1.033,00"
+store: "Mercado Livre"
+categories: ["Tecnologia"]
+tags: ["mercadolivre", "oferta", "pechincheiros"]
+badge: "Novo"
+---
+
+## Moto G15 Dual SIM 256 GB laranja 4 GB RAM
+
+Encontramos essa oferta incrível para você! Clique no botão abaixo e aproveite antes que acabe.
+
+👉 [Comprar agora no Mercado Livre](https://www.mercadolivre.com.br/p/MLB49740252)
