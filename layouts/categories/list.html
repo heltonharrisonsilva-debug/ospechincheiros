@@ -85,8 +85,11 @@
       {{ else if eq .Page.Title "Casa & Cozinha" }}🏠
       {{ else if eq .Page.Title "Esporte" }}🏋️
       {{ else if eq .Page.Title "Livros" }}📚
+      {{ else if eq .Page.Title "Brinquedos" }}🧸
+      {{ else if eq .Page.Title "Ferramentas" }}🔧
+      {{ else if eq .Page.Title "Informática" }}💻
+      {{ else if eq .Page.Title "Tecnologia" }}📱
       {{ else }}🛍️
-      {{ end }}
     </span>
     <span class="cat-name">{{ .Page.Title }}</span>
     <span class="cat-count">{{ .Count }} {{ if eq .Count 1 }}produto{{ else }}produtos{{ end }}</span>
