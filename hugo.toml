@@ -33,6 +33,10 @@ title = 'Os Pechincheiros'
     name = "Categorias"
     url = "/categories/"
     weight = 30
+  [[menu.main]]
+    name = "Sobre"
+    url = "/sobre/"
+    weight = 40
 
 [taxonomies]
   category = "categories"

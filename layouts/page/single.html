@@ -1,0 +1,141 @@
+{{ define "main" }}
+<style>
+  * { box-sizing: border-box; }
+  body { background: #f8f8f8 !important; }
+
+  .sobre-wrapper {
+    max-width: 800px;
+    margin: 3rem auto 5rem;
+    padding: 0 1.5rem;
+  }
+
+  .sobre-hero {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .sobre-hero .section-label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #f97316;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 0.5rem;
+  }
+
+  .sobre-hero h1 {
+    font-size: 2.2rem;
+    font-weight: 900;
+    color: #1a1a1a;
+    margin-bottom: 1rem;
+  }
+
+  .sobre-hero p {
+    color: #666;
+    font-size: 1rem;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .sobre-content {
+    background: #fff;
+    border-radius: 20px;
+    padding: 2.5rem;
+    border: 1px solid #f0f0f0;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    line-height: 1.8;
+    color: #333;
+  }
+
+  .sobre-content h2 {
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: #1a1a1a;
+    margin: 2rem 0 0.8rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #f97316;
+    display: inline-block;
+  }
+
+  .sobre-content h2:first-child {
+    margin-top: 0;
+  }
+
+  .sobre-content p {
+    margin-bottom: 1rem;
+    color: #444;
+  }
+
+  .sobre-content strong {
+    color: #f97316;
+  }
+
+  .sobre-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+  }
+
+  .sobre-content ul li {
+    padding: 0.4rem 0;
+    color: #444;
+  }
+
+  .sobre-cta {
+    text-align: center;
+    margin-top: 3rem;
+    padding: 2rem;
+    background: linear-gradient(135deg, #f97316, #ea580c);
+    border-radius: 20px;
+    color: #fff;
+  }
+
+  .sobre-cta h3 {
+    font-size: 1.3rem;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+  }
+
+  .sobre-cta p {
+    opacity: 0.9;
+    margin-bottom: 1.2rem;
+    font-size: 0.95rem;
+  }
+
+  .sobre-cta a {
+    display: inline-block;
+    background: #fff;
+    color: #f97316 !important;
+    font-weight: 700;
+    padding: 0.8rem 2rem;
+    border-radius: 999px;
+    text-decoration: none !important;
+    transition: opacity 0.2s;
+  }
+
+  .sobre-cta a:hover { opacity: 0.9; }
+
+  @media (max-width: 640px) {
+    .sobre-content { padding: 1.5rem; }
+    .sobre-hero h1 { font-size: 1.8rem; }
+  }
+</style>
+
+<div class="sobre-wrapper">
+  <div class="sobre-hero">
+    <div class="section-label">CONHEÇA</div>
+    <h1>Os Pechincheiros</h1>
+    <p>{{ .Description }}</p>
+  </div>
+
+  <div class="sobre-content">
+    {{ .Content }}
+  </div>
+
+  <div class="sobre-cta">
+    <h3>🛍️ Bora economizar?</h3>
+    <p>Veja as melhores ofertas selecionadas para você hoje!</p>
+    <a href="/produtos/">Ver ofertas →</a>
+  </div>
+</div>
+{{ end }}
