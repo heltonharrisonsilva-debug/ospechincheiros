@@ -3,6 +3,7 @@ title: "Sobre"
 description: "Conheça Os Pechincheiros — a curadoria de ofertas que vai te ajudar a economizar de verdade"
 date: 2026-04-18
 draft: false
+layout: sobre
 ---
 
 ## Quem somos
