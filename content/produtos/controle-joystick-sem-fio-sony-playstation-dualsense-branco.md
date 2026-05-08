@@ -1,6 +1,6 @@
 ---
 title: "Controle Joystick Sem Fio Sony Playstation Dualsense Branco"
-date: 2026-05-08T13:00:47.745Z
+date: 2026-05-08T19:00:50.252Z
 draft: false
 description: "Confira essa oferta incrível na Shopee!"
 coverImage: "https://http2.mlstatic.com/D_NQ_NP_734154-MLA95669318090_102025-F.jpg"
