@@ -465,6 +465,44 @@
   </div>
 </div>
 
+<!-- BUSCA -->
+<div class="busca-section">
+  <div class="busca-wrapper">
+    <div class="busca-input-wrap">
+      <span class="busca-icon">🔍</span>
+      <input 
+        type="text" 
+        id="busca-input" 
+        placeholder="Buscar produtos, categorias ou lojas..."
+        oninput="filtrarProdutos()"
+      />
+    </div>
+    <div class="busca-filtros">
+      <select id="filtro-categoria" onchange="filtrarProdutos()">
+        <option value="">Todas as categorias</option>
+        <option value="beleza">Beleza</option>
+        <option value="brinquedos">Brinquedos</option>
+        <option value="casa & cozinha">Casa & Cozinha</option>
+        <option value="esporte">Esporte</option>
+        <option value="ferramentas">Ferramentas</option>
+        <option value="informática">Informática</option>
+        <option value="moda">Moda</option>
+        <option value="tecnologia">Tecnologia</option>
+      </select>
+      <select id="filtro-loja" onchange="filtrarProdutos()">
+        <option value="">Todas as lojas</option>
+        <option value="shopee">Shopee</option>
+        <option value="mercado livre">Mercado Livre</option>
+        <option value="magazine luiza">Magazine Luiza</option>
+        <option value="amazon">Amazon</option>
+      </select>
+    </div>
+  </div>
+  <div id="busca-resultado" class="busca-resultado" style="display:none;">
+    <span id="busca-count"></span>
+  </div>
+</div>
+
 <!-- PRODUTOS -->
 {{ $produtos := where .Site.RegularPages "Section" "produtos" }}
 {{ if $produtos }}
@@ -475,7 +513,10 @@
   </div>
   <div class="produtos-grid">
     {{ range $produtos }}
-    <div class="produto-card">
+    <div class="produto-card" 
+      data-titulo="{{ .Title | lower }}"
+      data-categoria="{{ range .Params.categories }}{{ . | lower }}{{ end }}"
+      data-loja="{{ .Params.store | lower }}">
       <div class="produto-card-img">
         {{ if .Params.coverImage }}
         <img src="{{ .Params.coverImage }}" alt="{{ .Title }}" loading="lazy" />
@@ -570,4 +611,43 @@
     <p>© {{ now.Year }} Os Pechincheiros. Todos os direitos reservados.</p>
   </div>
 </footer>
+
+<script>
+function filtrarProdutos() {
+  const busca = document.getElementById('busca-input').value.toLowerCase().trim();
+  const categoria = document.getElementById('filtro-categoria').value.toLowerCase();
+  const loja = document.getElementById('filtro-loja').value.toLowerCase();
+  
+  const cards = document.querySelectorAll('.produto-card');
+  let visiveis = 0;
+
+  cards.forEach(card => {
+    const titulo = (card.dataset.titulo || '').toLowerCase();
+    const cardCategoria = (card.dataset.categoria || '').toLowerCase();
+    const cardLoja = (card.dataset.loja || '').toLowerCase();
+
+    const matchBusca = !busca || titulo.includes(busca);
+    const matchCategoria = !categoria || cardCategoria.includes(categoria);
+    const matchLoja = !loja || cardLoja.includes(loja);
+
+    if (matchBusca && matchCategoria && matchLoja) {
+      card.classList.remove('hidden');
+      visiveis++;
+    } else {
+      card.classList.add('hidden');
+    }
+  });
+
+  const resultado = document.getElementById('busca-resultado');
+  const count = document.getElementById('busca-count');
+  
+  if (busca || categoria || loja) {
+    resultado.style.display = 'block';
+    count.textContent = `${visiveis} produto${visiveis !== 1 ? 's' : ''} encontrado${visiveis !== 1 ? 's' : ''}`;
+  } else {
+    resultado.style.display = 'none';
+  }
+}
+</script>
+
 {{ end }}
