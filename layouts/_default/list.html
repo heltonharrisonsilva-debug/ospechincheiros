@@ -196,6 +196,10 @@
   }
   .ver-todos:hover { text-decoration: underline !important; }
 
+  .produto-card.hidden {
+    display: none !important;
+  }
+
   .produtos-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -618,6 +622,7 @@ function filtrarProdutos() {
   const categoria = document.getElementById('filtro-categoria').value.toLowerCase();
   const loja = document.getElementById('filtro-loja').value.toLowerCase();
   
+  const grid = document.querySelector('.produtos-grid');
   const cards = document.querySelectorAll('.produto-card');
   let visiveis = 0;
 
@@ -631,10 +636,11 @@ function filtrarProdutos() {
     const matchLoja = !loja || cardLoja.includes(loja);
 
     if (matchBusca && matchCategoria && matchLoja) {
-      card.classList.remove('hidden');
+      card.style.display = 'flex';
+      grid.appendChild(card);
       visiveis++;
     } else {
-      card.classList.add('hidden');
+      card.style.display = 'none';
     }
   });
 
@@ -643,7 +649,11 @@ function filtrarProdutos() {
   
   if (busca || categoria || loja) {
     resultado.style.display = 'block';
-    count.textContent = `${visiveis} produto${visiveis !== 1 ? 's' : ''} encontrado${visiveis !== 1 ? 's' : ''}`;
+    if (visiveis === 0) {
+      count.textContent = 'Nenhum produto encontrado';
+    } else {
+      count.textContent = `${visiveis} produto${visiveis !== 1 ? 's' : ''} encontrado${visiveis !== 1 ? 's' : ''}`;
+    }
   } else {
     resultado.style.display = 'none';
   }
