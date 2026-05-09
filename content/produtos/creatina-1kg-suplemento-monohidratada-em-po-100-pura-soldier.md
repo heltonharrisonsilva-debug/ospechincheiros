@@ -6,9 +6,9 @@ description: "Confira essa oferta incrível na Shopee!"
 coverImage: "https://http2.mlstatic.com/D_NQ_NP_894230-MLA111390627295_052026-F.jpg"
 affiliateLink: "https://www.mercadolivre.com.br/p/MLB18725310"
 price: "75,90"
-store: "Shopee"
+store: "Mercado Livre"
 categories: ["Esporte"]
-tags: ["shopee", "oferta", "pechincheiros"]
+tags: ["mercadolivre", "oferta", "pechincheiros"]
 badge: "Novo"
 ---
 
