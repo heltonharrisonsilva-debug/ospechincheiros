@@ -8,10 +8,9 @@ affiliateLink: "https://s.shopee.com.br/2g79x21dfM"
 price: "22,90"
 store: "Shopee"
 categories: ["Casa & Cozinha"]
-tags: ["shopee", "oferta", "pechincheiros"]
+tags: ["shopee", "oferta", "promocao", "desconto", "pechincha", "achado", "ospechincheiros", "casa", "cozinha", "decoracao", "utilidades", "organizacao"]
 badge: "Novo"
 ---
-
 ## Kit com 15 potes plásticos herméticos para cozinha
 
 Encontramos essa oferta incrível para você! Clique no botão abaixo e aproveite antes que acabe.
