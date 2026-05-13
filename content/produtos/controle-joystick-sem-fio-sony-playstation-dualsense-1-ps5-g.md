@@ -6,9 +6,9 @@ description: "Confira essa oferta incrível na Shopee!"
 coverImage: "https://http2.mlstatic.com/D_NQ_NP_850307-MLA52988770639_122022-F.jpg"
 affiliateLink: "https://www.mercadolivre.com.br/p/MLB19692999"
 price: "1799,00"
-store: "Shopee"
-categories: ["Casa & Cozinha"]
-tags: ["shopee", "oferta", "pechincheiros"]
+store: "Mercado Livre"
+categories: ["Tecnologia"]
+tags: ["mercadolivre", "oferta", "pechincheiros"]
 badge: "Novo"
 ---
 
