@@ -4,7 +4,7 @@ date: 2026-05-12T13:00:52.141Z
 draft: false
 description: "Celular Android com tela de 6,5 polegadas e câmera dupla"
 coverImage: "https://http2.mlstatic.com/D_NQ_NP_937647-MLA95360419493_102025-F.jpg"
-affiliateLink: "https://www.mercadolivre.com.br/p/MLB48486617"
+affiliateLink: "https://meli.la/22gUu6q"
 price: "1040,00"
 store: "Mercado Livre"
 categories: ["Eletrônicos"]
@@ -16,4 +16,4 @@ badge: "Novo"
 
 Celular Android com tela de 6,5 polegadas e câmera dupla
 
-👉 [Comprar agora na Mercado Livre](https://www.mercadolivre.com.br/p/MLB48486617)
+👉 [Comprar agora na Mercado Livre](https://meli.la/22gUu6q)
