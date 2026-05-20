@@ -4,7 +4,7 @@ date: 2026-05-19T00:00:00Z
 draft: false
 description: "Ducha Lorenzetti 5500W com banho quente e potente — qualidade garantida!"
 coverImage: "https://http2.mlstatic.com/D_NQ_NP_896908-MLA101388142032_122025-F.jpg"
-affiliateLink: "https://www.mercadolivre.com.br/p/MLB24327117"
+affiliateLink: "https://meli.la/2qxgJ3k"
 price: "129,00"
 store: "Mercado Livre"
 categories: ["Casa & Cozinha"]
@@ -16,4 +16,4 @@ badge: "Novo"
 
 Ducha Lorenzetti 5500W com banho quente e potente — qualidade garantida!
 
-👉 [Comprar agora no Mercado Livre](https://www.mercadolivre.com.br/p/MLB24327117)
+👉 [Comprar agora no Mercado Livre](https://meli.la/2qxgJ3k)
