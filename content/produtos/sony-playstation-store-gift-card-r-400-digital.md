@@ -4,7 +4,7 @@ date: 2026-05-19T00:00:00Z
 draft: false
 description: "Gift Card PlayStation Store R$400 — recarregue sua carteira e aproveite jogos e DLCs!"
 coverImage: "https://http2.mlstatic.com/D_NQ_NP_911391-MLA97783828318_112025-F.jpg"
-affiliateLink: "https://www.mercadolivre.com.br/p/MLB50196685"
+affiliateLink: "https://meli.la/27SZyxN"
 price: "400,00"
 store: "Mercado Livre"
 categories: ["Tecnologia"]
@@ -16,4 +16,4 @@ badge: "Novo"
 
 Gift Card PlayStation Store R$400 — recarregue sua carteira e aproveite jogos e DLCs!
 
-👉 [Comprar agora no Mercado Livre](https://www.mercadolivre.com.br/p/MLB50196685)
+👉 [Comprar agora no Mercado Livre](https://meli.la/27SZyxN)
