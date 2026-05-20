@@ -4,7 +4,7 @@ date: 2026-05-19T00:00:00Z
 draft: false
 description: "Lençol extra macio 400 fios micropercal — conforto e maciez para o seu sono!"
 coverImage: "https://cf.shopee.com.br/file/br-11134207-7r98o-m2jzarq31tjq53"
-affiliateLink: "https://s.shopee.com.br/1gFYTEUGs2"
+affiliateLink: "https://meli.la/1vhkDpc"
 price: "13,90"
 store: "Shopee"
 categories: ["Casa & Cozinha"]
@@ -16,4 +16,4 @@ badge: "Novo"
 
 Lençol extra macio 400 fios micropercal — conforto e maciez para o seu sono!
 
-👉 [Comprar agora na Shopee](https://s.shopee.com.br/1gFYTEUGs2)
+👉 [Comprar agora na Shopee](https://meli.la/1vhkDpc)
