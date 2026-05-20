@@ -4,7 +4,7 @@ date: 2026-05-19T00:00:00Z
 draft: false
 description: "Samsung Galaxy A17 4G com 128GB e 6GB RAM — desempenho e armazenamento de sobra!"
 coverImage: "https://http2.mlstatic.com/D_NQ_NP_823538-MLA98230873705_112025-F.jpg"
-affiliateLink: "https://www.mercadolivre.com.br/p/MLB62112346"
+affiliateLink: "https://meli.la/2Gx9V95"
 price: "1.239,00"
 store: "Mercado Livre"
 categories: ["Tecnologia"]
@@ -16,4 +16,4 @@ badge: "Novo"
 
 Samsung Galaxy A17 4G com 128GB e 6GB RAM — desempenho e armazenamento de sobra!
 
-👉 [Comprar agora no Mercado Livre](https://www.mercadolivre.com.br/p/MLB62112346)
+👉 [Comprar agora no Mercado Livre](https://meli.la/2Gx9V95)
