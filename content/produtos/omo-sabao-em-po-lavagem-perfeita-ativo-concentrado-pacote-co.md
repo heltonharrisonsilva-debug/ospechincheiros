@@ -4,11 +4,11 @@ date: 2026-05-02T17:54:10.455Z
 draft: false
 description: "Confira essa oferta incrível na Shopee!"
 coverImage: "https://http2.mlstatic.com/D_NQ_NP_731561-MLA99452016820_112025-F.jpg"
-affiliateLink: "https://www.mercadolivre.com.br/p/MLB17001103"
+affiliateLink: "https://meli.la/147LWHi"
 price: "32,98"
 store: "Mercado Livre"
 categories: ["Casa & Cozinha"]
-tags: ["shopee", "oferta", "pechincheiros"]
+tags: ["mercado livre", "oferta", "pechincheiros", "sabao", "omo"]
 badge: "Novo"
 ---
 
@@ -16,4 +16,4 @@ badge: "Novo"
 
 Encontramos essa oferta incrível para você! Clique no botão abaixo e aproveite antes que acabe.
 
-👉 [Comprar agora na Shopee](https://www.mercadolivre.com.br/p/MLB17001103)
+👉 [Comprar agora na Shopee](https://meli.la/147LWHi)
