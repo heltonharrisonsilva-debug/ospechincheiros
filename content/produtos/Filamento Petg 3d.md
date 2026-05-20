@@ -4,7 +4,7 @@ date: 2026-05-07T00:00:00Z
 draft: false
 description: "Confira essa oferta incrível no Mercado Livre!"
 coverImage: "https://http2.mlstatic.com/D_NQ_NP_626609-MLA93332235284_092025-F.jpg"
-affiliateLink: "https://www.mercadolivre.com.br/p/MLB46882172"
+affiliateLink: "https://meli.la/1GGvmsW"
 price: "68,90"
 store: "Mercado Livre"
 categories: ["Informática"]
@@ -16,4 +16,4 @@ badge: "Novo"
 
 Encontramos essa oferta incrível para você! Clique no botão abaixo e aproveite antes que acabe.
 
-👉 [Comprar agora no Mercado Livre](https://www.mercadolivre.com.br/p/MLB46882172)
+👉 [Comprar agora no Mercado Livre](https://meli.la/1GGvmsW)
