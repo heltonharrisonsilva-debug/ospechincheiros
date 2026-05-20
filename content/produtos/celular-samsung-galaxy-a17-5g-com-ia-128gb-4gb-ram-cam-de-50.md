@@ -4,7 +4,7 @@ date: 2026-05-19T00:00:00Z
 draft: false
 description: "Samsung Galaxy A17 5G com IA, câmera de 50MP e NFC — tecnologia de ponta por menos!"
 coverImage: "https://http2.mlstatic.com/D_NQ_NP_755351-MLA99597188918_122025-F.jpg"
-affiliateLink: "https://www.mercadolivre.com.br/p/MLB55027309"
+affiliateLink: https://meli.la/2Gx9V95"
 price: "999,00"
 store: "Mercado Livre"
 categories: ["Tecnologia"]
@@ -16,4 +16,4 @@ badge: "Novo"
 
 Samsung Galaxy A17 5G com IA, câmera de 50MP e NFC — tecnologia de ponta por menos!
 
-👉 [Comprar agora no Mercado Livre](https://www.mercadolivre.com.br/p/MLB55027309)
+👉 [Comprar agora no Mercado Livre](https://meli.la/2Gx9V95)
