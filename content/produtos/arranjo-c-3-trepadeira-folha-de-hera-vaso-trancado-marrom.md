@@ -1,19 +1,14 @@
 ---
 title: "Arranjo c/ 3 Trepadeira Folha de HERA + Vaso Trançado Marrom"
-date: 2026-04-19T11:00:52.608Z
+date: "2026-05-22T11:57:51.717Z"
 draft: false
-description: "Confira essa oferta incrível na Shopee!"
-coverImage: "https://down-br.img.susercontent.com/file/br-11134207-7r98o-md3o52t872giaa.webp"
-affiliateLink: "https://s.shopee.com.br/9UxekLVyl6"
-price: "16,80"
+description: "Um arranjo bonito com 3 trepadeiras folha de hera e um vaso trançado marrom que adiciona um toque de elegância a qualquer ambiente."
+categoria: "Casa & Cozinha"
 store: "Shopee"
-categories: ["Casa & Cozinha"]
-tags: ["shopee", "oferta", "pechincheiros"]
-badge: "Novo"
+price: "16,80"
+coverImage: "https://cf.shopee.com.br/file/br-11134207-7r98o-md3o52t872giaa"
+affiliateLink: "https://s.shopee.com.br/5flmscCC5N"
+slug: "arranjo-c-3-trepadeira-folha-de-hera-vaso-trancado-marrom"
 ---
 
-## Arranjo c/ 3 Trepadeira Folha de HERA + Vaso Trançado Marrom
-
-Encontramos essa oferta incrível para você! Clique no botão abaixo e aproveite antes que acabe.
-
-👉 [Comprar agora na Shopee](https://s.shopee.com.br/9UxekLVyl6)
+Um arranjo bonito com 3 trepadeiras folha de hera e um vaso trançado marrom que adiciona um toque de elegância a qualquer ambiente.
