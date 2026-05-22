@@ -82,6 +82,12 @@
     overflow: hidden;
     flex: 1;
   }
+  .produto-card-preco {
+    font-size: 1.15rem;
+    font-weight: 900;
+    color: #f97316;
+    margin-top: 0.2rem;
+  }
   .produto-card-btn {
     display: block;
     text-align: center;
@@ -119,15 +125,12 @@
       {{ end }}
       <div class="produto-card-title">{{ .Title }}</div>
       <div class="produto-card-desc">{{ .Description }}</div>
-      {{ if .Params.affiliateLink }}
-      <a class="produto-card-btn" href="{{ .Params.affiliateLink }}" target="_blank" rel="noopener">
-        🛒 Ver Oferta →
-      </a>
-      {{ else }}
-      <a class="produto-card-btn" href="{{ .Permalink }}">
-        Ver Detalhes →
-      </a>
+      {{ if .Params.price }}
+      <div class="produto-card-preco">R$ {{ .Params.price }}</div>
       {{ end }}
+      <a class="produto-card-btn" href="{{ .Permalink }}">
+        🔍 Ver Detalhes →
+      </a>
     </div>
   </div>
   {{ end }}
