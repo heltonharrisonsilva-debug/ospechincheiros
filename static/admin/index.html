@@ -1,23 +1,533 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="pt-BR">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Os Pechincheiros - Admin</title>
-  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Admin — Os Pechincheiros</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@400;500;600&display=swap');
+
+  :root {
+    --laranja: #f97316;
+    --laranja-dark: #ea580c;
+    --bg: #fafaf8;
+    --card: #ffffff;
+    --border: #f0ede8;
+    --text: #1a1208;
+    --muted: #9a8f7e;
+    --success: #16a34a;
+    --error: #dc2626;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+  }
+
+  /* LOGIN */
+  .login-screen {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #fff8f0 0%, #fff3e0 60%, #ffe8cc 100%);
+    padding: 1.5rem;
+  }
+  .login-card {
+    background: #fff;
+    border-radius: 24px;
+    padding: 3rem 2.5rem;
+    width: 100%;
+    max-width: 420px;
+    box-shadow: 0 8px 48px rgba(249,115,22,0.12);
+    border: 1px solid var(--border);
+  }
+  .login-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 2rem;
+  }
+  .login-logo-icon {
+    width: 48px;
+    height: 48px;
+    background: linear-gradient(135deg, var(--laranja), var(--laranja-dark));
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+  }
+  .login-logo-text {
+    font-family: 'Syne', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: var(--text);
+    line-height: 1.1;
+  }
+  .login-logo-text span {
+    display: block;
+    font-size: 0.75rem;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 500;
+    color: var(--muted);
+  }
+  .login-title {
+    font-family: 'Syne', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 800;
+    margin-bottom: 0.4rem;
+  }
+  .login-sub {
+    color: var(--muted);
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+  }
+  .field {
+    margin-bottom: 1.2rem;
+  }
+  .field label {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.4rem;
+  }
+  .field input, .field select, .field textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1.5px solid var(--border);
+    border-radius: 12px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.95rem;
+    color: var(--text);
+    background: #fafaf8;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    outline: none;
+  }
+  .field input:focus, .field select:focus, .field textarea:focus {
+    border-color: var(--laranja);
+    box-shadow: 0 0 0 3px rgba(249,115,22,0.1);
+    background: #fff;
+  }
+  .field textarea {
+    resize: vertical;
+    min-height: 80px;
+  }
+  .btn {
+    width: 100%;
+    padding: 0.85rem;
+    background: linear-gradient(135deg, var(--laranja), var(--laranja-dark));
+    color: #fff;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: opacity 0.2s, transform 0.1s;
+    box-shadow: 0 4px 16px rgba(249,115,22,0.3);
+  }
+  .btn:hover { opacity: 0.92; transform: translateY(-1px); }
+  .btn:active { transform: translateY(0); }
+  .btn:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
+
+  /* ADMIN */
+  .admin-screen { display: none; min-height: 100vh; }
+
+  .topbar {
+    background: #fff;
+    border-bottom: 1px solid var(--border);
+    padding: 0 2rem;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+  .topbar-logo {
+    font-family: 'Syne', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+  }
+  .topbar-logo-icon {
+    width: 36px;
+    height: 36px;
+    background: linear-gradient(135deg, var(--laranja), var(--laranja-dark));
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+  }
+  .topbar-right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  .topbar-user {
+    font-size: 0.85rem;
+    color: var(--muted);
+  }
+  .btn-logout {
+    padding: 0.4rem 1rem;
+    background: transparent;
+    border: 1.5px solid var(--border);
+    border-radius: 8px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--muted);
+    cursor: pointer;
+    transition: all 0.2s;
+    font-family: 'DM Sans', sans-serif;
+  }
+  .btn-logout:hover { border-color: var(--laranja); color: var(--laranja); }
+
+  .admin-body {
+    max-width: 760px;
+    margin: 2.5rem auto;
+    padding: 0 1.5rem 4rem;
+  }
+
+  .page-title {
+    font-family: 'Syne', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 800;
+    margin-bottom: 0.3rem;
+  }
+  .page-sub {
+    color: var(--muted);
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+  }
+
+  .form-card {
+    background: var(--card);
+    border-radius: 20px;
+    border: 1px solid var(--border);
+    padding: 2rem;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.04);
+    margin-bottom: 1.5rem;
+  }
+  .form-card-title {
+    font-family: 'Syne', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding-bottom: 0.8rem;
+    border-bottom: 1px solid var(--border);
+  }
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+  @media (max-width: 600px) {
+    .form-row { grid-template-columns: 1fr; }
+    .admin-body { padding: 0 1rem 4rem; }
+  }
+
+  .preview-img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 1.5px solid var(--border);
+    margin-top: 0.5rem;
+    display: none;
+    background: #f5f5f0;
+  }
+
+  .toast {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    padding: 1rem 1.5rem;
+    border-radius: 14px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+    transform: translateY(100px);
+    opacity: 0;
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    z-index: 999;
+    max-width: 360px;
+  }
+  .toast.show {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  .toast.success {
+    background: #f0fdf4;
+    color: var(--success);
+    border: 1px solid #bbf7d0;
+  }
+  .toast.error {
+    background: #fef2f2;
+    color: var(--error);
+    border: 1px solid #fecaca;
+  }
+
+  .spinner {
+    width: 18px;
+    height: 18px;
+    border: 2.5px solid rgba(255,255,255,0.4);
+    border-top-color: #fff;
+    border-radius: 50%;
+    animation: spin 0.7s linear infinite;
+    display: inline-block;
+  }
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  .char-count {
+    font-size: 0.75rem;
+    color: var(--muted);
+    text-align: right;
+    margin-top: 0.25rem;
+  }
+
+  select option { font-family: 'DM Sans', sans-serif; }
+</style>
 </head>
 <body>
-  <script>
-    if (window.netlifyIdentity) {
-      window.netlifyIdentity.on("init", user => {
-        if (!user) {
-          window.netlifyIdentity.on("login", () => {
-            document.location.href = "/admin/";
-          });
-        }
-      });
+
+<!-- LOGIN -->
+<div class="login-screen" id="loginScreen">
+  <div class="login-card">
+    <div class="login-logo">
+      <div class="login-logo-icon">🛍️</div>
+      <div class="login-logo-text">
+        Os Pechincheiros
+        <span>Painel Administrativo</span>
+      </div>
+    </div>
+    <div class="login-title">Bem-vindo de volta</div>
+    <div class="login-sub">Acesse para gerenciar produtos</div>
+    <div class="field">
+      <label>Senha de acesso</label>
+      <input type="password" id="senhaInput" placeholder="••••••••" onkeydown="if(event.key==='Enter')entrar()" />
+    </div>
+    <button class="btn" onclick="entrar()" id="btnEntrar">Entrar</button>
+    <div id="loginErro" style="color:var(--error);font-size:0.85rem;margin-top:0.8rem;text-align:center;display:none;">
+      ❌ Senha incorreta
+    </div>
+  </div>
+</div>
+
+<!-- ADMIN -->
+<div class="admin-screen" id="adminScreen">
+  <div class="topbar">
+    <div class="topbar-logo">
+      <div class="topbar-logo-icon">🛍️</div>
+      Os Pechincheiros
+    </div>
+    <div class="topbar-right">
+      <span class="topbar-user">Admin</span>
+      <button class="btn-logout" onclick="sair()">Sair</button>
+    </div>
+  </div>
+
+  <div class="admin-body">
+    <div class="page-title">Novo Produto</div>
+    <div class="page-sub">Preencha os dados abaixo. O produto será publicado automaticamente via n8n.</div>
+
+    <!-- INFORMAÇÕES BÁSICAS -->
+    <div class="form-card">
+      <div class="form-card-title">📦 Informações do Produto</div>
+
+      <div class="field">
+        <label>Nome do produto *</label>
+        <input type="text" id="productName" placeholder="Ex: Fone Bluetooth JBL Tune 510BT" maxlength="120" oninput="contarChars(this,'countName',120)" />
+        <div class="char-count"><span id="countName">0</span>/120</div>
+      </div>
+
+      <div class="form-row">
+        <div class="field">
+          <label>Preço (R$) *</label>
+          <input type="number" id="price" placeholder="0.00" step="0.01" min="0" />
+        </div>
+        <div class="field">
+          <label>Loja *</label>
+          <select id="store">
+            <option value="">Selecione a loja</option>
+            <option value="Shopee">Shopee</option>
+            <option value="Mercado Livre">Mercado Livre</option>
+            <option value="Magazine Luiza">Magazine Luiza</option>
+            <option value="Amazon">Amazon</option>
+            <option value="Americanas">Americanas</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="field">
+        <label>Categoria *</label>
+        <select id="category">
+          <option value="">Selecione a categoria</option>
+          <option value="Beleza">✨ Beleza</option>
+          <option value="Brinquedos">🧸 Brinquedos</option>
+          <option value="Casa & Cozinha">🏠 Casa & Cozinha</option>
+          <option value="Esporte">🏋️ Esporte</option>
+          <option value="Ferramentas">🔧 Ferramentas</option>
+          <option value="Informática">💻 Informática</option>
+          <option value="Moda">👗 Moda</option>
+          <option value="Tecnologia">📱 Tecnologia</option>
+          <option value="Eletrônicos">🖥️ Eletrônicos</option>
+          <option value="Livros">📚 Livros</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- LINKS -->
+    <div class="form-card">
+      <div class="form-card-title">🔗 Links</div>
+
+      <div class="field">
+        <label>Link de afiliado *</label>
+        <input type="url" id="offerLink" placeholder="https://..." />
+      </div>
+
+      <div class="field">
+        <label>URL da imagem do produto</label>
+        <input type="url" id="imageUrl" placeholder="https://..." oninput="previewImagem(this.value)" />
+        <img id="imgPreview" class="preview-img" alt="Preview" onerror="this.style.display='none'" />
+      </div>
+    </div>
+
+    <!-- BOTÃO -->
+    <button class="btn" onclick="publicar()" id="btnPublicar">
+      🚀 Publicar Produto
+    </button>
+  </div>
+</div>
+
+<!-- TOAST -->
+<div class="toast" id="toast"></div>
+
+<script>
+const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzF3ofZ77bU5yvdU5jngZ6PW0Q0EgWodrs5xAOTAbG-ql0V-e3ECay9GP9Hc9eluBI3uA/exec';
+const SENHA_LOCAL = 'admin123'; // senha local para mostrar a tela — validação real é no Apps Script
+
+// ── AUTH ─────────────────────────────────────────────────────────────────────
+function entrar() {
+  const senha = document.getElementById('senhaInput').value;
+  const erro = document.getElementById('loginErro');
+  if (!senha) return;
+
+  // Guarda senha na sessão para enviar ao backend
+  sessionStorage.setItem('adminSenha', senha);
+  erro.style.display = 'none';
+  document.getElementById('loginScreen').style.display = 'none';
+  document.getElementById('adminScreen').style.display = 'block';
+}
+
+function sair() {
+  sessionStorage.removeItem('adminSenha');
+  document.getElementById('loginScreen').style.display = 'flex';
+  document.getElementById('adminScreen').style.display = 'none';
+  document.getElementById('senhaInput').value = '';
+}
+
+// Mantém sessão ao recarregar
+if (sessionStorage.getItem('adminSenha')) {
+  document.getElementById('loginScreen').style.display = 'none';
+  document.getElementById('adminScreen').style.display = 'block';
+}
+
+// ── UTILS ────────────────────────────────────────────────────────────────────
+function contarChars(input, spanId, max) {
+  document.getElementById(spanId).textContent = input.value.length;
+}
+
+function previewImagem(url) {
+  const img = document.getElementById('imgPreview');
+  if (url && url.startsWith('http')) {
+    img.src = url;
+    img.style.display = 'block';
+  } else {
+    img.style.display = 'none';
+  }
+}
+
+function toast(msg, tipo = 'success') {
+  const el = document.getElementById('toast');
+  el.className = `toast ${tipo}`;
+  el.innerHTML = tipo === 'success' ? `✅ ${msg}` : `❌ ${msg}`;
+  el.classList.add('show');
+  setTimeout(() => el.classList.remove('show'), 4000);
+}
+
+function val(id) { return document.getElementById(id).value.trim(); }
+
+// ── PUBLICAR ─────────────────────────────────────────────────────────────────
+async function publicar() {
+  const productName = val('productName');
+  const price       = val('price');
+  const store       = val('store');
+  const category    = val('category');
+  const offerLink   = val('offerLink');
+  const imageUrl    = val('imageUrl');
+  const senha       = sessionStorage.getItem('adminSenha') || '';
+
+  // Validação
+  if (!productName) return toast('Informe o nome do produto', 'error');
+  if (!price)       return toast('Informe o preço', 'error');
+  if (!store)       return toast('Selecione a loja', 'error');
+  if (!category)    return toast('Selecione a categoria', 'error');
+  if (!offerLink)   return toast('Informe o link de afiliado', 'error');
+
+  const btn = document.getElementById('btnPublicar');
+  btn.disabled = true;
+  btn.innerHTML = '<span class="spinner"></span> Publicando...';
+
+  try {
+    const resp = await fetch(SCRIPT_URL, {
+      method: 'POST',
+      body: JSON.stringify({ senha, productName, price, store, category, offerLink, imageUrl }),
+    });
+
+    const data = await resp.json();
+
+    if (data.ok) {
+      toast('Produto enviado! O n8n irá publicar em instantes.', 'success');
+      limparForm();
+    } else if (data.erro === 'Senha incorreta') {
+      toast('Senha incorreta. Faça login novamente.', 'error');
+      sair();
+    } else {
+      toast(data.erro || 'Erro ao publicar', 'error');
     }
-  </script>
-  <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
+  } catch (err) {
+    toast('Erro de conexão. Tente novamente.', 'error');
+  } finally {
+    btn.disabled = false;
+    btn.innerHTML = '🚀 Publicar Produto';
+  }
+}
+
+function limparForm() {
+  ['productName','price','store','category','offerLink','imageUrl'].forEach(id => {
+    document.getElementById(id).value = '';
+  });
+  document.getElementById('imgPreview').style.display = 'none';
+  document.getElementById('countName').textContent = '0';
+}
+</script>
 </body>
 </html>
