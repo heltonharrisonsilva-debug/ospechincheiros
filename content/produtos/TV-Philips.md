@@ -15,4 +15,14 @@ description: |
   Imagens ultra nítidas, cores vibrantes e detalhes impressionantes em cada cena.
   🔊 Som Dolby Atmos
   Áudio poderoso e envolvente que faz você sentir cada detalhe.
-  🎙️ Cont
+  🎙️ Controle por voz + Alexa + AirPlay
+  Mais praticidade e tecnologia no seu dia a dia.
+  🚨 Quem vê ao vivo se impressiona. Quem compra não se arrepende.
+coverImage: "https://m.media-amazon.com/images/I/61HN+7ldJnL._AC_SL1500_.jpg"
+affiliateLink: "https://amzn.to/49lc1d0"
+price: "2.066,99"
+store: "Amazon"
+categories: ["Eletronico"]
+tags: ["amazon", "oferta", "pechincheiros"]
+badge: "Novo"
+---
