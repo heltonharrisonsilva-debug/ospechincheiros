@@ -29,4 +29,4 @@ badge: "Novo"
 
 O Kit 02 Travesseiros Toque de Pluma Premium Percal 400 Fios foi feito para quem quer transformar o sono em uma verdadeira experiência de conforto e relaxamento. 🛏️💤
 
-👉 [Comprar agora na Shopee](https://amzn.to/43bc3kh)
+👉 [Comprar agora na Amazon](https://amzn.to/43bc3kh)
