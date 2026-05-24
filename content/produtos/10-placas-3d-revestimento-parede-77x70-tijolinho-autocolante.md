@@ -7,7 +7,7 @@ categoria: "Casa & Cozinha"
 store: "Mercado Livre"
 price: "38,10"
 coverImage: "https://http2.mlstatic.com/D_NQ_NP_756790-MLA106359478879_022026-F.jpg"
-affiliateLink: "https://www.mercadolivre.com.br/p/MLB22610539?affId=lp20250304070745"
+affiliateLink: "https://meli.la/2WGxZrC"
 slug: "10-placas-3d-revestimento-parede-77x70-tijolinho-autocolante"
 ---
 
