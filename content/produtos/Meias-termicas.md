@@ -5,7 +5,7 @@ draft: false
 description: "Meia Térmica Soft Felpuda Cano Alto. Composto por 3 pares de meias felpudas Soft cano longo modelo masculino quentinho em cores sortidas. Produto em tamanho único que atende o número 36-44. "
 coverImage: "https://m.media-amazon.com/images/I/617Br93QH1L._AC_SX679_.jpg"
 affiliateLink: "https://amzn.to/3RJ1a6w"
-price: "725"
+price: "43,99"
 store: "Amazon"
 categories: ["Moda"]
 tags: ["amazon", "oferta", "pechincheiros", "mercado livre", "shopee"]
