@@ -10,7 +10,7 @@ Descubra uma experiência de jogo mais profunda e altamente imersiva"
 coverImage: "https://http2.mlstatic.com/D_NQ_NP_971659-MLA100012678485_122025-F.jpg"
 affiliateLink: "https://meli.la/1TL1x9M"
 price: "725"
-store: "Amazon"
+store: "Mercado Livre"
 categories: ["Eletronico"]
 tags: ["amazon", "oferta", "pechincheiros", "mercado livre", "shopee"]
 badge: "Novo"
