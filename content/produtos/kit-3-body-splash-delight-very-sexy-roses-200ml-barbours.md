@@ -1,19 +1,14 @@
 ---
 title: "Kit 3 Body Splash Delight Very Sexy Roses 200ml Barbours"
-date: 2026-04-17T23:03:42.556Z
+date: "2026-06-08T11:00:52.752Z"
 draft: false
-description: "Confira essa oferta incrível na Shopee!"
-coverImage: "https://down-br.img.susercontent.com/file/br-11134207-81ztc-mjhapy8ec8hy64@resize_w450_nl.webp"
-affiliateLink: "https://s.shopee.com.br/9UxcM9uYNf"
-price: "227,90"
+description: "Desfrute da doçura de uma noite de amor com o Kit 3 Body Splash Delight Very Sexy Roses 200ml Barbours. Um perfume sensual e sedutor para você se sentir irresistível."
+categoria: "Moda"
 store: "Shopee"
-categories: ["Beleza"]
-tags: ["shopee", "oferta", "pechincheiros"]
-badge: "Novo"
+price: "139,93"
+coverImage: "https://cf.shopee.com.br/file/br-11134207-81ztc-mjhapy8ec8hy64"
+affiliateLink: "https://s.shopee.com.br/2LVlxiMgFA"
+slug: "kit-3-body-splash-delight-very-sexy-roses-200ml-barbours"
 ---
 
-## Kit 3 Body Splash Delight Very Sexy Roses 200ml Barbours
-
-Encontramos essa oferta incrível para você! Clique no botão abaixo e aproveite antes que acabe.
-
-👉 [Comprar agora na Shopee](https://s.shopee.com.br/9UxcM9uYNf)
+Desfrute da doçura de uma noite de amor com o Kit 3 Body Splash Delight Very Sexy Roses 200ml Barbours. Um perfume sensual e sedutor para você se sentir irresistível.
