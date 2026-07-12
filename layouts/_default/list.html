@@ -5,15 +5,39 @@
 
   /* HERO */
   .hero {
-    background: linear-gradient(135deg, #fff8f0 0%, #fff3e0 50%, #ffe8cc 100%);
-    padding: 4rem 1.5rem 3rem;
-    text-align: center;
     position: relative;
+    min-height: 520px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
     overflow: hidden;
+    padding: 5rem 1.5rem 4rem;
+  }
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    background-image: url('https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?w=1600&q=80');
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
+  }
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(0,0,0,0.72) 0%, rgba(234,88,12,0.55) 100%);
+    z-index: 1;
+  }
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 680px;
+    margin: 0 auto;
   }
   .hero-badge {
     display: inline-block;
-    background: linear-gradient(135deg, #f97316, #ea580c);
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(8px);
     color: #fff;
     font-size: 0.75rem;
     font-weight: 700;
@@ -21,24 +45,26 @@
     border-radius: 999px;
     margin-bottom: 1rem;
     letter-spacing: 0.05em;
+    border: 1px solid rgba(255,255,255,0.25);
   }
   .hero h1 {
-    font-size: 3rem;
+    font-size: 3.2rem;
     font-weight: 900;
     line-height: 1.1;
-    color: #1a1a1a;
-    margin-bottom: 0.5rem;
+    color: #fff;
+    margin-bottom: 0.8rem;
+    text-shadow: 0 2px 16px rgba(0,0,0,0.3);
   }
   .hero h1 span {
-    background: linear-gradient(135deg, #f97316, #ea580c);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: #f97316;
+    -webkit-text-fill-color: #f97316;
   }
   .hero p {
-    color: #666;
-    font-size: 1rem;
+    color: rgba(255,255,255,0.85);
+    font-size: 1.05rem;
     max-width: 500px;
-    margin: 0 auto 1.5rem;
+    margin: 0 auto 2rem;
+    line-height: 1.6;
   }
   .hero-btns {
     display: flex;
@@ -53,22 +79,24 @@
     padding: 0.8rem 1.8rem;
     border-radius: 999px;
     text-decoration: none !important;
-    transition: opacity 0.2s;
+    transition: opacity 0.2s, transform 0.2s;
     font-size: 0.95rem;
+    box-shadow: 0 4px 20px rgba(249,115,22,0.4);
   }
-  .btn-primary:hover { opacity: 0.9; }
+  .btn-primary:hover { opacity: 0.9; transform: translateY(-2px); }
   .btn-secondary {
-    background: transparent;
-    color: #f97316 !important;
+    background: rgba(255,255,255,0.12);
+    backdrop-filter: blur(8px);
+    color: #fff !important;
     font-weight: 700;
     padding: 0.8rem 1.8rem;
     border-radius: 999px;
     text-decoration: none !important;
-    border: 2px solid #f97316;
+    border: 2px solid rgba(255,255,255,0.4);
     transition: all 0.2s;
     font-size: 0.95rem;
   }
-  .btn-secondary:hover { background: #f97316; color: #fff !important; }
+  .btn-secondary:hover { background: rgba(255,255,255,0.22); }
 
   /* BARRA DE BENEFÍCIOS */
   .beneficios-bar {
@@ -539,12 +567,16 @@
 
 <!-- HERO -->
 <div class="hero">
-  <div class="hero-badge">✨ Novas ofertas toda semana</div>
-  <h1>Produtos que<br><span>você vai amar.</span></h1>
-  <p>Uma curadoria das melhores ofertas em tech, beleza, moda, casa e mais. Tudo garimpado, tudo aprovado.</p>
-  <div class="hero-btns">
-    <a href="/produtos/" class="btn-primary">Explorar produtos →</a>
-    <a href="/categories/" class="btn-secondary">Ver categorias</a>
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-badge">✨ Novas ofertas toda semana</div>
+    <h1>Produtos que<br><span>você vai amar.</span></h1>
+    <p>Uma curadoria das melhores ofertas em tech, beleza, moda, casa e mais. Tudo garimpado, tudo aprovado.</p>
+    <div class="hero-btns">
+      <a href="/produtos/" class="btn-primary">Explorar produtos →</a>
+      <a href="/categories/" class="btn-secondary">Ver categorias</a>
+    </div>
   </div>
 </div>
 
