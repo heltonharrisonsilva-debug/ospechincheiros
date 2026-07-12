@@ -70,31 +70,59 @@
   }
   .btn-secondary:hover { background: #f97316; color: #fff !important; }
 
-  .stats {
-    display: flex;
-    justify-content: center;
-    gap: 3rem;
-    padding: 2rem 1.5rem 0;
-    flex-wrap: wrap;
-    margin-top: 2rem;
+  /* BARRA DE BENEFÍCIOS */
+  .beneficios-bar {
+    background: #fff;
+    border-bottom: 1px solid #f0ede8;
+    border-top: 1px solid #f0ede8;
+    padding: 1rem 1.5rem;
   }
-  .stat-num {
-    font-size: 1.5rem;
-    font-weight: 900;
+  .beneficios-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+  }
+  .beneficio-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.5rem;
+  }
+  .beneficio-icon {
+    width: 42px;
+    height: 42px;
+    background: linear-gradient(135deg, #fff3e0, #ffe8cc);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    flex-shrink: 0;
+  }
+  .beneficio-text strong {
+    display: block;
+    font-size: 0.82rem;
+    font-weight: 700;
     color: #1a1a1a;
   }
-  .stat-label {
+  .beneficio-text span {
     font-size: 0.75rem;
     color: #888;
-    margin-top: 0.2rem;
   }
 
-  /* CATEGORIAS */
+  /* CATEGORIAS BANNER */
   .categorias-section {
     max-width: 1200px;
     margin: 2.5rem auto 0;
     padding: 0 1.5rem;
-    text-align: center;
+  }
+  .section-header {
+    display: flex;
+    align-items: baseline;
+    gap: 0.75rem;
+    margin-bottom: 1.2rem;
   }
   .section-label {
     font-size: 0.75rem;
@@ -102,63 +130,66 @@
     color: #f97316;
     text-transform: uppercase;
     letter-spacing: 0.1em;
-    margin-bottom: 0.3rem;
   }
   .section-title {
-    font-size: 1.8rem;
+    font-size: 1.4rem;
     font-weight: 800;
     color: #1a1a1a;
-    margin-bottom: 1.5rem;
   }
   .categorias-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     gap: 1rem;
-    justify-content: center;
-    max-width: 1200px;
-    margin: 0 auto 2rem;
-    padding: 0 1.5rem;
+    margin-bottom: 2rem;
   }
-
-  @media (max-width: 640px) {
-    .categorias-grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
- .categoria-item {
+  .categoria-item {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 0.5rem;
-    padding: 1rem 0.5rem;
-    background: #fff;
-    border-radius: 16px;
-    border: 1px solid #f0f0f0;
+    justify-content: center;
+    gap: 0.6rem;
+    padding: 1.5rem 0.5rem;
+    border-radius: 20px;
     text-decoration: none !important;
-    transition: all 0.2s;
-    min-width: 0;
-    width: 100%;
-  }
-
-  .categoria-nome {
-    font-size: 0.8rem;
-    font-weight: 600;
-    color: #333;
-    text-align: center;
-    word-break: keep-all;
-    hyphens: none;
-    white-space: nowrap;
+    transition: all 0.25s;
+    position: relative;
     overflow: hidden;
-    text-overflow: ellipsis;
-    max-width: 100%;
+    min-height: 110px;
   }
+  .categoria-item::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, #f97316, #ea580c);
+    opacity: 0.08;
+    transition: opacity 0.25s;
+  }
+  .categoria-item {
+    background: #fff;
+    border: 1.5px solid #f0ede8;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+  }
+  .categoria-item:hover::before { opacity: 0.15; }
   .categoria-item:hover {
     border-color: #f97316;
-    box-shadow: 0 4px 16px rgba(249,115,22,0.15);
-    transform: translateY(-2px);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(249,115,22,0.15);
   }
-  .categoria-icon { font-size: 1.8rem; }
-  .categoria-nome { font-size: 0.8rem; font-weight: 600; color: #333; }
+  .categoria-icon {
+    font-size: 2.2rem;
+    position: relative;
+    z-index: 1;
+    line-height: 1;
+  }
+  .categoria-nome {
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    white-space: nowrap;
+  }
 
   /* PRODUTOS */
   .produtos-section {
@@ -195,10 +226,6 @@
     text-decoration: none !important;
   }
   .ver-todos:hover { text-decoration: underline !important; }
-
-  .produto-card.hidden {
-    display: none !important;
-  }
 
   .produtos-grid {
     display: grid;
@@ -240,6 +267,18 @@
     top: 0.5rem;
     left: 0.5rem;
     background: linear-gradient(135deg, #f97316, #ea580c);
+    color: #fff;
+    font-size: 0.65rem;
+    font-weight: 700;
+    padding: 0.2rem 0.5rem;
+    border-radius: 999px;
+    text-transform: uppercase;
+  }
+  .badge-novo {
+    position: absolute;
+    top: 0.5rem;
+    left: 0.5rem;
+    background: #16a34a;
     color: #fff;
     font-size: 0.65rem;
     font-weight: 700;
@@ -306,6 +345,62 @@
   }
   .produto-card-btn:hover { opacity: 0.9; }
 
+  /* BUSCA */
+  .busca-section {
+    max-width: 1200px;
+    margin: 2rem auto 0;
+    padding: 0 1.5rem;
+  }
+  .busca-wrapper {
+    background: #fff;
+    border-radius: 16px;
+    padding: 1rem 1.2rem;
+    border: 1.5px solid #f0ede8;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+    display: flex;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .busca-input-wrap {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex: 1;
+    min-width: 200px;
+  }
+  .busca-icon { font-size: 1rem; color: #aaa; }
+  .busca-input-wrap input {
+    border: none;
+    outline: none;
+    font-size: 0.95rem;
+    width: 100%;
+    color: #1a1a1a;
+    background: transparent;
+  }
+  .busca-filtros {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+  .busca-filtros select {
+    border: 1.5px solid #f0ede8;
+    border-radius: 10px;
+    padding: 0.4rem 0.8rem;
+    font-size: 0.82rem;
+    color: #555;
+    outline: none;
+    background: #fafaf8;
+    cursor: pointer;
+  }
+  .busca-filtros select:focus { border-color: #f97316; }
+  .busca-resultado {
+    margin-top: 0.6rem;
+    font-size: 0.82rem;
+    color: #888;
+    padding: 0 0.2rem;
+  }
+
   /* BANNER OFERTA */
   .banner-oferta {
     max-width: 1200px;
@@ -340,9 +435,7 @@
     line-height: 1.2;
     margin-bottom: 0.5rem;
   }
-  .banner-oferta-texto h2 span {
-    color: #f97316;
-  }
+  .banner-oferta-texto h2 span { color: #f97316; }
   .banner-oferta-texto p {
     color: #aaa;
     font-size: 0.9rem;
@@ -422,11 +515,25 @@
     font-size: 0.8rem;
   }
 
+  /* DIVIDER */
+  .section-divider {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    border: none;
+    border-top: 1px solid #f0ede8;
+  }
+
   @media (max-width: 768px) {
     .hero h1 { font-size: 2rem; }
     .banner-oferta-inner { grid-template-columns: 1fr; }
     .footer-inner { grid-template-columns: 1fr; }
-    .stats { gap: 1.5rem; }
+    .beneficios-inner { grid-template-columns: 1fr 1fr; }
+    .categorias-grid { grid-template-columns: repeat(3, 1fr); }
+  }
+  @media (max-width: 480px) {
+    .categorias-grid { grid-template-columns: repeat(2, 1fr); }
+    .beneficios-inner { grid-template-columns: 1fr; }
   }
 </style>
 
@@ -439,13 +546,48 @@
     <a href="/produtos/" class="btn-primary">Explorar produtos →</a>
     <a href="/categories/" class="btn-secondary">Ver categorias</a>
   </div>
+</div>
 
-  
+<!-- BARRA DE BENEFÍCIOS -->
+<div class="beneficios-bar">
+  <div class="beneficios-inner">
+    <div class="beneficio-item">
+      <div class="beneficio-icon">🔍</div>
+      <div class="beneficio-text">
+        <strong>Produtos garimpados</strong>
+        <span>Selecionamos as melhores ofertas</span>
+      </div>
+    </div>
+    <div class="beneficio-item">
+      <div class="beneficio-icon">💰</div>
+      <div class="beneficio-text">
+        <strong>Economia garantida</strong>
+        <span>Sempre com o melhor preço</span>
+      </div>
+    </div>
+    <div class="beneficio-item">
+      <div class="beneficio-icon">🔒</div>
+      <div class="beneficio-text">
+        <strong>Compra segura</strong>
+        <span>Links diretos para lojas oficiais</span>
+      </div>
+    </div>
+    <div class="beneficio-item">
+      <div class="beneficio-icon">🚀</div>
+      <div class="beneficio-text">
+        <strong>Atualizado diariamente</strong>
+        <span>Novas ofertas toda semana</span>
+      </div>
+    </div>
+  </div>
+</div>
 
 <!-- CATEGORIAS -->
 <div class="categorias-section">
-  <div class="section-label">NAVEGUE</div>
-  <div class="section-title">Categorias</div>
+  <div class="section-header">
+    <span class="section-label">NAVEGUE POR</span>
+    <span class="section-title">Categorias</span>
+  </div>
   <div class="categorias-grid">
     {{ range .Site.Taxonomies.categories }}
     <a href="{{ .Page.Permalink }}" class="categoria-item">
@@ -474,9 +616,9 @@
   <div class="busca-wrapper">
     <div class="busca-input-wrap">
       <span class="busca-icon">🔍</span>
-      <input 
-        type="text" 
-        id="busca-input" 
+      <input
+        type="text"
+        id="busca-input"
         placeholder="Buscar produtos, categorias ou lojas..."
         oninput="filtrarProdutos()"
       />
@@ -507,17 +649,63 @@
   </div>
 </div>
 
-<!-- PRODUTOS -->
-{{ $produtos := where .Site.RegularPages "Section" "produtos" }}
-{{ if $produtos }}
+<!-- NOVIDADES -->
+{{ $todos := where .Site.RegularPages "Section" "produtos" }}
+{{ $novidades := first 5 $todos }}
+{{ if $novidades }}
 <div class="produtos-section">
   <div class="produtos-section-header">
-    <h2>Os mais desejados</h2>
+    <h2>🆕 Novidades</h2>
     <a href="/produtos/" class="ver-todos">Ver todos →</a>
   </div>
-  <div class="produtos-grid">
-    {{ range $produtos }}
-    <div class="produto-card" 
+  <div class="produtos-grid" id="grid-novidades">
+    {{ range $novidades }}
+    <div class="produto-card"
+      data-titulo="{{ .Title | lower }}"
+      data-categoria="{{ range .Params.categories }}{{ . | lower }}{{ end }}"
+      data-loja="{{ .Params.store | lower }}">
+      <div class="produto-card-img">
+        {{ if .Params.coverImage }}
+        <img src="{{ .Params.coverImage }}" alt="{{ .Title }}" loading="lazy" />
+        {{ else }}
+        <img src="https://placehold.co/400x300/f97316/white?text=Produto" alt="{{ .Title }}" loading="lazy" />
+        {{ end }}
+        <span class="badge-novo">NOVO</span>
+      </div>
+      <div class="produto-card-body">
+        {{ if .Params.store }}
+        <span class="produto-store-tag">{{ .Params.store }}</span>
+        {{ end }}
+        <div class="produto-card-title">{{ .Title }}</div>
+        {{ if .Params.price }}
+        <div class="produto-preco">
+          <span class="produto-preco-atual">R$ {{ .Params.price }}</span>
+          {{ if .Params.oldPrice }}
+          <span class="produto-preco-antigo">R$ {{ .Params.oldPrice }}</span>
+          {{ end }}
+        </div>
+        {{ end }}
+        <a class="produto-card-btn" href="{{ .Permalink }}">
+          🔍 Ver Detalhes →
+        </a>
+      </div>
+    </div>
+    {{ end }}
+  </div>
+</div>
+{{ end }}
+
+<!-- MAIS VISTOS -->
+{{ $mais := after 5 $todos }}
+{{ if $mais }}
+<div class="produtos-section">
+  <div class="produtos-section-header">
+    <h2>🔥 Mais Vistos</h2>
+    <a href="/produtos/" class="ver-todos">Ver todos →</a>
+  </div>
+  <div class="produtos-grid" id="grid-mais">
+    {{ range $mais }}
+    <div class="produto-card"
       data-titulo="{{ .Title | lower }}"
       data-categoria="{{ range .Params.categories }}{{ . | lower }}{{ end }}"
       data-loja="{{ .Params.store | lower }}">
@@ -545,7 +733,7 @@
         </div>
         {{ end }}
         <a class="produto-card-btn" href="{{ .Permalink }}">
-         🔍 Ver Detalhes →
+          🔍 Ver Detalhes →
         </a>
       </div>
     </div>
@@ -605,15 +793,15 @@
       </ul>
     </div>
     <div class="footer-col">
-  <h4>Redes Sociais</h4>
-  <ul>
-    <li><a href="https://instagram.com/os_pechincheiros" target="_blank" rel="noopener">Instagram</a></li>
-    <li><a href="https://threads.net/@os_pechincheiros" target="_blank" rel="noopener">Threads</a></li>
-    <li><a href="https://facebook.com/ospechincheiros" target="_blank" rel="noopener">Facebook</a></li>
-    <li><a href="https://tiktok.com/@ospechincheirosoficial" target="_blank" rel="noopener">TikTok</a></li>
-    <li><a href="https://pinterest.com/ospechincheiros" target="_blank" rel="noopener">Pinterest</a></li>
-  </ul>
-</div>
+      <h4>Redes Sociais</h4>
+      <ul>
+        <li><a href="https://instagram.com/os_pechincheiros" target="_blank" rel="noopener">Instagram</a></li>
+        <li><a href="https://threads.net/@os_pechincheiros" target="_blank" rel="noopener">Threads</a></li>
+        <li><a href="https://facebook.com/ospechincheiros" target="_blank" rel="noopener">Facebook</a></li>
+        <li><a href="https://tiktok.com/@ospechincheirosoficial" target="_blank" rel="noopener">TikTok</a></li>
+        <li><a href="https://pinterest.com/ospechincheiros" target="_blank" rel="noopener">Pinterest</a></li>
+      </ul>
+    </div>
   </div>
   <div class="footer-bottom">
     <p>© {{ now.Year }} Os Pechincheiros. Todos os direitos reservados.</p>
@@ -625,8 +813,7 @@ function filtrarProdutos() {
   const busca = document.getElementById('busca-input').value.toLowerCase().trim();
   const categoria = document.getElementById('filtro-categoria').value.toLowerCase();
   const loja = document.getElementById('filtro-loja').value.toLowerCase();
-  
-  const grid = document.querySelector('.produtos-grid');
+
   const cards = document.querySelectorAll('.produto-card');
   let visiveis = 0;
 
@@ -641,7 +828,6 @@ function filtrarProdutos() {
 
     if (matchBusca && matchCategoria && matchLoja) {
       card.style.display = 'flex';
-      grid.appendChild(card);
       visiveis++;
     } else {
       card.style.display = 'none';
@@ -650,14 +836,12 @@ function filtrarProdutos() {
 
   const resultado = document.getElementById('busca-resultado');
   const count = document.getElementById('busca-count');
-  
+
   if (busca || categoria || loja) {
     resultado.style.display = 'block';
-    if (visiveis === 0) {
-      count.textContent = 'Nenhum produto encontrado';
-    } else {
-      count.textContent = `${visiveis} produto${visiveis !== 1 ? 's' : ''} encontrado${visiveis !== 1 ? 's' : ''}`;
-    }
+    count.textContent = visiveis === 0
+      ? 'Nenhum produto encontrado'
+      : `${visiveis} produto${visiveis !== 1 ? 's' : ''} encontrado${visiveis !== 1 ? 's' : ''}`;
   } else {
     resultado.style.display = 'none';
   }
