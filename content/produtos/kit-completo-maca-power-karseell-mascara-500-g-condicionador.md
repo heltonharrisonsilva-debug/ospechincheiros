@@ -1,14 +1,14 @@
 ---
 title: "Kit Completo Maca Power karseell  Máscara 500 g + condicionador 1L + Shampoo 1L + Óleo P 50ml"
-date: "2026-07-13T23:00:51.298Z"
+date: "2026-08-12T11:00:49.958Z"
 draft: false
-description: "Compre o Kit Completo Maca Power karseell, composto por máscara, condicionador e shampoo de alta qualidade para cuidar do seu cabelo. Compre agora e beneficie com nossas ofertas!"
-categoria: "Casa & Cozinha"
+description: "Desfrute de uma experiência de cuidado capilar completo com o Kit Completo Maca Power. Este kit inclui uma máscara para fortalecer os fios, um condicionador para deixar os cabelos macios e um shampoo para limpar a raiz. Além disso, inclui um óleo para proteger e hidratar os cabelos."
+categoria: "Beleza"
 store: "Shopee"
 price: "49,00"
 coverImage: "https://cf.shopee.com.br/file/br-11134207-820ly-mnb7dwwwmo748e"
-affiliateLink: "https://s.shopee.com.br/2LWgaKgnl5"
+affiliateLink: "https://s.shopee.com.br/8KoemdAhFE"
 slug: "kit-completo-maca-power-karseell-mascara-500-g-condicionador"
 ---
 
-Compre o Kit Completo Maca Power karseell, composto por máscara, condicionador e shampoo de alta qualidade para cuidar do seu cabelo. Compre agora e beneficie com nossas ofertas!
+Desfrute de uma experiência de cuidado capilar completo com o Kit Completo Maca Power. Este kit inclui uma máscara para fortalecer os fios, um condicionador para deixar os cabelos macios e um shampoo para limpar a raiz. Além disso, inclui um óleo para proteger e hidratar os cabelos.
