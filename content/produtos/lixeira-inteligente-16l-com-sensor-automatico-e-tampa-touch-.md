@@ -7,7 +7,7 @@ categoria: "Casa & Cozinha"
 store: "Mercado Livre"
 price: "58,00"
 coverImage: "https://http2.mlstatic.com/D_NQ_NP_856967-MLA114117250171_072026-F.jpg"
-affiliateLink: "https://www.mercadolivre.com.br/p/MLB66154165?affId=lp20250304070745"
+affiliateLink: "https://meli.la/2kkTCgv"
 slug: "lixeira-inteligente-16l-com-sensor-automatico-e-tampa-touch-"
 ---
 
