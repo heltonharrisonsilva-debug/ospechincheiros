@@ -7,7 +7,7 @@ categoria: "Eletrônicos"
 store: "Mercado Livre"
 price: "74,20"
 coverImage: "https://http2.mlstatic.com/D_NQ_NP_951165-MLA95713207282_102025-F.jpg"
-affiliateLink: "https://www.mercadolivre.com.br/p/MLB40558796?affId=lp20250304070745"
+affiliateLink: "https://meli.la/2iR2r9o"
 slug: "fone-de-ouvido-headphone-dapon-h02d-bluetooth-51-over-ear-22"
 ---
 
