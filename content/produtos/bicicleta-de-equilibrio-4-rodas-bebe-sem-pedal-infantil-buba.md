@@ -7,7 +7,7 @@ categoria: "Brinquedos"
 store: "Mercado Livre"
 price: "171,00"
 coverImage: "https://http2.mlstatic.com/D_NQ_NP_795647-MLA104796752911_012026-F.jpg"
-affiliateLink: "https://www.mercadolivre.com.br/p/MLB64282200?affId=lp20250304070745"
+affiliateLink: "https://meli.la/2ow9ZXc"
 slug: "bicicleta-de-equilibrio-4-rodas-bebe-sem-pedal-infantil-buba"
 ---
 
