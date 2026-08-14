@@ -7,7 +7,7 @@ categoria: "Casa & Cozinha"
 store: "Mercado Livre"
 price: "128,51"
 coverImage: "https://http2.mlstatic.com/D_NQ_NP_896908-MLA101388142032_122025-F.jpg"
-affiliateLink: "https://www.mercadolivre.com.br/p/MLB24327117?affId=lp20250304070745"
+affiliateLink: "https://meli.la/2qxgJ3k"
 slug: "chuveiro-loren-shower-eletronico-ducha-lorenzetti-cor-branco"
 ---
 
