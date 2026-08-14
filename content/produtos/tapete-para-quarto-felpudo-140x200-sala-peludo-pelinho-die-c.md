@@ -7,7 +7,7 @@ categoria: "Casa & Cozinha"
 store: "Mercado Livre"
 price: "62,89"
 coverImage: "https://http2.mlstatic.com/D_NQ_NP_833195-MLA96114769945_102025-F.jpg"
-affiliateLink: "https://www.mercadolivre.com.br/p/MLB34106467?affId=lp20250304070745"
+affiliateLink: "https://meli.la/29QVivm"
 slug: "tapete-para-quarto-felpudo-140x200-sala-peludo-pelinho-die-c"
 ---
 
