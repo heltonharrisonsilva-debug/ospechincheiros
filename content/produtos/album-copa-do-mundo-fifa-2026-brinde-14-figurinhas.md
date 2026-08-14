@@ -7,7 +7,7 @@ categoria: "Esporte"
 store: "Mercado Livre"
 price: "29,90"
 coverImage: "https://http2.mlstatic.com/D_NQ_NP_675713-MLA111498569223_052026-F.jpg"
-affiliateLink: "https://www.mercadolivre.com.br/p/MLB69424580?affId=lp20250304070745"
+affiliateLink: "https://meli.la/1TktUHH"
 slug: "album-copa-do-mundo-fifa-2026-brinde-14-figurinhas"
 ---
 
