@@ -7,7 +7,7 @@ categoria: "Eletrônicos"
 store: "Mercado Livre"
 price: "196,84"
 coverImage: "https://http2.mlstatic.com/D_NQ_NP_970851-MLA100042433307_122025-F.jpg"
-affiliateLink: "https://www.mercadolivre.com.br/p/MLB44238532?affId=lp20250304070745"
+affiliateLink: "https://meli.la/1TpP6X3"
 slug: "controle-gamesir-t4-nova-lite-sem-fio-para-pc-switch-android"
 ---
 
