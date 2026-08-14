@@ -7,7 +7,7 @@ categoria: "Casa & Cozinha"
 store: "Mercado Livre"
 price: "33,90"
 coverImage: "https://http2.mlstatic.com/D_NQ_NP_790904-MLA108570211465_032026-F.jpg"
-affiliateLink: "https://www.mercadolivre.com.br/p/MLB66453791?affId=lp20250304070745"
+affiliateLink: "https://meli.la/1RtEeJC"
 slug: "papel-higienico-familiar-folha-dupla-24-rolos"
 ---
 
