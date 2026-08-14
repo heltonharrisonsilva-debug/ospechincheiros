@@ -7,7 +7,7 @@ categoria: "Eletrônicos"
 store: "Mercado Livre"
 price: "798,90"
 coverImage: "https://http2.mlstatic.com/D_NQ_NP_870845-MLA100041287939_122025-F.jpg"
-affiliateLink: "https://www.mercadolivre.com.br/p/MLB46056608?affId=lp20250304070745"
+affiliateLink: "https://meli.la/2j7mCoA"
 slug: "moto-g15-dual-sim-4gb-ram-128gb-azul-marino"
 ---
 
