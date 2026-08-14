@@ -7,7 +7,7 @@ categoria: "Tecnologia"
 store: "Mercado Livre"
 price: "887,78"
 coverImage: "https://http2.mlstatic.com/D_NQ_NP_778917-MLA91526601104_092025-F.jpg"
-affiliateLink: "https://www.mercadolivre.com.br/p/MLB54963045?affId=lp20250304070745"
+affiliateLink: "https://meli.la/1kd2H3C"
 slug: "celular-samsung-galaxy-a07-256gb-8gb-camera-50mp-verde"
 ---
 
