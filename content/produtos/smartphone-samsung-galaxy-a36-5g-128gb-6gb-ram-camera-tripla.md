@@ -7,7 +7,7 @@ categoria: "Tecnologia"
 store: "Mercado Livre"
 price: "1476,14"
 coverImage: "https://http2.mlstatic.com/D_NQ_NP_965596-MLA99457420984_112025-F.jpg"
-affiliateLink: "https://www.mercadolivre.com.br/p/MLB47111438?affId=lp20250304070745"
+affiliateLink: "https://meli.la/2Agf3yX"
 slug: "smartphone-samsung-galaxy-a36-5g-128gb-6gb-ram-camera-tripla"
 ---
 
