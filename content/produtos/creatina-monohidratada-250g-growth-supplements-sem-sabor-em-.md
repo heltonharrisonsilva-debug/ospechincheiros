@@ -7,7 +7,7 @@ categoria: "Esporte"
 store: "Mercado Livre"
 price: "39,00"
 coverImage: "https://http2.mlstatic.com/D_NQ_NP_662415-MLA97812910758_112025-F.jpg"
-affiliateLink: "https://www.mercadolivre.com.br/p/MLB19603205?affId=lp20250304070745"
+affiliateLink: "https://meli.la/1G21AMn"
 slug: "creatina-monohidratada-250g-growth-supplements-sem-sabor-em-"
 ---
 
