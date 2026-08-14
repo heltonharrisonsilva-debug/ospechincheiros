@@ -7,7 +7,7 @@ categoria: "Casa & Cozinha"
 store: "Mercado Livre"
 price: "479,00"
 coverImage: "https://http2.mlstatic.com/D_NQ_NP_736277-MLA113883017431_062026-F.jpg"
-affiliateLink: "https://www.mercadolivre.com.br/p/MLB14815387?affId=lp20250304070745"
+affiliateLink: "https://meli.la/2tBNqeT"
 slug: "lavadora-semiautomatica-lcs-10kg-branca-colormaq-110v-branco"
 ---
 
