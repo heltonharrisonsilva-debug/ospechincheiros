@@ -7,7 +7,7 @@ categoria: "Eletrônicos"
 store: "Mercado Livre"
 price: "2908,78"
 coverImage: "https://http2.mlstatic.com/D_NQ_NP_993303-MLA96666133268_112025-F.jpg"
-affiliateLink: "https://www.mercadolivre.com.br/p/MLB61655019?affId=lp20250304070745"
+affiliateLink: "https://meli.la/1JpCBHT"
 slug: "celular-samsung-galaxy-s25-fe-5g-128gb-8gb-ram-camera-tripla"
 ---
 
