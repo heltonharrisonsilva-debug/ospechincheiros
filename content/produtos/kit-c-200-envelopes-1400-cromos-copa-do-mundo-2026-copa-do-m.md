@@ -5,9 +5,9 @@ draft: false
 description: "Compre o Kit com 200 envelopes e 1.400 cromos da Copa do Mundo 2026. Um presente incrível para os fãs do futebol!"
 categoria: "Esporte"
 store: "Mercado Livre"
-price: "999,90"
+price: "849,99"
 coverImage: "https://http2.mlstatic.com/D_NQ_NP_800064-MLA111116644817_052026-F.jpg"
-affiliateLink: "https://www.mercadolivre.com.br/p/MLB69001975?affId=lp20250304070745"
+affiliateLink: "https://meli.la/1Zxmabu"
 slug: "kit-c-200-envelopes-1400-cromos-copa-do-mundo-2026-copa-do-m"
 ---
 
