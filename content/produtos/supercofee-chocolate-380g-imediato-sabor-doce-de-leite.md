@@ -7,7 +7,7 @@ categoria: "Casa & Cozinha"
 store: "Mercado Livre"
 price: "240,00"
 coverImage: "https://http2.mlstatic.com/D_NQ_NP_619384-MLA99526721112_122025-F.jpg"
-affiliateLink: "https://www.mercadolivre.com.br/p/MLB54397288?affId=lp20250304070745"
+affiliateLink: "https://meli.la/2xAEyA3"
 slug: "supercofee-chocolate-380g-imediato-sabor-doce-de-leite"
 ---
 
