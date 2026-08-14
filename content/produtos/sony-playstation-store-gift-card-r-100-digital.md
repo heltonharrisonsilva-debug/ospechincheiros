@@ -7,7 +7,7 @@ categoria: "Tecnologia"
 store: "Mercado Livre"
 price: "100,00"
 coverImage: "https://http2.mlstatic.com/D_NQ_NP_742211-MLA95816447081_102025-F.jpg"
-affiliateLink: "https://www.mercadolivre.com.br/p/MLB50200776?affId=lp20250304070745"
+affiliateLink: "https://meli.la/1DmDR3n"
 slug: "sony-playstation-store-gift-card-r-100-digital"
 ---
 
