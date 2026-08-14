@@ -7,7 +7,7 @@ categoria: "Eletrônicos"
 store: "Mercado Livre"
 price: "630,05"
 coverImage: "https://http2.mlstatic.com/D_NQ_NP_715477-MLA108553364167_032026-F.jpg"
-affiliateLink: "https://www.mercadolivre.com.br/p/MLB66446758?affId=lp20250304070745"
+affiliateLink: "ttps://meli.la/2wHQLPb"
 slug: "smartphone-galaxy-a07-128gb-tela-67-verde-verde"
 ---
 
