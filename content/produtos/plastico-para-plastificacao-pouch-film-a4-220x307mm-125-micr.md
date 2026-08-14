@@ -7,7 +7,7 @@ categoria: "Casa & Cozinha"
 store: "Mercado Livre"
 price: "50,71"
 coverImage: "https://http2.mlstatic.com/D_NQ_NP_993922-MLA99584284648_122025-F.jpg"
-affiliateLink: "https://www.mercadolivre.com.br/p/MLB60133205?affId=lp20250304070745"
+affiliateLink: "https://meli.la/25WtgeT"
 slug: "plastico-para-plastificacao-pouch-film-a4-220x307mm-125-micr"
 ---
 
