@@ -7,7 +7,7 @@ categoria: "Eletrônicos"
 store: "Mercado Livre"
 price: "850,00"
 coverImage: "https://http2.mlstatic.com/D_NQ_NP_945623-MLA96724963315_102025-F.jpg"
-affiliateLink: "https://www.mercadolivre.com.br/p/MLB61424002?affId=lp20250304070745"
+affiliateLink: "https://meli.la/2iR6P6h"
 slug: "smartphone-motorola-moto-g06-128gb-12gb-4gb-ram-8gb-ram-boos"
 ---
 
