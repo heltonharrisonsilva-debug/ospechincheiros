@@ -7,7 +7,7 @@ categoria: "Brinquedos"
 store: "Mercado Livre"
 price: "178,48"
 coverImage: "https://http2.mlstatic.com/D_NQ_NP_839104-MLA113627955722_072026-F.jpg"
-affiliateLink: "https://www.mercadolivre.com.br/p/MLB74460211?affId=lp20250304070745"
+affiliateLink: "https://meli.la/11D1fjR"
 slug: "combo-de-booster-pokemon-me05-escuridao-absoluta-108-cartas"
 ---
 
