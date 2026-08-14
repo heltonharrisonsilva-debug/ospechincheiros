@@ -7,7 +7,7 @@ categoria: "Casa & Cozinha"
 store: "Mercado Livre"
 price: "44,90"
 coverImage: "https://http2.mlstatic.com/D_NQ_NP_986994-MLA99595815694_122025-F.jpg"
-affiliateLink: "https://www.mercadolivre.com.br/p/MLB54487078?affId=lp20250304070745"
+affiliateLink: "https://meli.la/32P2aCv"
 slug: "kit-2-potes-hermetico-vidro-marmita-micro-ondas-640ml-star-h"
 ---
 
