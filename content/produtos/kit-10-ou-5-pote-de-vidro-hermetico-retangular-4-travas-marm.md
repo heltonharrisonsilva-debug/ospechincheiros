@@ -6,9 +6,9 @@ description: "Kit de 10 ou 5 pote de vidro hermético para mantimentos"
 coverImage: "https://cf.shopee.com.br/file/sg-11134201-821ep-mgjgq4m9ssgf89"
 affiliateLink: "https://meli.la/2UTKZtZ"
 price: "47,43"
-store: "Shopee"
+store: "Mercado Livre"
 categories: ["Casa & Cozinha"]
-tags: ["shopee", "oferta", "pechincheiros"]
+tags: ["Mercado Livre", "oferta", "pechincheiros"]
 badge: "Novo"
 ---
 
@@ -16,4 +16,4 @@ badge: "Novo"
 
 Kit de 10 ou 5 pote de vidro hermético para mantimentos
 
-👉 [Comprar agora na Shopee](https://meli.la/2UTKZtZ)
+👉 [Comprar agora no Mercado Livre](https://meli.la/2UTKZtZ)
