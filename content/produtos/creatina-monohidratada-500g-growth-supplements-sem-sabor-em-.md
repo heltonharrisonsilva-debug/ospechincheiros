@@ -7,7 +7,7 @@ categoria: "Esporte"
 store: "Mercado Livre"
 price: "58,90"
 coverImage: "https://http2.mlstatic.com/D_NQ_NP_602304-MLA109372354737_032026-F.jpg"
-affiliateLink: "https://www.mercadolivre.com.br/p/MLB66637233?affId=lp20250304070745"
+affiliateLink: "https://meli.la/2hVcY9h"
 slug: "creatina-monohidratada-500g-growth-supplements-sem-sabor-em-"
 ---
 
