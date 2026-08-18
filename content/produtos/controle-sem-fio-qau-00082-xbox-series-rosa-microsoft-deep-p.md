@@ -7,7 +7,7 @@ categoria: "Eletrônicos"
 store: "Mercado Livre"
 price: "407,89"
 coverImage: "https://http2.mlstatic.com/D_NQ_NP_607719-MLA91958635789_092025-F.jpg"
-affiliateLink: "https://www.mercadolivre.com.br/p/MLB22522892?affId=lp20250304070745"
+affiliateLink: "https://meli.la/1Si751o"
 slug: "controle-sem-fio-qau-00082-xbox-series-rosa-microsoft-deep-p"
 ---
 
