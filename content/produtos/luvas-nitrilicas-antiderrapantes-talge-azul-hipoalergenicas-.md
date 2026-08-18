@@ -7,7 +7,7 @@ categoria: "Beleza"
 store: "Mercado Livre"
 price: "32,87"
 coverImage: "https://http2.mlstatic.com/D_NQ_NP_832970-MLA81382006227_122024-F.jpg"
-affiliateLink: "https://www.mercadolivre.com.br/p/MLB14810822?affId=lp20250304070745"
+affiliateLink: "https://meli.la/1kmaiup"
 slug: "luvas-nitrilicas-antiderrapantes-talge-azul-hipoalergenicas-"
 ---
 
