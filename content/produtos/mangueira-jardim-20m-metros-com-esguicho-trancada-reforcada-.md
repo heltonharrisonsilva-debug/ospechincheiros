@@ -7,7 +7,7 @@ categoria: "Casa & Cozinha"
 store: "Mercado Livre"
 price: "39,90"
 coverImage: "https://http2.mlstatic.com/D_NQ_NP_631192-MLA99628151612_122025-F.jpg"
-affiliateLink: "https://www.mercadolivre.com.br/p/MLB38207832?affId=lp20250304070745"
+affiliateLink: "https://meli.la/1AgCQW9"
 slug: "mangueira-jardim-20m-metros-com-esguicho-trancada-reforcada-"
 ---
 
