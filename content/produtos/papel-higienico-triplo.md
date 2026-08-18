@@ -6,7 +6,7 @@ description: "Papel Higiênico Folha Tripla 20 Metros Neve Com 4 Unidades"
 coverImage: "https://http2.mlstatic.com/D_NQ_NP_917733-MLA99419880988_112025-F.jpg"
 affiliateLink: "https://meli.la/31zjfpQ"
 price: "16.10
-.store: "Mercado Livre"
+store: "Mercado Livre"
 categories: ["Casa"]
 tags: ["amazon", "oferta", "pechincheiros", "mercado livre", "shopee"]
 badge: "Novo"
