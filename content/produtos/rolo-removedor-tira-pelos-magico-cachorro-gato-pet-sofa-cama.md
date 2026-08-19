@@ -8,7 +8,7 @@ affiliateLink: "https://s.shopee.com.br/1qbM8sKIzv"
 price: "24.9"
 store: "Shopee"
 categories: ["Casa & Cozinha"]
-tags: ["shopee", "oferta", "pechincheiros" "amazon" "mercado livre"]
+tags: ["shopee", "oferta", "pechincheiros", "amazon", "mercado livre"]
 badge: "Novo"
 ---
 
