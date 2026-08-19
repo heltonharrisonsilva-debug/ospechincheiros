@@ -1,14 +1,14 @@
 ---
 title: "Kit com 15 potes plásticos herméticos para cozinha"
-date: "2026-04-12T18:40:39.536Z"
+date: "undefined"
 draft: false
-description: "Conheça nosso kit de potes plásticos herméticos para cozinha, perfeito para armazenar alimentos e mantê-los frescos por mais tempo!"
-categoria: "Casa & Cozinha"
-store: "Shopee"
-price: "22,90"
-coverImage: "https://down-br.img.susercontent.com/file/sg-11134201-7raum-mb75u6rh8o7ke0.webp"
-affiliateLink: "https://s.shopee.com.br/2g79x21dfM"
+description: ""
+categoria: ""
+store: ""
+price: ""
+coverImage: ""
+affiliateLink: ""
 slug: "kit-com-15-potes-plasticos-hermeticos-para-cozinha"
 ---
 
-Conheça nosso kit de potes plásticos herméticos para cozinha, perfeito para armazenar alimentos e mantê-los frescos por mais tempo!
+
