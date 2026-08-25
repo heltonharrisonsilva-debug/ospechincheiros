@@ -1,14 +1,19 @@
 ---
-title: "Fone De Ouvido Headphone Dapon H02d Bluetooth 5.1 Over-ear 22 Horas De Bateria Bege"
-date: "2026-08-13T19:00:56.829Z"
+title: "Fone De Ouvido Headphone Dapon H02D Bluetooth 5.1 Over-ear 22h Preto"
+date: 2026-08-25T19:01:49.026Z
 draft: false
-description: "O Fone De Ouvido Dapon H02d é perfeito para ouvir música ou assistir filmes em qualquer lugar. Com 22 horas de bateria, você pode se conectar ao seu mundo favorito sem parar."
-categoria: "Eletrônicos"
-store: "Mercado Livre"
-price: "74,20"
-coverImage: "https://http2.mlstatic.com/D_NQ_NP_951165-MLA95713207282_102025-F.jpg"
-affiliateLink: "https://meli.la/1ueXyQN"
-slug: "fone-de-ouvido-headphone-dapon-h02d-bluetooth-51-over-ear-22"
+description: "Confira essa oferta incrível!"
+coverImage: ""
+affiliateLink: ""
+price: ""
+store: "Shopee"
+categories: ["Casa & Cozinha"]
+tags: ["shopee", "mercado-livre", "amazon", "magazine-luiza", "oferta", "pechincheiros"]
+badge: "Novo"
 ---
 
-O Fone De Ouvido Dapon H02d é perfeito para ouvir música ou assistir filmes em qualquer lugar. Com 22 horas de bateria, você pode se conectar ao seu mundo favorito sem parar.
+## Fone De Ouvido Headphone Dapon H02D Bluetooth 5.1 Over-ear 22h Preto
+
+Confira essa oferta incrível!
+
+👉 [Comprar agora na Shopee]()
