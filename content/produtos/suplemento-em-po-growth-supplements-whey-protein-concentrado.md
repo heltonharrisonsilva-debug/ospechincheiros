@@ -4,7 +4,7 @@ date: 2026-09-02T19:02:45.506Z
 draft: false
 description: "Confira essa oferta incrível!"
 coverImage: "https://http2.mlstatic.com/D_NQ_NP_786626-MLA49862537022_052022-F.jpg"
-affiliateLink: "https://www.mercadolivre.com.br/p/MLB19049046?affId=lp20250304070745"
+affiliateLink: "https://meli.la/1ci2yiP"
 price: "236,69"
 store: "Mercado Livre"
 categories: ["Casa & Cozinha"]
@@ -16,4 +16,4 @@ badge: "Novo"
 
 Confira essa oferta incrível!
 
-👉 [Comprar agora na Mercado Livre](https://www.mercadolivre.com.br/p/MLB19049046?affId=lp20250304070745)
+👉 [Comprar agora na Mercado Livre](https://meli.la/1ci2yiP)
