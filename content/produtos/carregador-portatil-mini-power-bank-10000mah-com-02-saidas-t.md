@@ -1,6 +1,6 @@
 ---
 title: "Carregador Portátil Mini Power Bank 10000mAh Com 02 Saídas Tipo-C / Lightning"
-date: 2026-09-19T23:00:49.468Z
+date: 2026-09-20T11:00:47.000Z
 draft: false
 description: "Confira essa oferta incrível!"
 coverImage: "https://cf.shopee.com.br/file/sg-11134201-81zvk-mik9ovwbhszk62"
