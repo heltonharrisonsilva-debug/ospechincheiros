@@ -1,6 +1,6 @@
 ---
 title: "kit 21 potes para cozinha"
-date: 2026-09-22T11:00:53.682Z
+date: 2026-09-22T23:04:15.420Z
 draft: false
 description: "Confira essa oferta incrível!"
 coverImage: "https://cf.shopee.com.br/file/br-11134207-81ztj-mku1w5yl9fk3a7"
