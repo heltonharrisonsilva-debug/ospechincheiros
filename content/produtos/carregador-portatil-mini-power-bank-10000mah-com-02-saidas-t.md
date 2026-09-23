@@ -1,10 +1,10 @@
 ---
 title: "Carregador Portátil Mini Power Bank 10000mAh Com 02 Saídas Tipo-C / Lightning"
-date: 2026-09-20T11:00:47.000Z
+date: 2026-09-23T11:01:35.887Z
 draft: false
 description: "Confira essa oferta incrível!"
 coverImage: "https://cf.shopee.com.br/file/sg-11134201-81zvk-mik9ovwbhszk62"
-affiliateLink: "https://s.shopee.com.br/1Lftr3cib3"
+affiliateLink: "https://s.shopee.com.br/W6sRe11iA"
 price: "31,99"
 store: "Shopee"
 categories: ["Casa & Cozinha"]
@@ -16,4 +16,4 @@ badge: "Novo"
 
 Confira essa oferta incrível!
 
-👉 [Comprar agora na Shopee](https://s.shopee.com.br/1Lftr3cib3)
+👉 [Comprar agora na Shopee](https://s.shopee.com.br/W6sRe11iA)
