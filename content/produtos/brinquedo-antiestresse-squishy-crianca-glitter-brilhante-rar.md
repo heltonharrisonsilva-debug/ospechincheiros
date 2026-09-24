@@ -4,7 +4,7 @@ date: 2026-08-31T19:00:55.028Z
 draft: false
 description: "Confira essa oferta incrível!"
 coverImage: "https://http2.mlstatic.com/D_NQ_NP_849720-MLA115247879354_082026-F.jpg"
-affiliateLink: "https://www.mercadolivre.com.br/p/MLB75642679?affId=lp20250304070745"
+affiliateLink: "https://meli.la/2fmPanA"
 price: "46,15"
 store: "Mercado Livre"
 categories: ["Casa & Cozinha"]
@@ -16,4 +16,4 @@ badge: "Novo"
 
 Confira essa oferta incrível!
 
-👉 [Comprar agora na Mercado Livre](https://www.mercadolivre.com.br/p/MLB75642679?affId=lp20250304070745)
+👉 [Comprar agora na Mercado Livre](https://meli.la/2fmPanA)
