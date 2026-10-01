@@ -1,19 +1,19 @@
 ---
 title: "Celimax The Vita A Retinal Shot Tightening Booster 15ml"
-date: 2026-05-10T11:00:49.293Z
+date: 2026-10-01T11:01:05.656Z
 draft: false
-description: "Confira essa oferta incrível na Shopee!"
-coverImage: "https://cf.shopee.com.br/file/sg-11134207-7reop-m8a5lbdub3xlf9"
-affiliateLink: "https://s.shopee.com.br/8fP5FWWexw"
-price: "93,98"
+description: "Confira essa oferta incrível!"
+coverImage: "https://cf.shopee.com.br/file/sg-11134207-825ai-mr9pynhmd43k22"
+affiliateLink: "https://s.shopee.com.br/Lnf0SrIqu"
+price: "146,99"
 store: "Shopee"
 categories: ["Casa & Cozinha"]
-tags: ["shopee", "oferta", "pechincheiros"]
+tags: ["shopee", "mercado-livre", "amazon", "magazine-luiza", "oferta", "pechincheiros"]
 badge: "Novo"
 ---
 
 ## Celimax The Vita A Retinal Shot Tightening Booster 15ml
 
-Encontramos essa oferta incrível para você! Clique no botão abaixo e aproveite antes que acabe.
+Confira essa oferta incrível!
 
-👉 [Comprar agora na Shopee](https://s.shopee.com.br/8fP5FWWexw)
+👉 [Comprar agora na Shopee](https://s.shopee.com.br/Lnf0SrIqu)
