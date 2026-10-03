@@ -1,14 +1,19 @@
 ---
-title: "Copa do Mundo da FIFA 2026™ Kit com 12 Envelopes de Figurinhas FIFA WORLD CUP 2026™"
-date: "2026-07-27T18:57:53.106Z"
+title: "Copa do Mundo da Fifa 2026™ Kit com 12 envelopes de figurinhas Fifa World Cup 2026™ - Panini - Capa Mole"
+date: 2026-10-03T19:00:55.553Z
 draft: false
-description: "Conheça os times e jogadores da Copa do Mundo da FIFA 2026 com esses kits exclusivos! Com 12 envelopes de figurinhas, você vai estar sempre informado sobre os principais momentos do evento."
-categoria: "Esporte"
-store: "Amazon"
-price: "62,00"
-coverImage: "https://m.media-amazon.com/images/I/71rYopPC69L._SL1500_.jpg"
-affiliateLink: "https://link.amazon/B03hxbsut"
-slug: "copa-do-mundo-da-fifa-2026-kit-com-12-envelopes-de-figurinha"
+description: "Confira essa oferta incrível!"
+coverImage: "https://http2.mlstatic.com/D_NQ_NP_903022-MLA109894312615_032026-F.jpg"
+affiliateLink: "https://www.mercadolivre.com.br/p/MLB66864521?affId=lp20250304070745"
+price: "24,95"
+store: "Mercado Livre"
+categories: ["Casa & Cozinha"]
+tags: ["shopee", "mercado-livre", "amazon", "magazine-luiza", "oferta", "pechincheiros"]
+badge: "Novo"
 ---
 
-Conheça os times e jogadores da Copa do Mundo da FIFA 2026 com esses kits exclusivos! Com 12 envelopes de figurinhas, você vai estar sempre informado sobre os principais momentos do evento.
+## Copa do Mundo da Fifa 2026™ Kit com 12 envelopes de figurinhas Fifa World Cup 2026™ - Panini - Capa Mole
+
+Confira essa oferta incrível!
+
+👉 [Comprar agora na Mercado Livre](https://www.mercadolivre.com.br/p/MLB66864521?affId=lp20250304070745)
