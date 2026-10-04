@@ -1,6 +1,6 @@
 ---
 title: "Tênis De Placa De Carbono Masculino Feminino Correndo Maratona Leve Respirável 33 – 44"
-date: 2026-10-03T23:02:02.234Z
+date: 2026-10-04T11:00:50.182Z
 draft: false
 description: "Confira essa oferta incrível!"
 coverImage: "https://cf.shopee.com.br/file/sg-11134201-820n1-mnd2xc94nhfq05"
