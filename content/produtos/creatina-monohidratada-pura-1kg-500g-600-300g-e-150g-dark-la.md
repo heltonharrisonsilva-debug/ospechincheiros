@@ -1,14 +1,19 @@
 ---
 title: "Creatina Monohidratada Pura 1kg, 500g, 600, 300g e 150g - Dark Lab"
-date: "2026-07-24T00:12:28.769Z"
+date: 2026-10-17T11:00:50.729Z
 draft: false
-description: "Melhore seu desempenho atlético com a Creatina Monohidratada Pura de alta qualidade, oferecida em diferentes pesos para atender às suas necessidades."
-categoria: "Esporte"
+description: "Confira essa oferta incrível!"
+coverImage: "https://cf.shopee.com.br/file/br-11134207-820ld-ms0e8jfsnb45e1"
+affiliateLink: "https://s.shopee.com.br/7Kxo48C2dB"
+price: "29,90"
 store: "Shopee"
-price: "32,90"
-coverImage: "https://cf.shopee.com.br/file/br-11134207-7r98o-lzawb2jf7rxhf2"
-affiliateLink: "https://s.shopee.com.br/Lls9YwOpK"
-slug: "creatina-monohidratada-pura-1kg-500g-600-300g-e-150g-dark-la"
+categories: ["Casa & Cozinha"]
+tags: ["shopee", "mercado-livre", "amazon", "magazine-luiza", "oferta", "pechincheiros"]
+badge: "Novo"
 ---
 
-Melhore seu desempenho atlético com a Creatina Monohidratada Pura de alta qualidade, oferecida em diferentes pesos para atender às suas necessidades.
+## Creatina Monohidratada Pura 1kg, 500g, 600, 300g e 150g - Dark Lab
+
+Confira essa oferta incrível!
+
+👉 [Comprar agora na Shopee](https://s.shopee.com.br/7Kxo48C2dB)
