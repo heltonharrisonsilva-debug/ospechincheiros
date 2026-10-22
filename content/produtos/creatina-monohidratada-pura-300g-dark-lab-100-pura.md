@@ -1,10 +1,10 @@
 ---
 title: "Creatina Monohidratada Pura 300g Dark Lab - 100% Pura"
-date: 2026-10-21T23:01:19.102Z
+date: 2026-10-22T11:00:54.930Z
 draft: false
 description: "Confira essa oferta incrível!"
 coverImage: "https://cf.shopee.com.br/file/br-11134207-820l8-ms0du9lcw8p1d3"
-affiliateLink: "https://s.shopee.com.br/AKbXc66oPc"
+affiliateLink: "https://s.shopee.com.br/5VWIef9pYq"
 price: "39,90"
 store: "Shopee"
 categories: ["Casa & Cozinha"]
@@ -16,4 +16,4 @@ badge: "Novo"
 
 Confira essa oferta incrível!
 
-👉 [Comprar agora na Shopee](https://s.shopee.com.br/AKbXc66oPc)
+👉 [Comprar agora na Shopee](https://s.shopee.com.br/5VWIef9pYq)
