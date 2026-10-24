@@ -1,6 +1,6 @@
 ---
 title: "Patinete Infantil 3 Rodas Led Dobrável Luppy Azul Maxi Toys"
-date: 2026-10-22T19:00:51.365Z
+date: 2026-10-24T19:00:59.611Z
 draft: false
 description: "Confira essa oferta incrível!"
 coverImage: "https://http2.mlstatic.com/D_NQ_NP_702576-MLA110388417253_042026-F.jpg"
