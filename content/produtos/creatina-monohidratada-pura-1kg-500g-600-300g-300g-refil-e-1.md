@@ -1,10 +1,10 @@
 ---
 title: "Creatina Monohidratada Pura 1kg, 500g, 600, 300g, 300g Refil e 150g - Dark Lab"
-date: 2026-11-03T23:01:07.238Z
+date: 2026-11-04T11:00:54.383Z
 draft: false
 description: "Confira essa oferta incrível!"
 coverImage: "https://cf.shopee.com.br/file/br-11134207-820ld-ms0e8jfsnb45e1"
-affiliateLink: "https://s.shopee.com.br/20wkQMQ3Pk"
+affiliateLink: "https://s.shopee.com.br/7KyHZblcp8"
 price: "32,90"
 store: "Shopee"
 categories: ["Casa & Cozinha"]
@@ -16,4 +16,4 @@ badge: "Novo"
 
 Confira essa oferta incrível!
 
-👉 [Comprar agora na Shopee](https://s.shopee.com.br/20wkQMQ3Pk)
+👉 [Comprar agora na Shopee](https://s.shopee.com.br/7KyHZblcp8)
