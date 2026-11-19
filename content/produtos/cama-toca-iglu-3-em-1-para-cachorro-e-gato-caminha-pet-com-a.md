@@ -7,8 +7,8 @@ coverImage: "https://cf.shopee.com.br/file/br-11134207-820lz-msztzu9m3w9296"
 affiliateLink: "https://s.shopee.com.br/2BFrHOWNYF"
 price: "64,90"
 store: "Shopee"
-categories: ["Casa & Cozinha"]
-tags: ["shopee", "mercado-livre", "amazon", "magazine-luiza", "oferta", "pechincheiros"]
+categories: ["Pet"]
+tags: ["pet", "cachorro", "gato", "petshop", "achados-pet", "shopee", "oferta", "pechincheiros"]
 badge: "Novo"
 ---
 

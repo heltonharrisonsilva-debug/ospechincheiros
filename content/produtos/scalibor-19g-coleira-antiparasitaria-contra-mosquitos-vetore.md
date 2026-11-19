@@ -3,7 +3,7 @@ title: "Scalibor® 19g - Coleira Antiparasitária contra mosquitos vetores da Le
 date: "2026-07-31T00:03:53.114Z"
 draft: false
 description: "A coleira Scalibor 19g é uma solução eficaz contra mosquitos vetores da Leishmaniose. Indicada para cães de porte médio com pescoço de 48cm. Proteja seu pet com a melhor tecnologia anti-parasitária disponível."
-categoria: "Beleza"
+categories: ["Pet"]
 store: "Amazon"
 price: "58,18"
 coverImage: "https://m.media-amazon.com/images/I/5105WiYFuaL._AC_SL1080_.jpg"
