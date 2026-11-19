@@ -7,14 +7,7 @@
   <span class="pc-body">
     {{ with .Params.store }}<span class="pc-store">{{ . }}</span>{{ end }}
     <span class="pc-title">{{ .Title }}</span>
-    {{ with .Params.price }}
-    {{- $p := string . -}}
-    {{- if not (and (in $p ",") (in $p ".")) -}}
-      {{- $p = replace $p "." "," -}}
-      {{- if findRE `^\d+,\d$` $p -}}{{- $p = printf "%s0" $p -}}{{- else if findRE `^\d+$` $p -}}{{- $p = printf "%s,00" $p -}}{{- end -}}
-    {{- end -}}
-    <span class="pc-price">R$ {{ $p }}</span>
-    {{ end }}
+    {{ with .Params.price }}<span class="pc-price">R$ {{ partial "preco.html" . }}</span>{{ end }}
     <span class="pc-cta">Ver oferta →</span>
   </span>
 </a>

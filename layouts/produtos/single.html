@@ -1,285 +1,83 @@
 {{ define "main" }}
-<style>
-  * { box-sizing: border-box; }
-  body { background: #f8f8f8 !important; }
+{{- $cat := "" }}{{ with .Params.categories }}{{ if reflect.IsSlice . }}{{ $cat = index . 0 }}{{ end }}{{ end }}
+{{- $store := .Params.store | default "a loja" }}
+{{- $novo := lt (now.Sub .Date).Hours 96.0 }}
 
-  .produto-single-wrapper {
-    max-width: 1100px;
-    margin: 2rem auto 4rem;
-    padding: 0 1.5rem;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2.5rem;
-    align-items: start;
-  }
-  .produto-single-img-wrap {
-    position: sticky;
-    top: 80px;
-  }
-  .produto-single-img-wrap img {
-    width: 100%;
-    border-radius: 20px;
-    object-fit: cover;
-    max-height: 420px;
-    box-shadow: 0 8px 32px rgba(0,0,0,0.10);
-  }
-  .produto-single-img-placeholder {
-    width: 100%;
-    height: 420px;
-    border-radius: 20px;
-    background: linear-gradient(135deg, #f97316, #ea580c);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 5rem;
-  }
-  .produto-single-info {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-  }
-  .produto-single-badges {
-    display: flex;
-    gap: 0.5rem;
-    flex-wrap: wrap;
-  }
-  .badge-store {
-    display: inline-block;
-    background: #fff3e0;
-    color: #ea580c;
-    font-size: 0.75rem;
-    font-weight: 700;
-    padding: 0.3rem 0.8rem;
-    border-radius: 999px;
-    border: 1px solid #fed7aa;
-  }
-  .badge-tag {
-    display: inline-block;
-    background: linear-gradient(135deg, #f97316, #ea580c);
-    color: #fff;
-    font-size: 0.75rem;
-    font-weight: 700;
-    padding: 0.3rem 0.8rem;
-    border-radius: 999px;
-  }
-  .produto-single-title {
-    font-size: 1.8rem;
-    font-weight: 900;
-    color: #1a1a1a;
-    line-height: 1.2;
-  }
-  .produto-single-desc {
-    font-size: 1rem;
-    color: #666;
-    line-height: 1.6;
-  }
-  .produto-single-preco {
-    display: flex;
-    align-items: baseline;
-    gap: 0.8rem;
-    padding: 1.2rem;
-    background: #fff;
-    border-radius: 16px;
-    border: 1px solid #f0f0f0;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
-  }
-  .preco-atual {
-    font-size: 2rem;
-    font-weight: 900;
-    color: #f97316;
-  }
-  .preco-antigo {
-    font-size: 1rem;
-    color: #aaa;
-    text-decoration: line-through;
-  }
-  .produto-single-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-    background: linear-gradient(135deg, #f97316, #ea580c);
-    color: #fff !important;
-    font-weight: 800;
-    font-size: 1.1rem;
-    padding: 1rem 2rem;
-    border-radius: 14px;
-    text-decoration: none !important;
-    transition: opacity 0.2s, transform 0.2s;
-    box-shadow: 0 4px 16px rgba(249,115,22,0.35);
-  }
-  .produto-single-btn:hover {
-    opacity: 0.92;
-    transform: translateY(-2px);
-  }
-  .produto-single-aviso {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    font-size: 0.8rem;
-    color: #888;
-  }
-  .produto-single-content {
-    max-width: 1100px;
-    margin: 0 auto 4rem;
-    padding: 0 1.5rem;
-  }
-  .produto-single-content-inner {
-    background: #fff;
-    border-radius: 20px;
-    padding: 2rem;
-    border: 1px solid #f0f0f0;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
-    line-height: 1.8;
-    color: #333;
-  }
-  .relacionados {
-    max-width: 1100px;
-    margin: 0 auto 4rem;
-    padding: 0 1.5rem;
-  }
-  .relacionados-title {
-    font-size: 1.3rem;
-    font-weight: 800;
-    color: #1a1a1a;
-    margin-bottom: 1.2rem;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-  }
-  .relacionados-title::before {
-    content: '';
-    display: inline-block;
-    width: 4px;
-    height: 1.2rem;
-    background: linear-gradient(135deg, #f97316, #ea580c);
-    border-radius: 4px;
-  }
-  .relacionados-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 1rem;
-  }
-  .rel-card {
-    background: #fff;
-    border-radius: 16px;
-    overflow: hidden;
-    border: 1px solid #f0f0f0;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
-    transition: all 0.2s;
-    text-decoration: none !important;
-    display: flex;
-    flex-direction: column;
-  }
-  .rel-card:hover {
-    border-color: #f97316;
-    transform: translateY(-4px);
-    box-shadow: 0 8px 24px rgba(249,115,22,0.15);
-  }
-  .rel-card img {
-    width: 100%;
-    height: 140px;
-    object-fit: cover;
-  }
-  .rel-card-body {
-    padding: 0.8rem;
-  }
-  .rel-card-title {
-    font-size: 0.85rem;
-    font-weight: 700;
-    color: #1a1a1a;
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    line-height: 1.3;
-  }
-  .rel-card-price {
-    font-size: 0.95rem;
-    font-weight: 900;
-    color: #f97316;
-    margin-top: 0.4rem;
-  }
-  @media (max-width: 768px) {
-    .produto-single-wrapper { grid-template-columns: 1fr; }
-    .produto-single-img-wrap { position: static; }
-    .produto-single-title { font-size: 1.4rem; }
-  }
-</style>
+<nav class="crumbs" aria-label="Você está em">
+  <a href="/">Início</a> <span>›</span>
+  {{ if $cat }}<a href="/categories/{{ $cat | urlize }}/">{{ $cat }}</a> <span>›</span>{{ end }}
+  <span>{{ .Title | truncate 60 }}</span>
+</nav>
 
-<div class="produto-single-wrapper">
-  <div class="produto-single-img-wrap">
-    {{ if .Params.coverImage }}
-    <img src="{{ .Params.coverImage }}" alt="{{ .Title }}" />
-    {{ else }}
-    <div class="produto-single-img-placeholder">🛍️</div>
-    {{ end }}
-  </div>
-
-  <div class="produto-single-info">
-    <div class="produto-single-badges">
-      {{ if .Params.store }}
-      <span class="badge-store">{{ .Params.store }}</span>
-      {{ end }}
-      {{ if .Params.badge }}
-      <span class="badge-tag">{{ .Params.badge }}</span>
-      {{ end }}
+<article class="prod">
+  <div class="prod-grid">
+    <div class="prod-media">
+      {{ if .Params.coverImage }}<img src="{{ .Params.coverImage }}" alt="{{ .Title }}" width="800" height="800" fetchpriority="high">{{ else }}<span class="prod-ph">🐾</span>{{ end }}
     </div>
 
-    <h1 class="produto-single-title">{{ .Title }}</h1>
+    <div class="prod-info">
+      <div class="prod-badges">
+        {{ with .Params.store }}<span class="badge">{{ . }}</span>{{ end }}
+        {{ if $cat }}<a class="badge badge-cat" href="/categories/{{ $cat | urlize }}/">{{ partial "icone-categoria.html" $cat }} {{ $cat }}</a>{{ end }}
+        {{ if $novo }}<span class="badge badge-novo">Novo</span>{{ end }}
+      </div>
 
-    {{ if .Description }}
-    <p class="produto-single-desc">{{ .Description }}</p>
-    {{ end }}
+      <h1 class="prod-title">{{ .Title }}</h1>
 
-    {{ if .Params.price }}
-    <div class="produto-single-preco">
-      <span class="preco-atual">R$ {{ .Params.price }}</span>
-      {{ if .Params.oldPrice }}
-      <span class="preco-antigo">R$ {{ .Params.oldPrice }}</span>
+      {{ if and .Description (ne .Description "Confira essa oferta incrível!") }}
+      <p class="prod-desc">{{ .Description }}</p>
       {{ end }}
-    </div>
-    {{ end }}
 
-    {{ if .Params.affiliateLink }}
-    <a class="produto-single-btn" href="{{ .Params.affiliateLink }}" target="_blank" rel="sponsored nofollow noopener">
-      🛒 Comprar Agora
-    </a>
-    {{ end }}
-
-    <div class="produto-single-aviso">
-      Você será redirecionado para {{ with .Params.store }}a loja ({{ . }}){{ else }}a loja{{ end }}.
-      Link de afiliado: podemos receber comissão, sem custo extra para você.
-      Preço verificado em {{ .Date.Format "02/01/2006" }}; ele pode mudar na loja.
+      <div class="prod-card">
+        {{ with .Params.price }}
+        <div class="prod-price">R$ {{ partial "preco.html" . }}{{ with $.Params.oldPrice }}<s>R$ {{ . }}</s>{{ end }}</div>
+        <div class="prod-note">Preço verificado em {{ $.Date.Format "02/01/2006" }}. Ele pode mudar na loja.</div>
+        {{ end }}
+        {{ if .Params.affiliateLink }}
+        <a class="btn-buy" data-main href="{{ .Params.affiliateLink }}" target="_blank" rel="sponsored nofollow noopener">Ver na {{ $store }} →</a>
+        {{ end }}
+        <ul class="prod-points">
+          <li>Você finaliza a compra no site da loja</li>
+          <li>Link de afiliado: podemos receber comissão, sem custo extra para você</li>
+        </ul>
+      </div>
     </div>
   </div>
-</div>
+</article>
 
 {{/* O corpo do .md (título + link) repetia o que já aparece acima; não é exibido. */}}
+{{- $todos := where .Site.RegularPages "Section" "produtos" }}
+{{- $rel := slice }}
+{{- if $cat }}{{ $rel = where $todos "Params.categories" "intersect" (slice $cat) }}{{ end }}
+{{- $rel = where $rel "Permalink" "ne" .Permalink }}
+{{- if lt (len $rel) 4 }}{{ $rel = where $todos "Permalink" "ne" .Permalink }}{{ end }}
+{{- $rel = first 4 (sort $rel "Date" "desc") }}
+{{ if $rel }}
+<section class="rel">
+  <h2>Mais achados parecidos</h2>
+  <div class="pc-grid">{{ range $rel }}{{ partial "card-produto.html" . }}{{ end }}</div>
+</section>
+{{ end }}
 
-{{ $current := . }}
-{{ $relacionados := where .Site.RegularPages "Section" "produtos" }}
-{{ $relacionados = first 4 (where $relacionados "Permalink" "ne" $current.Permalink) }}
-{{ if $relacionados }}
-<div class="relacionados">
-  <div class="relacionados-title">Você também pode gostar</div>
-  <div class="relacionados-grid">
-    {{ range $relacionados }}
-    <a class="rel-card" href="{{ .Permalink }}">
-      {{ if .Params.coverImage }}
-      <img src="{{ .Params.coverImage }}" alt="{{ .Title }}" loading="lazy" />
-      {{ else }}
-      <img src="https://placehold.co/400x300/f97316/white?text=Produto" alt="{{ .Title }}" loading="lazy" />
-      {{ end }}
-      <div class="rel-card-body">
-        <div class="rel-card-title">{{ .Title }}</div>
-        {{ if .Params.price }}
-        <div class="rel-card-price">R$ {{ .Params.price }}</div>
-        {{ end }}
-      </div>
-    </a>
-    {{ end }}
-  </div>
+{{ if .Params.affiliateLink }}
+<div class="buybar" id="buybar" hidden>
+  <span class="buybar-price">{{ with .Params.price }}R$ {{ partial "preco.html" . }}{{ end }}</span>
+  <a class="btn-buy" href="{{ .Params.affiliateLink }}" target="_blank" rel="sponsored nofollow noopener">Ver na {{ $store }} →</a>
 </div>
+<script>
+(function () {
+  var barra = document.getElementById('buybar'), alvo = document.querySelector('.btn-buy[data-main]');
+  if (!barra || !alvo || !('IntersectionObserver' in window)) return;
+  function atualizar(visivel) {
+    var cookies = !!document.getElementById('pech-cookie');
+    var mostrar = !visivel && !cookies && window.innerWidth <= 768;
+    barra.hidden = !mostrar;
+    document.body.classList.toggle('tem-buybar', mostrar);
+  }
+  var ultimo = true;
+  new IntersectionObserver(function (es) { ultimo = es[0].isIntersecting; atualizar(ultimo); }, { threshold: 0 }).observe(alvo);
+  window.addEventListener('resize', function () { atualizar(ultimo); });
+})();
+</script>
 {{ end }}
 {{ end }}

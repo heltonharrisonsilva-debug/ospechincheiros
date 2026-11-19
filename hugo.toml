@@ -6,8 +6,8 @@ title = 'Os Pechincheiros'
 [params]
   description = "Achados pet com preço de pechincha: brinquedos, caminhas, higiene e mais para cães e gatos, com links diretos para a loja."
   keywords = ["achados pet", "pet", "cachorro", "gato", "ofertas", "shopee", "pechincha"]
-  defaultTheme = "auto"
-  disableThemeToggle = false
+  defaultTheme = "light"
+  disableThemeToggle = true
   ShowReadingTime = false
   ShowShareButtons = false
   ShowPostNavLinks = true

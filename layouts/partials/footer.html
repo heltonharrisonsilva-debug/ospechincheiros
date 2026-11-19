@@ -1,0 +1,52 @@
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <img src="/images/logo.jpg" alt="Os Pechincheiros" width="40" height="40" />
+      <p>Curadoria de achados pet e outras ofertas. Os links são de afiliados: podemos receber comissão, sem custo extra para você.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Explorar</h4>
+      <ul>
+        <li><a href="/categories/pet/">Achados pet</a></li>
+        <li><a href="/produtos/">Todos os produtos</a></li>
+        <li><a href="/categories/">Categorias</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Sobre</h4>
+      <ul>
+        <li><a href="/sobre/">Quem somos</a></li>
+        <li><a href="/politica-de-privacidade.html">Política de privacidade</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Redes Sociais</h4>
+      <ul>
+        <li><a href="https://instagram.com/os_pechincheiros" target="_blank" rel="noopener">Instagram</a></li>
+        <li><a href="https://threads.net/@os_pechincheiros" target="_blank" rel="noopener">Threads</a></li>
+        <li><a href="https://facebook.com/ospechincheiros" target="_blank" rel="noopener">Facebook</a></li>
+        <li><a href="https://tiktok.com/@ospechincheirosoficial" target="_blank" rel="noopener">TikTok</a></li>
+        <li><a href="https://pinterest.com/ospechincheiros" target="_blank" rel="noopener">Pinterest</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© {{ now.Year }} Os Pechincheiros. Todos os direitos reservados.</p>
+    <p><a href="/politica-de-privacidade.html">Política de privacidade</a> &middot; <a href="#" onclick="if(window.abrirPreferenciasCookies){abrirPreferenciasCookies();}return false;">Preferências de cookies</a></p>
+  </div>
+</footer>
+
+<a href="#top" id="top-link" class="top-link hidden" aria-label="Voltar ao topo" title="Voltar ao topo">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="17 11 12 6 7 11"></polyline><polyline points="17 18 12 13 7 18"></polyline></svg>
+</a>
+<script>
+(function () {
+  var t = document.getElementById('top-link');
+  if (!t) return;
+  window.addEventListener('scroll', function () {
+    var y = document.body.scrollTop || document.documentElement.scrollTop;
+    if (y > window.innerHeight) t.classList.remove('hidden'); else t.classList.add('hidden');
+  }, { passive: true });
+  t.addEventListener('click', function (e) { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); });
+})();
+</script>

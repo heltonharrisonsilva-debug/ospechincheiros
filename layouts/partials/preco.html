@@ -1,0 +1,6 @@
+{{- $p := string . -}}
+{{- if not (and (in $p ",") (in $p ".")) -}}
+  {{- $p = replace $p "." "," -}}
+  {{- if findRE `^\d+,\d$` $p -}}{{- $p = printf "%s0" $p -}}{{- else if findRE `^\d+$` $p -}}{{- $p = printf "%s,00" $p -}}{{- end -}}
+{{- end -}}
+{{- $p -}}

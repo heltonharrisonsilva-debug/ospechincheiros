@@ -1,3 +1,7 @@
+{{ $css := resources.Get "css/site.css" | resources.Minify | resources.Fingerprint }}
+<link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
+<link rel="preconnect" href="https://cf.shopee.com.br" crossorigin>
+<link rel="preconnect" href="https://http2.mlstatic.com" crossorigin>
 {{ partial "cookie-consent.html" . }}
 
 <!-- Google Search -->
@@ -56,23 +60,3 @@
 {{ end }}
 
 <!-- Identidade visual -->
-<style>
-  body { background: #f8f8f8 !important; }
-  .home-info h1 {
-    background: linear-gradient(135deg, #f97316, #ea580c) !important;
-    -webkit-background-clip: text !important;
-    -webkit-text-fill-color: transparent !important;
-  }
-</style>
-<style>
-  /* Remove container limitante do PaperMod */
-  .main {
-    max-width: 100% !important;
-    padding: 0 !important;
-  }
-  body .post-single {
-    max-width: 100% !important;
-    padding: 0 !important;
-  }
-  body { background: #f8f8f8 !important; }
-</style>

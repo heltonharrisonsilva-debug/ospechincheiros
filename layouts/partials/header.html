@@ -2,172 +2,40 @@
   <nav class="nav">
     <div class="logo">
       <a href="{{ .Site.BaseURL }}">
-        <img src="/images/logo.jpg" alt="{{ .Site.Title }}" height="40" style="border-radius: 50%;" />
+        <img src="/images/logo.jpg" alt="{{ .Site.Title }}" height="40" width="40" style="border-radius: 50%;" />
         <span>Os Pechincheiros</span>
       </a>
     </div>
 
-    <!-- Menu hamburger para mobile -->
-    <button class="menu-toggle" onclick="toggleMenu()" aria-label="Menu">
+    <button class="menu-toggle" onclick="toggleMenu()" aria-label="Abrir menu" aria-controls="main-menu">
       <span></span>
       <span></span>
       <span></span>
     </button>
 
     <ul class="menu" id="main-menu">
+      {{- $cur := .RelPermalink }}
       {{- range .Site.Menus.main }}
-      <li><a href="{{ .URL }}" onclick="closeMenu()">{{ .Name }}</a></li>
+      {{- $pet := eq .URL "/categories/pet/" }}
+      {{- $ativo := false }}
+      {{- if eq .URL "/" }}{{ $ativo = eq $cur "/" }}
+      {{- else if eq .URL "/categories/" }}{{ $ativo = and (hasPrefix $cur "/categories/") (not (hasPrefix $cur "/categories/pet/")) }}
+      {{- else }}{{ $ativo = hasPrefix $cur .URL }}{{ end }}
+      <li><a href="{{ .URL }}"{{ if $pet }} class="pet"{{ end }}{{ if and $ativo (not $pet) }} aria-current="page"{{ end }} onclick="closeMenu()">{{ .Name }}</a></li>
       {{- end }}
     </ul>
   </nav>
 </header>
 
-<style>
-  :root {
-    --laranja: #f97316;
-    --laranja-escuro: #ea580c;
-    --gradiente: linear-gradient(135deg, #f97316, #ea580c);
-  }
-
-  .header {
-    background: #fff;
-    border-bottom: 3px solid var(--laranja);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 2px 12px rgba(249,115,22,0.15);
-  }
-
-  .nav {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0.7rem 1.2rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 1rem;
-  }
-
-  .logo a {
-    display: flex;
-    align-items: center;
-    gap: 0.6rem;
-    text-decoration: none !important;
-    flex-shrink: 0;
-  }
-
-  .logo span {
-    font-size: 1rem;
-    font-weight: 800;
-    background: var(--gradiente);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    white-space: nowrap;
-  }
-
-  .menu {
-    list-style: none;
-    display: flex;
-    gap: 1rem;
-    margin: 0;
-    padding: 0;
-  }
-
-  .menu a {
-    font-weight: 600;
-    font-size: 0.9rem;
-    color: #333 !important;
-    text-decoration: none !important;
-    padding: 0.4rem 0.7rem;
-    border-radius: 8px;
-    transition: all 0.2s;
-    white-space: nowrap;
-  }
-
-  .menu a:hover {
-    background: var(--gradiente);
-    color: #fff !important;
-  }
-
-  /* Botão hamburger */
-  .menu-toggle {
-    display: none;
-    flex-direction: column;
-    gap: 5px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 4px;
-    flex-shrink: 0;
-  }
-
-  .menu-toggle span {
-    display: block;
-    width: 24px;
-    height: 2px;
-    background: #333;
-    border-radius: 2px;
-    transition: all 0.3s;
-  }
-
-  /* MOBILE */
-  @media (max-width: 640px) {
-    .menu-toggle {
-      display: flex;
-    }
-
-    .menu {
-      display: none;
-      position: absolute;
-      top: 100%;
-      left: 0;
-      right: 0;
-      background: #fff;
-      flex-direction: column;
-      gap: 0;
-      border-bottom: 3px solid var(--laranja);
-      box-shadow: 0 8px 24px rgba(0,0,0,0.1);
-      padding: 0.5rem 0;
-    }
-
-    .menu.open {
-      display: flex;
-    }
-
-    .menu li a {
-      display: block;
-      padding: 0.8rem 1.5rem;
-      border-radius: 0;
-      font-size: 1rem;
-    }
-
-    .menu li a:hover {
-      background: #fff3e0;
-      color: #f97316 !important;
-    }
-
-    .logo span {
-      font-size: 0.95rem;
-    }
-  }
-</style>
-
 <script>
-  function toggleMenu() {
-    const menu = document.getElementById('main-menu');
-    menu.classList.toggle('open');
-  }
-
-  function closeMenu() {
-    const menu = document.getElementById('main-menu');
-    menu.classList.remove('open');
-  }
-
-  // Fecha menu ao clicar fora
-  document.addEventListener('click', function(e) {
-    const nav = document.querySelector('.nav');
-    if (!nav.contains(e.target)) {
-      closeMenu();
-    }
-  });
+function toggleMenu() {
+  document.getElementById('main-menu').classList.toggle('open');
+}
+function closeMenu() {
+  document.getElementById('main-menu').classList.remove('open');
+}
+document.addEventListener('click', function (e) {
+  var nav = document.querySelector('.nav');
+  if (nav && !nav.contains(e.target)) closeMenu();
+});
 </script>
