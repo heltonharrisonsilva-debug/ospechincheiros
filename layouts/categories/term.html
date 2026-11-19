@@ -171,6 +171,8 @@
   <p>{{ len .Pages }} {{ if eq (len .Pages) 1 }}produto encontrado{{ else }}produtos encontrados{{ end }}</p>
 </div>
 
+{{ partial "aviso-afiliado.html" . }}
+
 <div class="produtos-grid">
   {{ range .Pages }}
   <div class="produto-card">
@@ -198,7 +200,7 @@
       </div>
       {{ end }}
       {{ if .Params.affiliateLink }}
-      <a class="produto-card-btn" href="{{ .Params.affiliateLink }}" target="_blank" rel="noopener">
+      <a class="produto-card-btn" href="{{ .Params.affiliateLink }}" target="_blank" rel="sponsored nofollow noopener">
         🛒 Ver Oferta →
       </a>
       {{ else }}

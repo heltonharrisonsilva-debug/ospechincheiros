@@ -21,7 +21,7 @@ Os links dos produtos são **links de afiliados** — isso significa que quando 
 ## Nossa promessa
 
 - ✅ Só indicamos produtos que acreditamos ter bom custo-benefício
-- ✅ Preços sempre atualizados
+- ✅ Mostramos o preço do dia em que encontramos a oferta; ele pode mudar na loja
 - ✅ Sem enrolação — direto ao ponto
 - ✅ Novidades toda semana
 

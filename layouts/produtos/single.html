@@ -242,24 +242,20 @@
     {{ end }}
 
     {{ if .Params.affiliateLink }}
-    <a class="produto-single-btn" href="{{ .Params.affiliateLink }}" target="_blank" rel="noopener">
+    <a class="produto-single-btn" href="{{ .Params.affiliateLink }}" target="_blank" rel="sponsored nofollow noopener">
       🛒 Comprar Agora
     </a>
     {{ end }}
 
     <div class="produto-single-aviso">
-      🔒 Você será redirecionado para a loja oficial
+      Você será redirecionado para {{ with .Params.store }}a loja ({{ . }}){{ else }}a loja{{ end }}.
+      Link de afiliado: podemos receber comissão, sem custo extra para você.
+      Preço verificado em {{ .Date.Format "02/01/2006" }}; ele pode mudar na loja.
     </div>
   </div>
 </div>
 
-{{ if .Content }}
-<div class="produto-single-content">
-  <div class="produto-single-content-inner">
-    {{ .Content }}
-  </div>
-</div>
-{{ end }}
+{{/* O corpo do .md (título + link) repetia o que já aparece acima; não é exibido. */}}
 
 {{ $current := . }}
 {{ $relacionados := where .Site.RegularPages "Section" "produtos" }}

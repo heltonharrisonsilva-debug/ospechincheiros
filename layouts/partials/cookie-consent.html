@@ -1,0 +1,91 @@
+<!-- Consentimento de cookies: o Google Analytics só é carregado depois que o visitante aceita -->
+<style>
+  #pech-cookie { position: fixed; left: 1rem; right: 1rem; bottom: 1rem; z-index: 99999; max-width: 640px; margin: 0 auto;
+    background: #fff; color: #222; border: 1px solid #e5e5e5; border-radius: 14px; box-shadow: 0 8px 30px rgba(0,0,0,.18);
+    padding: 1rem 1.1rem; font: 0.85rem/1.5 Inter, system-ui, sans-serif; }
+  #pech-cookie p { margin: 0 0 .75rem; }
+  #pech-cookie a { color: #ea580c; text-decoration: underline; }
+  #pech-cookie .pech-btns { display: flex; gap: .5rem; justify-content: flex-end; flex-wrap: wrap; }
+  #pech-cookie button { cursor: pointer; border-radius: 999px; padding: .5rem 1.1rem; font: 600 .85rem Inter, system-ui, sans-serif; }
+  #pech-cookie .pech-aceitar { background: #f97316; color: #fff; border: 1px solid #f97316; }
+  #pech-cookie .pech-recusar { background: #fff; color: #444; border: 1px solid #ccc; }
+</style>
+<script>
+(function () {
+  var KEY = 'pech_cookie_consent';
+  var GA_ID = 'G-11ZEWB5XV1';
+
+  function ler() { try { return localStorage.getItem(KEY); } catch (e) { return null; } }
+  function salvar(v) { try { localStorage.setItem(KEY, v); } catch (e) {} }
+
+  function carregarGA() {
+    if (window.__pechGA) return;
+    window.__pechGA = true;
+    window['ga-disable-' + GA_ID] = false;
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function () { window.dataLayer.push(arguments); };
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
+    document.head.appendChild(s);
+    gtag('js', new Date());
+    // sem sinais do Google e sem personalização de anúncios (não fazemos remarketing)
+    gtag('config', GA_ID, { allow_google_signals: false, allow_ad_personalization_signals: false });
+  }
+
+  function limparCookiesGA() {
+    window['ga-disable-' + GA_ID] = true;
+    var host = location.hostname, raiz = '.' + host.replace(/^www\./, '');
+    document.cookie.split(';').forEach(function (c) {
+      var nome = c.split('=')[0].trim();
+      if (/^_ga/.test(nome)) {
+        [host, raiz].forEach(function (d) {
+          document.cookie = nome + '=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/; domain=' + d;
+        });
+        document.cookie = nome + '=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/';
+      }
+    });
+  }
+
+  function fechar() { var b = document.getElementById('pech-cookie'); if (b) b.remove(); }
+
+  function mostrar() {
+    if (document.getElementById('pech-cookie')) return;
+    var b = document.createElement('div');
+    b.id = 'pech-cookie';
+    b.setAttribute('role', 'dialog');
+    b.setAttribute('aria-label', 'Aviso de cookies');
+    b.innerHTML =
+      '<p>Usamos o Google Analytics, <strong>somente com a sua permissão</strong>, para entender como o site é usado e melhorá-lo. ' +
+      'Não usamos cookies para anúncios. Veja a <a href="/politica-de-privacidade.html">Política de privacidade</a>.</p>' +
+      '<div class="pech-btns"><button type="button" class="pech-recusar">Recusar</button>' +
+      '<button type="button" class="pech-aceitar">Aceitar</button></div>';
+    document.body.appendChild(b);
+    b.querySelector('.pech-aceitar').addEventListener('click', function () { salvar('aceito'); carregarGA(); fechar(); });
+    b.querySelector('.pech-recusar').addEventListener('click', function () { salvar('recusado'); limparCookiesGA(); fechar(); });
+  }
+
+  window.abrirPreferenciasCookies = mostrar;
+
+  // Links legais no rodapé das páginas que usam o rodapé do tema (produto, categoria, lista)
+  function rodape() {
+    var f = document.querySelector('footer.footer');
+    if (!f || f.querySelector('.pech-legal')) return;
+    var p = document.createElement('p');
+    p.className = 'pech-legal';
+    p.style.cssText = 'text-align:center;font-size:.8rem;margin:.4rem 1rem 0;';
+    p.innerHTML = 'Links de afiliado: podemos receber comissão, sem custo extra para você. &middot; ' +
+      '<a href="/politica-de-privacidade.html">Política de privacidade</a> &middot; ' +
+      '<a href="#" class="pech-prefs">Preferências de cookies</a>';
+    f.appendChild(p);
+    p.querySelector('.pech-prefs').addEventListener('click', function (e) { e.preventDefault(); mostrar(); });
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', rodape); else rodape();
+
+  var escolha = ler();
+  if (escolha === 'aceito') { carregarGA(); }
+  else if (!escolha) {
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', mostrar); else mostrar();
+  }
+})();
+</script>

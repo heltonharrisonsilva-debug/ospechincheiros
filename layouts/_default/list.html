@@ -593,22 +593,22 @@
     <div class="beneficio-item">
       <div class="beneficio-icon">💰</div>
       <div class="beneficio-text">
-        <strong>Economia garantida</strong>
-        <span>Sempre com o melhor preço</span>
+        <strong>Preço à vista</strong>
+        <span>Valor mostrado no dia da oferta</span>
       </div>
     </div>
     <div class="beneficio-item">
       <div class="beneficio-icon">🔒</div>
       <div class="beneficio-text">
-        <strong>Compra segura</strong>
-        <span>Links diretos para lojas oficiais</span>
+        <strong>Compra na loja</strong>
+        <span>Você finaliza a compra no site da loja</span>
       </div>
     </div>
     <div class="beneficio-item">
       <div class="beneficio-icon">🚀</div>
       <div class="beneficio-text">
-        <strong>Atualizado diariamente</strong>
-        <span>Novas ofertas toda semana</span>
+        <strong>Sempre novidade</strong>
+        <span>Novos achados toda semana</span>
       </div>
     </div>
   </div>
@@ -681,6 +681,8 @@
   </div>
 </div>
 
+{{ partial "aviso-afiliado.html" . }}
+
 <!-- NOVIDADES -->
 {{ $todos := where .Site.RegularPages "Section" "produtos" }}
 {{ $novidades := first 5 $todos }}
@@ -732,7 +734,7 @@
 {{ if $mais }}
 <div class="produtos-section">
   <div class="produtos-section-header">
-    <h2>🔥 Mais Vistos</h2>
+    <h2>🛍️ Mais ofertas</h2>
     <a href="/produtos/" class="ver-todos">Ver todos →</a>
   </div>
   <div class="produtos-grid" id="grid-mais">
@@ -776,30 +778,12 @@
 
 <!-- BANNER OFERTA -->
 <div class="banner-oferta">
-  <div class="banner-oferta-inner">
+  <div class="banner-oferta-inner" style="grid-template-columns:1fr;">
     <div class="banner-oferta-texto">
-      <span class="badge-oferta">Drop da semana</span>
-      <h2>Até <span>40% off</span><br>em selecionados.</h2>
-      <p>Ofertas relâmpago atualizadas toda semana. Não perca o próximo drop.</p>
-      <a href="/produtos/" class="btn-primary">Ver ofertas →</a>
-    </div>
-    <div class="banner-cats">
-      <div class="banner-cat">
-        <div>Tech</div>
-        <div class="banner-cat-discount">-35%</div>
-      </div>
-      <div class="banner-cat">
-        <div>Beleza</div>
-        <div class="banner-cat-discount">-28%</div>
-      </div>
-      <div class="banner-cat">
-        <div>Moda</div>
-        <div class="banner-cat-discount">-40%</div>
-      </div>
-      <div class="banner-cat">
-        <div>Casa</div>
-        <div class="banner-cat-discount">-22%</div>
-      </div>
+      <span class="badge-oferta">Curadoria pet</span>
+      <h2>Achados <span>pet</span><br>da semana.</h2>
+      <p>Brinquedos, caminhas, higiene e mais para cães e gatos, com link direto para a loja.</p>
+      <a href="/categories/pet/" class="btn-primary">Ver achados pet →</a>
     </div>
   </div>
 </div>
@@ -809,7 +793,7 @@
   <div class="footer-inner">
     <div class="footer-brand">
       <img src="/images/logo.jpg" alt="Os Pechincheiros" />
-      <p>Marketplace de produtos selecionados. Cada link é uma indicação curada da nossa curadoria.</p>
+      <p>Curadoria de ofertas. Os links são de afiliados: podemos receber comissão, sem custo extra para você.</p>
     </div>
     <div class="footer-col">
       <h4>Explorar</h4>
@@ -837,6 +821,7 @@
   </div>
   <div class="footer-bottom">
     <p>© {{ now.Year }} Os Pechincheiros. Todos os direitos reservados.</p>
+    <p><a href="/politica-de-privacidade.html">Política de privacidade</a> &middot; <a href="#" onclick="if(window.abrirPreferenciasCookies){abrirPreferenciasCookies();}return false;">Preferências de cookies</a></p>
   </div>
 </footer>
 

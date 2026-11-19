@@ -1,5 +1,6 @@
 baseURL = 'https://www.ospechincheiros.com.br/'
 languageCode = 'pt-br'
+defaultContentLanguage = 'pt-br'
 title = 'Os Pechincheiros'
 
 [params]
