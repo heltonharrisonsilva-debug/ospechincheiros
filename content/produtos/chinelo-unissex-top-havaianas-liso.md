@@ -3,7 +3,7 @@ title: "Chinelo Unissex Top Havaianas Liso"
 date: "2026-07-10T13:00:49.698Z"
 draft: false
 description: "Completa o seu estilo com estes chinelos liso da marca Havaianas. Com desenho minimalista e fácil de combinar, você não pode errar!"
-categoria: "Moda"
+categories: ["Moda"]
 store: "Mercado Livre"
 price: "29,90"
 coverImage: "https://http2.mlstatic.com/D_NQ_NP_740930-MLA100107121067_122025-F.jpg"

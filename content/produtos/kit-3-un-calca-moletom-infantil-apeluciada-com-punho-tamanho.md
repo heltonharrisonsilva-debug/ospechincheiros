@@ -3,7 +3,7 @@ title: "Kit 3 un. Calça Moletom Infantil Apeluciada Com Punho Tamanho Masculino
 date: "2026-05-25T11:01:01.891Z"
 draft: false
 description: "Kit de 3 unidades de calça moletom infantil apelucada com punho, disponível em diferentes tamanhos, perfeito para meninos de 1 a 14 anos."
-categoria: "Moda"
+categories: ["Moda"]
 store: "Shopee"
 price: "39,14"
 coverImage: "https://cf.shopee.com.br/file/sg-11134201-7rdwf-mcl31eluanpv7a"

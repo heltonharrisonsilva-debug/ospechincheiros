@@ -3,7 +3,7 @@ title: "KIT 2 Arandelas Tocheiro Dourada C/ Cúpula Tecido 127/220V deal para sa
 date: "2026-07-25T14:20:33.894Z"
 draft: false
 description: "Kit de iluminação elegante para salas, salas de jantar e quartos com arandelas tocheiro douradas e cúpula de tecido."
-categoria: "Casa & Cozinha"
+categories: ["Casa & Cozinha"]
 store: "Shopee"
 price: "199,50"
 coverImage: "https://cf.shopee.com.br/file/br-11134207-820la-mqfltt7fcow1b8"

@@ -22,7 +22,7 @@ coverImage: "https://m.media-amazon.com/images/I/61HN+7ldJnL._AC_SL1500_.jpg"
 affiliateLink: "https://amzn.to/49lc1d0"
 price: "2.066,99"
 store: "Amazon"
-categories: ["Eletronico"]
+categories: ["Tecnologia"]
 tags: ["amazon", "oferta", "pechincheiros"]
 badge: "Novo"
 ---

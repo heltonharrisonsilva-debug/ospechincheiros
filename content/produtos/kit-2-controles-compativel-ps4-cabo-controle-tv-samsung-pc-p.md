@@ -3,7 +3,7 @@ title: "Kit 2 Controles Compatível Ps4 Cabo Controle Tv Samsung Pc P4 Ps 4 Blue
 date: "2026-07-19T19:00:51.873Z"
 draft: false
 description: "Conecte-se à sua experiência de jogo com o Kit 2 Controles Compatível Ps4, oferecendo uma conexão sem fio ininterrupta e controle preciso para seus jogos favoritos."
-categoria: "Eletrônicos"
+categories: ["Tecnologia"]
 store: "Mercado Livre"
 price: "107,00"
 coverImage: "https://http2.mlstatic.com/D_NQ_NP_753489-MLA99412449450_112025-F.jpg"

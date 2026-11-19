@@ -3,7 +3,7 @@ title: "Conjunto Feminino Ribi Canelada Lanzinha 2 peças blusa e pantalona Inve
 date: "2026-06-06T23:00:52.357Z"
 draft: false
 description: "Conjunto feminino Ribi Canelada Lanzinha para inverno, composto por blusa e pantalona, perfeito para mulher que busca elegância e conforto."
-categoria: "Moda"
+categories: ["Moda"]
 store: "Shopee"
 price: "79,99"
 coverImage: "https://cf.shopee.com.br/file/br-11134207-820lq-mnd61e9wwb29a9"

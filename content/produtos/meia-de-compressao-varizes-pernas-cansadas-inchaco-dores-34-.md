@@ -3,7 +3,7 @@ title: "Meia de Compressão Varizes Pernas Cansadas Inchaço Dores 3/4 Zíper Co
 date: "2026-05-21T23:00:50.163Z"
 draft: false
 description: "Alivie os desconfortos das varizes com nossas meias de compressão, projetadas para proporcionar suporte e conforto às pernas cansadas."
-categoria: "Beleza"
+categories: ["Beleza"]
 store: "Shopee"
 price: "27,99"
 coverImage: "https://cf.shopee.com.br/file/br-11134207-7r98o-ma9c4wscx2gm0e"

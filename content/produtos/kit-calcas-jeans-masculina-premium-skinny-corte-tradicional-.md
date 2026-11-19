@@ -3,7 +3,7 @@ title: "Kit Calças Jeans Masculina Premium Skinny Corte tradicional Basico com 
 date: "2026-06-12T23:00:52.962Z"
 draft: false
 description: "Adquira o Kit Calças Jeans Masculina Premium Skinny com corte tradicional e Lycra, oferecida em cores claras, escuras ou pretas."
-categoria: "Moda"
+categories: ["Moda"]
 store: "Shopee"
 price: "54,99"
 coverImage: "https://cf.shopee.com.br/file/br-11134207-7r98o-lyk6c5jglqedc8"

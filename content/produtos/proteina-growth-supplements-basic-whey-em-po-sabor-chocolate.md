@@ -7,7 +7,7 @@ coverImage: "https://http2.mlstatic.com/D_NQ_NP_819000-MLA101180020755_122025-F.
 affiliateLink: "https://meli.la/1yVbz3j"
 price: "72,90"
 store: "Mercado Livre"
-categories: ["Casa & Cozinha"]
+categories: ["Esporte"]
 tags: ["shopee", "mercado-livre", "amazon", "magazine-luiza", "oferta", "pechincheiros"]
 badge: "Novo"
 ---

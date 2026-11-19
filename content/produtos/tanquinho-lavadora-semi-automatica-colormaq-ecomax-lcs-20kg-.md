@@ -3,7 +3,7 @@ title: "Tanquinho Lavadora Semi Automática Colormaq Ecomax Lcs 20kg Cor Prata"
 date: "2026-05-27T19:00:47.842Z"
 draft: false
 description: "Mantenha a sua louça limpa e brilhante com o tanquinho lavadora semi automática Colormaq Ecomax Lcs 20kg. Com capacidade para 20 kg, é ideial para pequenas e médias casas."
-categoria: "Casa & Cozinha"
+categories: ["Casa & Cozinha"]
 store: "Mercado Livre"
 price: "559,00"
 coverImage: "https://http2.mlstatic.com/D_NQ_NP_689293-MLA52222533872_102022-F.jpg"

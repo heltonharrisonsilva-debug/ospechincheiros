@@ -3,7 +3,7 @@ title: "100g De Musgo Artificial – Para Micropaisagems DIY , Bonsai , Jardins 
 date: "2026-07-29T10:15:14.723Z"
 draft: false
 description: "Crie paisagens incríveis com este musgo artificial de alta qualidade. Perfeito para projetos de micropaisagismo DIY, bonsai, jardins de rocha e cenas falsas."
-categoria: "Casa & Cozinha"
+categories: ["Casa & Cozinha"]
 store: "Shopee"
 price: "22,65"
 coverImage: "https://cf.shopee.com.br/file/sg-11134201-823qi-mp4mtxfwqo0d7d"

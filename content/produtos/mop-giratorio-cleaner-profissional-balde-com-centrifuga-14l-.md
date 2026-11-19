@@ -3,7 +3,7 @@ title: "Mop Girátorio Cleaner Profissional – Balde com Centrífuga 14L + Refi
 date: "2026-08-11T11:01:12.707Z"
 draft: false
 description: "Limpeie superfícies com eficiência utilizando o Mop Girátorio Cleaner Profissional, equipado com balde de 14L, centrífuga e cabo reforçado."
-categoria: "Casa & Cozinha"
+categories: ["Casa & Cozinha"]
 store: "Shopee"
 price: "59,90"
 coverImage: "https://cf.shopee.com.br/file/br-11134207-7r98o-mbnxm1i5f5ndcc"

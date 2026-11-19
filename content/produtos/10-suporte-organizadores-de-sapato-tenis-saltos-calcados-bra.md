@@ -3,7 +3,7 @@ title: "10 Suporte Organizadores de Sapato Tênis Saltos Calçados Branco com Re
 date: "2026-08-08T21:50:52.087Z"
 draft: false
 description: "Organize seus sapatos com estilos com esses suportes de sapato. Regulagem de altura para encontrar a posição perfeita. Compre agora!"
-categoria: "Casa & Cozinha"
+categories: ["Casa & Cozinha"]
 store: "Shopee"
 price: "49,90"
 coverImage: "https://cf.shopee.com.br/file/br-11134207-7r98o-lrhe39s8yqrx99"

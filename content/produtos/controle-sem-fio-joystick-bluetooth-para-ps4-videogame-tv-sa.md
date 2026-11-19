@@ -3,7 +3,7 @@ title: "Controle Sem Fio Joystick Bluetooth Para Ps4 Videogame Tv Samsung Pc P4 
 date: "2026-06-03T13:00:48.918Z"
 draft: false
 description: "Controle sem fio joystick bluetooth para jogos com compatibilidade com PS4, TV Samsung, PC e outros dispositivos. Manete ergonômica e longo alcance."
-categoria: "Eletrônicos"
+categories: ["Tecnologia"]
 store: "Mercado Livre"
 price: "53,87"
 coverImage: "https://http2.mlstatic.com/D_NQ_NP_762912-MLA105696431793_012026-F.jpg"

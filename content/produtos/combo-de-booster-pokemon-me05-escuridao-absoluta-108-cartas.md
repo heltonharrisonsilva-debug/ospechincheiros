@@ -3,7 +3,7 @@ title: "Combo de Booster Pokémon ME05 Escuridão Absoluta - 108 Cartas"
 date: "2026-08-07T13:00:50.408Z"
 draft: false
 description: "Peça agora seu combo de Booster Pokémon ME05 Escuridão Absoluta, com 108 cartas exclusivas!"
-categoria: "Brinquedos"
+categories: ["Brinquedos"]
 store: "Mercado Livre"
 price: "178,48"
 coverImage: "https://http2.mlstatic.com/D_NQ_NP_839104-MLA113627955722_072026-F.jpg"

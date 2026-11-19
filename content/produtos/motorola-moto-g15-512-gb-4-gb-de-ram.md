@@ -7,7 +7,7 @@ coverImage: "https://http2.mlstatic.com/D_NQ_NP_937647-MLA95360419493_102025-F.j
 affiliateLink: "https://meli.la/22gUu6q"
 price: "1040,00"
 store: "Mercado Livre"
-categories: ["Eletrônicos"]
+categories: ["Tecnologia"]
 tags: ["mercado livre", "oferta", "pechincheiros"]
 badge: "Novo"
 ---

@@ -3,7 +3,7 @@ title: "CADERNO INTELIGENTE  DE DISCO  STITCH - MINI, P, M, G e (G de 10 MATÉRI
 date: "2026-08-12T00:38:11.965Z"
 draft: false
 description: "Um caderno inteligente que ajuda você a organizar suas ideias e criar projetos criativos. Com diferentes tamanhos e opções de materiais, encontra o que melhor se adapta às suas necessidades."
-categoria: "Informática"
+categories: ["Tecnologia"]
 store: "Shopee"
 price: "44,80"
 coverImage: "https://cf.shopee.com.br/file/br-11134207-820ln-mq556xwax8n6f6"

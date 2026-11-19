@@ -7,7 +7,7 @@ coverImage: "https://http2.mlstatic.com/D_NQ_NP_910932-MLA99916523483_112025-F.j
 affiliateLink: "https://meli.la/1QXhqRy"
 price: "679,00"
 store: "Mercado Livre"
-categories: ["Casa & Cozinha"]
+categories: ["Tecnologia"]
 tags: ["mercado-livre", "oferta", "promocao", "desconto", "pechincha", "achado", "ospechincheiros", "casa", "cozinha", "decoracao", "utilidades", "organizacao"]
 badge: "Novo"
 ---

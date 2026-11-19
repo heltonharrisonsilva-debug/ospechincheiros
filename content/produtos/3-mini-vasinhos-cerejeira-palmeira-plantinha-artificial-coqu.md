@@ -3,7 +3,7 @@ title: "3 Mini Vasinhos Cerejeira, Palmeira / Plantinha Artificial / Coqueiro Su
 date: "2026-08-08T10:21:05.520Z"
 draft: false
 description: "Adorne sua casa com esses 3 mini vasos decorativos repletos de flores artificiais de palmeira e cerejeira, perfeitos para um toque de charme em qualquer ambiente."
-categoria: "Casa & Cozinha"
+categories: ["Casa & Cozinha"]
 store: "Shopee"
 price: "19,97"
 coverImage: "https://cf.shopee.com.br/file/ffe308a5175d987e6ed6fbeea485caff"

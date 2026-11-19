@@ -3,7 +3,7 @@ title: "Bloco Formato Barra De Chocolate Anotações Com Cheirinho De Chocolate 
 date: "2026-07-16T11:05:25.409Z"
 draft: false
 description: "Um bloco de anotações fofa que cheira a chocolate, perfeito para anotações e desenhos!"
-categoria: "Papeleria"
+categories: ["Papelaria"]
 store: "Shopee"
 price: "14,99"
 coverImage: "https://cf.shopee.com.br/file/br-11134207-7r98o-m29k6nfzydau5e"

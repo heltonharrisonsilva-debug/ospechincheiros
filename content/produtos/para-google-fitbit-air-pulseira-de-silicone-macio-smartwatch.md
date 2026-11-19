@@ -3,7 +3,7 @@ title: "Para Google fitbit air Pulseira De Silicone Macio Smartwatch Relógio In
 date: "2026-08-06T21:05:07.396Z"
 draft: false
 description: "Monitore sua atividade e saúde com o Google Fitbit Air, uma pulseira inteligente que oferece informações precisas sobre seu ritmo cardíaco, distância percorrida e outras métricas importantes."
-categoria: "Esporte"
+categories: ["Esporte"]
 store: "Shopee"
 price: "29,98"
 coverImage: "https://cf.shopee.com.br/file/cn-11134207-820l4-mpm3wj2yzbpo28"

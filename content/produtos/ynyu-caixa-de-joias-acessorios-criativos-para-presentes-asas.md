@@ -3,7 +3,7 @@ title: "[YNYU] Caixa De Jóias Acessórios Criativos Para Presentes Asas Móveis
 date: "2026-08-12T14:50:44.836Z"
 draft: false
 description: "Adorne suas amizades com essas deliciosas caixas de acessórios Harry Potter. Móveis e personalizáveis para tornar o presente ainda mais especial."
-categoria: "Brinquedos"
+categories: ["Brinquedos"]
 store: "Shopee"
 price: "68,90"
 coverImage: "https://cf.shopee.com.br/file/cn-11134207-820l4-mk1x8whe0gzoed"

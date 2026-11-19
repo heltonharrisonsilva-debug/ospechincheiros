@@ -7,7 +7,7 @@ coverImage: "https://cf.shopee.com.br/file/br-11134207-820l9-mqt86n8incape7"
 affiliateLink: "https://s.shopee.com.br/9069ECeXQv"
 price: "28,99"
 store: "Shopee"
-categories: ["Casa & Cozinha"]
+categories: ["Ferramentas"]
 tags: ["shopee", "mercado-livre", "amazon", "magazine-luiza", "oferta", "pechincheiros"]
 badge: "Novo"
 ---

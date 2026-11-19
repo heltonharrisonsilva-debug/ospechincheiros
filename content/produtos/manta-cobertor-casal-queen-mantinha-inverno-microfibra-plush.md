@@ -3,7 +3,7 @@ title: "Manta Cobertor Casal Queen Mantinha Inverno Microfibra Plush Antialérgi
 date: "2026-06-13T23:00:51.947Z"
 draft: false
 description: "Aqueça seu casal com a Manta Cobertor Casal Queen Mantinha Inverno Microfibra Plush Antialérgico Quentinho Estampada Poá! Confortável e quentinho, é perfeito para as noites frias."
-categoria: "Casa & Cozinha"
+categories: ["Casa & Cozinha"]
 store: "Shopee"
 price: "39,90"
 coverImage: "https://cf.shopee.com.br/file/br-11134207-820m5-mo9eydj39c05a0"

@@ -3,7 +3,7 @@ title: "Sacola Boca De Palhaço 40x50 50 Unidades Sacolinha P/ Lojas Cor Prata L
 date: "2026-08-09T19:00:56.274Z"
 draft: false
 description: "Sacola boca de palhaço de 40x50 cm, ideal para lojas, com 50 unidades. Cor prata liso. "
-categoria: "Casa & Cozinha"
+categories: ["Casa & Cozinha"]
 store: "Mercado Livre"
 price: "32,92"
 coverImage: "https://http2.mlstatic.com/D_NQ_NP_887078-MLA115309380279_072026-F.jpg"

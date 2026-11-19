@@ -3,7 +3,7 @@ title: "Plástico Para Plastificação Pouch Film Mares A4 220x307 125 Micras 10
 date: "2026-06-13T19:00:51.588Z"
 draft: false
 description: "Adquira o Plástico Para Plastificação Pouch Film Mares A4 220x307 125 Micras 100 Un. de alta qualidade para seus projetos!"
-categoria: "Casa & Cozinha"
+categories: ["Casa & Cozinha"]
 store: "Mercado Livre"
 price: "58,86"
 coverImage: "https://http2.mlstatic.com/D_NQ_NP_996004-MLA99534275248_122025-F.jpg"

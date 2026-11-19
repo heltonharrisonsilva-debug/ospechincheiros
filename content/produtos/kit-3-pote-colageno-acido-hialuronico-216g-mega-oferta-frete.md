@@ -3,7 +3,7 @@ title: "Kit 3 Pote Colageno + Ácido Hialuronico 216g Mega Oferta + Frete Gratis
 date: "2026-07-28T23:00:47.651Z"
 draft: false
 description: "Aumente a produção de colágeno e hidrata sua pele com o Kit 3 Pote Colageno + Ácido Hialuronico 216g da Mega Oferta. Compre agora no Shopee e aproveite o frete gratis!"
-categoria: "Beleza"
+categories: ["Beleza"]
 store: "Shopee"
 price: "79,00"
 coverImage: "https://cf.shopee.com.br/file/br-11134207-7r98o-ls78zrmvthcdb2"

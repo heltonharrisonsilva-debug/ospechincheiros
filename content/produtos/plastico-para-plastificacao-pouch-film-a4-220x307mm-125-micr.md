@@ -3,7 +3,7 @@ title: "Plástico Para Plastificação Pouch Film A4 220x307mm 125 Micras Pacote
 date: "2026-05-31T19:00:50.879Z"
 draft: false
 description: "Plástico para plastificação de documentos, fotos e materiais. Oferece durabilidade, brilho e resistência a umidade e rasgos. Pacote com 100 unidades, tamanho A4 (220x307mm)."
-categoria: "Casa & Cozinha"
+categories: ["Casa & Cozinha"]
 store: "Mercado Livre"
 price: "50,71"
 coverImage: "https://http2.mlstatic.com/D_NQ_NP_993922-MLA99584284648_122025-F.jpg"

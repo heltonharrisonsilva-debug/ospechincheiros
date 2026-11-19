@@ -7,7 +7,7 @@ coverImage: "https://cf.shopee.com.br/file/sg-11134201-820l9-mnwzwejz44qqf0"
 affiliateLink: "https://s.shopee.com.br/8V5vOkw0c9"
 price: "55.64"
 store: "Shopee"
-categories: ["Casa & Cozinha"]
+categories: ["Moda"]
 tags: [Shopee", "oferta", "pechincheiros"]
 badge: "Novo"
 ---

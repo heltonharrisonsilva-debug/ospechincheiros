@@ -3,7 +3,7 @@ title: "Smartphone Motorola Moto G06 - 128gb 12gb (4gb Ram + 8gb Ram Boost) E Ca
 date: "2026-07-11T19:00:51.718Z"
 draft: false
 description: "Compre o Smartphone Motorola Moto G06 com 128GB de armazenamento e 12GB de RAM, incluindo 4GB de RAM Boost. Além disso, contém uma câmera de 50MP com AI e bateria de 5200mAh e tela de 6.9 polegadas. Compre agora no Mercado Livre!"
-categoria: "Eletrônicos"
+categories: ["Tecnologia"]
 store: "Mercado Livre"
 price: "850,00"
 coverImage: "https://http2.mlstatic.com/D_NQ_NP_945623-MLA96724963315_102025-F.jpg"

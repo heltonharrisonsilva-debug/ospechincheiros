@@ -3,7 +3,7 @@ title: "Kit Colmeia Organizadora de gavetas/Guarda Roupa P, M, G e GG - Maison P
 date: "2026-06-01T12:50:11.035Z"
 draft: false
 description: "Organize sua roupa com este kit de colmeias, ideal para gavetas e guarda-roupas. Disponível em diferentes tamanhos para atender às suas necessidades."
-categoria: "Casa & Cozinha"
+categories: ["Casa & Cozinha"]
 store: "Shopee"
 price: "19,90"
 coverImage: "https://cf.shopee.com.br/file/br-11134207-81z1k-mfvhv2o7wtfk77"
