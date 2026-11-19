@@ -1,0 +1,15 @@
+{{ with .Paginator }}{{ if gt .TotalPages 1 }}
+<nav class="pg" aria-label="Paginação">
+  {{ if .HasPrev }}<a href="{{ .Prev.URL }}" rel="prev">← Anteriores</a>{{ else }}<span class="pg-off">← Anteriores</span>{{ end }}
+  <span class="pg-info">Página {{ .PageNumber }} de {{ .TotalPages }}</span>
+  {{ if .HasNext }}<a href="{{ .Next.URL }}" rel="next">Mais ofertas →</a>{{ else }}<span class="pg-off">Mais ofertas →</span>{{ end }}
+</nav>
+<style>
+  .pg { max-width: 1200px; margin: 1.5rem auto 2.5rem; padding: 0 1rem; display: flex; align-items: center; justify-content: center; gap: 1rem; flex-wrap: wrap; font-size: .9rem; }
+  .pg a, .pg .pg-off { padding: .6rem 1.1rem; border-radius: 999px; border: 1px solid #e7e5e4; background: #fff; font-weight: 600; text-decoration: none !important; }
+  .pg a { color: #ea580c !important; }
+  .pg a:hover { background: #fff7ed; border-color: #fdba74; }
+  .pg .pg-off { color: #bbb; }
+  .pg .pg-info { color: #78716c; }
+</style>
+{{ end }}{{ end }}

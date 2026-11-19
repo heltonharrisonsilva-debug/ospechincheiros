@@ -164,6 +164,7 @@
     {{ else if eq .Title "Ferramentas" }}🔧
     {{ else if eq .Title "Informática" }}💻
     {{ else if eq .Title "Tecnologia" }}📱
+    {{ else if eq .Title "Pet" }}🐾
     {{ else }}🛍️
     {{ end }}
     {{ .Title }}
@@ -174,7 +175,8 @@
 {{ partial "aviso-afiliado.html" . }}
 
 <div class="produtos-grid">
-  {{ range .Pages }}
+  {{ $pg := .Paginate (sort .Pages "Date" "desc") 24 }}
+  {{ range $pg.Pages }}
   <div class="produto-card">
     <div class="produto-card-img">
       {{ if .Params.coverImage }}
@@ -212,4 +214,6 @@
   </div>
   {{ end }}
 </div>
+
+{{ partial "paginacao.html" . }}
 {{ end }}

@@ -1,804 +1,197 @@
 {{ define "main" }}
 <style>
-  * { box-sizing: border-box; }
-  body { background: #f8f8f8 !important; font-family: 'Inter', sans-serif; }
+  .home, .home * { box-sizing: border-box; }
+  body { background: #fafaf9 !important; }
+  .home { --o1:#f97316; --o2:#ea580c; --o3:#fff7ed; --tx:#1c1917; --mut:#78716c; --bd:#e7e5e4;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; color: var(--tx); }
+  .home a { text-decoration: none !important; }
+  .wrap { max-width: 1200px; margin: 0 auto; padding: 0 1rem; }
 
   /* HERO */
-  .hero {
-    position: relative;
-    min-height: 520px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    overflow: hidden;
-    padding: 5rem 1.5rem 4rem;
-  }
-  .hero-bg {
-    position: absolute;
-    inset: 0;
-    background-image: url('https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?w=1600&q=80');
-    background-size: cover;
-    background-position: center;
-    z-index: 0;
-  }
-  .hero-overlay {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(135deg, rgba(0,0,0,0.72) 0%, rgba(234,88,12,0.55) 100%);
-    z-index: 1;
-  }
-  .hero-content {
-    position: relative;
-    z-index: 2;
-    max-width: 680px;
-    margin: 0 auto;
-  }
-  .hero-badge {
-    display: inline-block;
-    background: rgba(255,255,255,0.15);
-    backdrop-filter: blur(8px);
-    color: #fff;
-    font-size: 0.75rem;
-    font-weight: 700;
-    padding: 0.3rem 1rem;
-    border-radius: 999px;
-    margin-bottom: 1rem;
-    letter-spacing: 0.05em;
-    border: 1px solid rgba(255,255,255,0.25);
-  }
-  .hero h1 {
-    font-size: 3.2rem;
-    font-weight: 900;
-    line-height: 1.1;
-    color: #fff;
-    margin-bottom: 0.8rem;
-    text-shadow: 0 2px 16px rgba(0,0,0,0.3);
-  }
-  .hero h1 span {
-    color: #f97316;
-    -webkit-text-fill-color: #f97316;
-  }
-  .hero p {
-    color: rgba(255,255,255,0.85);
-    font-size: 1.05rem;
-    max-width: 500px;
-    margin: 0 auto 2rem;
-    line-height: 1.6;
-  }
-  .hero-btns {
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-  .btn-primary {
-    background: linear-gradient(135deg, #f97316, #ea580c);
-    color: #fff !important;
-    font-weight: 700;
-    padding: 0.8rem 1.8rem;
-    border-radius: 999px;
-    text-decoration: none !important;
-    transition: opacity 0.2s, transform 0.2s;
-    font-size: 0.95rem;
-    box-shadow: 0 4px 20px rgba(249,115,22,0.4);
-  }
-  .btn-primary:hover { opacity: 0.9; transform: translateY(-2px); }
-  .btn-secondary {
-    background: rgba(255,255,255,0.12);
-    backdrop-filter: blur(8px);
-    color: #fff !important;
-    font-weight: 700;
-    padding: 0.8rem 1.8rem;
-    border-radius: 999px;
-    text-decoration: none !important;
-    border: 2px solid rgba(255,255,255,0.4);
-    transition: all 0.2s;
-    font-size: 0.95rem;
-  }
-  .btn-secondary:hover { background: rgba(255,255,255,0.22); }
+  .hero { background: linear-gradient(135deg, #c2410c 0%, #ea580c 45%, #fb923c 100%); color: #fff; position: relative; overflow: hidden; }
+  .hero::before { content: ""; position: absolute; inset: 0; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140' viewBox='0 0 140 140'%3E%3Cg fill='white' fill-opacity='.11'%3E%3Cellipse cx='70' cy='92' rx='23' ry='18'/%3E%3Cellipse cx='40' cy='60' rx='9' ry='13'/%3E%3Cellipse cx='60' cy='44' rx='9' ry='13'/%3E%3Cellipse cx='82' cy='44' rx='9' ry='13'/%3E%3Cellipse cx='102' cy='60' rx='9' ry='13'/%3E%3C/g%3E%3C/svg%3E"); background-size: 140px 140px; opacity: 1; }
+  .hero-in { position: relative; max-width: 820px; margin: 0 auto; padding: 3.2rem 1rem 2.6rem; text-align: center; }
+  .hero-badge { display: inline-block; background: rgba(255,255,255,.18); border: 1px solid rgba(255,255,255,.35); padding: .35rem .9rem; border-radius: 999px; font-size: .8rem; font-weight: 600; }
+  .hero h1 { font-size: clamp(2rem, 5vw, 3.2rem); line-height: 1.1; margin: 1rem 0 .8rem; font-weight: 800; letter-spacing: -.02em; color: #fff; }
+  .hero h1 span { color: #fde68a; }
+  .hero p { font-size: 1.05rem; line-height: 1.55; margin: 0 auto 1.4rem; max-width: 560px; color: #fff7ed; }
+  .hero-busca { max-width: 560px; margin: 0 auto; }
+  .hero-busca input { width: 100%; border: 0; border-radius: 999px; padding: 1rem 1.4rem; font-size: 1rem; color: var(--tx); background: #fff; box-shadow: 0 8px 24px rgba(0,0,0,.18); outline: none; }
+  .hero-busca input:focus { box-shadow: 0 0 0 3px rgba(255,255,255,.55), 0 8px 24px rgba(0,0,0,.18); }
+  .chips { display: flex; gap: .5rem; justify-content: center; flex-wrap: wrap; margin-top: 1rem; }
+  .chip { cursor: pointer; border: 1px solid rgba(255,255,255,.5); background: rgba(255,255,255,.14); color: #fff; padding: .45rem .95rem; border-radius: 999px; font: 600 .85rem system-ui, sans-serif; }
+  .chip:hover { background: rgba(255,255,255,.28); }
+  .chip[aria-pressed="true"] { background: #fff; color: var(--o2); border-color: #fff; }
+  .btn { display: inline-block; padding: .85rem 1.5rem; border-radius: 999px; font-weight: 700; font-size: .95rem; }
+  .btn-p { background: #fff; color: var(--o2) !important; box-shadow: 0 6px 18px rgba(0,0,0,.18); }
+  .hero-btns { margin-top: 1.3rem; }
 
-  /* BARRA DE BENEFÍCIOS */
-  .beneficios-bar {
-    background: #fff;
-    border-bottom: 1px solid #f0ede8;
-    border-top: 1px solid #f0ede8;
-    padding: 1rem 1.5rem;
-  }
-  .beneficios-inner {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1rem;
-  }
-  .beneficio-item {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    padding: 0.5rem;
-  }
-  .beneficio-icon {
-    width: 42px;
-    height: 42px;
-    background: linear-gradient(135deg, #fff3e0, #ffe8cc);
-    border-radius: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.3rem;
-    flex-shrink: 0;
-  }
-  .beneficio-text strong {
-    display: block;
-    font-size: 0.82rem;
-    font-weight: 700;
-    color: #1a1a1a;
-  }
-  .beneficio-text span {
-    font-size: 0.75rem;
-    color: #888;
-  }
+  /* CONFIANÇA */
+  .trust { background: #fff; border-bottom: 1px solid var(--bd); }
+  .trust-in { max-width: 1200px; margin: 0 auto; padding: .8rem 1rem; display: flex; gap: .5rem 1.8rem; justify-content: center; flex-wrap: wrap; font-size: .82rem; color: var(--mut); }
+  .trust-in b { color: var(--tx); font-weight: 600; }
 
-  /* CATEGORIAS BANNER */
-  .categorias-section {
-    max-width: 1200px;
-    margin: 2.5rem auto 0;
-    padding: 0 1.5rem;
-  }
-  .section-header {
-    display: flex;
-    align-items: baseline;
-    gap: 0.75rem;
-    margin-bottom: 1.2rem;
-  }
-  .section-label {
-    font-size: 0.75rem;
-    font-weight: 700;
-    color: #f97316;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-  }
-  .section-title {
-    font-size: 1.4rem;
-    font-weight: 800;
-    color: #1a1a1a;
-  }
-  .categorias-grid {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 1rem;
-    margin-bottom: 2rem;
-  }
-  .categoria-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 0.6rem;
-    padding: 1.5rem 0.5rem;
-    border-radius: 20px;
-    text-decoration: none !important;
-    transition: all 0.25s;
-    position: relative;
-    overflow: hidden;
-    min-height: 110px;
-  }
-  .categoria-item::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(135deg, #f97316, #ea580c);
-    opacity: 0.08;
-    transition: opacity 0.25s;
-  }
-  .categoria-item {
-    background: #fff;
-    border: 1.5px solid #f0ede8;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.04);
-  }
-  .categoria-item:hover::before { opacity: 0.15; }
-  .categoria-item:hover {
-    border-color: #f97316;
-    transform: translateY(-4px);
-    box-shadow: 0 8px 24px rgba(249,115,22,0.15);
-  }
-  .categoria-icon {
-    font-size: 2.2rem;
-    position: relative;
-    z-index: 1;
-    line-height: 1;
-  }
-  .categoria-nome {
-    font-size: 0.78rem;
-    font-weight: 700;
-    color: #1a1a1a;
-    text-align: center;
-    position: relative;
-    z-index: 1;
-    white-space: nowrap;
-  }
+  /* SEÇÕES */
+  .sec { margin: 2rem 0 1rem; }
+  .sec-h { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; margin-bottom: 1rem; }
+  .sec-h h2 { font-size: 1.35rem; margin: 0; font-weight: 800; letter-spacing: -.01em; color: var(--tx); }
+  .sec-h a { font-size: .9rem; font-weight: 700; color: var(--o2) !important; white-space: nowrap; }
 
-  /* PRODUTOS */
-  .produtos-section {
-    max-width: 1200px;
-    margin: 2.5rem auto 0;
-    padding: 0 1.5rem;
-  }
-  .produtos-section-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 1.2rem;
-  }
-  .produtos-section-header h2 {
-    font-size: 1.4rem;
-    font-weight: 800;
-    color: #1a1a1a;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-  }
-  .produtos-section-header h2::before {
-    content: '';
-    display: inline-block;
-    width: 4px;
-    height: 1.2rem;
-    background: linear-gradient(135deg, #f97316, #ea580c);
-    border-radius: 4px;
-  }
-  .ver-todos {
-    font-size: 0.85rem;
-    font-weight: 600;
-    color: #f97316 !important;
-    text-decoration: none !important;
-  }
-  .ver-todos:hover { text-decoration: underline !important; }
+  /* CARDS */
+  .pc-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 1rem; }
+  .pc { display: flex; flex-direction: column; background: #fff; border: 1px solid var(--bd); border-radius: 16px; overflow: hidden; color: var(--tx) !important; transition: transform .18s, box-shadow .18s, border-color .18s; }
+  .pc:hover { transform: translateY(-3px); box-shadow: 0 10px 26px rgba(0,0,0,.09); border-color: #fdba74; }
+  .pc-img { position: relative; display: block; aspect-ratio: 1 / 1; background: #f5f5f4; }
+  .pc-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .pc-ph { display: flex; align-items: center; justify-content: center; height: 100%; font-size: 2.6rem; }
+  .pc-badge { position: absolute; top: .6rem; left: .6rem; background: var(--o2); color: #fff; font-size: .68rem; font-weight: 800; padding: .2rem .55rem; border-radius: 999px; text-transform: uppercase; letter-spacing: .03em; }
+  .pc-body { display: flex; flex-direction: column; gap: .35rem; padding: .85rem .9rem 1rem; flex: 1; }
+  .pc-store { align-self: flex-start; font-size: .68rem; font-weight: 700; color: var(--o2); background: var(--o3); padding: .12rem .5rem; border-radius: 999px; }
+  .pc-title { font-size: .9rem; line-height: 1.35; font-weight: 600; color: var(--tx); display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; min-height: 2.45em; }
+  .pc-price { font-size: 1.2rem; font-weight: 800; color: var(--o2); margin-top: auto; }
+  .pc-cta { margin-top: .4rem; text-align: center; background: linear-gradient(135deg, var(--o1), var(--o2)); color: #fff; font-weight: 700; font-size: .85rem; padding: .6rem; border-radius: 10px; }
 
-  .produtos-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 1rem;
-    margin-bottom: 3rem;
-  }
-  .produto-card {
-    background: #fff;
-    border-radius: 16px;
-    overflow: hidden;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
-    border: 1px solid #f0f0f0;
-    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-  }
-  .produto-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 24px rgba(249,115,22,0.15);
-    border-color: #f97316;
-  }
-  .produto-card-img {
-    position: relative;
-    overflow: hidden;
-  }
-  .produto-card-img img {
-    width: 100%;
-    height: 160px;
-    object-fit: cover;
-    transition: transform 0.3s ease;
-  }
-  .produto-card:hover .produto-card-img img {
-    transform: scale(1.05);
-  }
-  .produto-badge {
-    position: absolute;
-    top: 0.5rem;
-    left: 0.5rem;
-    background: linear-gradient(135deg, #f97316, #ea580c);
-    color: #fff;
-    font-size: 0.65rem;
-    font-weight: 700;
-    padding: 0.2rem 0.5rem;
-    border-radius: 999px;
-    text-transform: uppercase;
-  }
-  .badge-novo {
-    position: absolute;
-    top: 0.5rem;
-    left: 0.5rem;
-    background: #16a34a;
-    color: #fff;
-    font-size: 0.65rem;
-    font-weight: 700;
-    padding: 0.2rem 0.5rem;
-    border-radius: 999px;
-    text-transform: uppercase;
-  }
-  .produto-card-body {
-    padding: 0.8rem;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 0.3rem;
-  }
-  .produto-store-tag {
-    display: inline-block;
-    background: #fff3e0;
-    color: #ea580c;
-    font-size: 0.65rem;
-    font-weight: 700;
-    padding: 0.15rem 0.5rem;
-    border-radius: 999px;
-    width: fit-content;
-  }
-  .produto-card-title {
-    font-size: 0.88rem;
-    font-weight: 700;
-    color: #1a1a1a;
-    line-height: 1.3;
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    flex: 1;
-  }
-  .produto-preco {
-    display: flex;
-    align-items: baseline;
-    gap: 0.4rem;
-    margin-top: 0.3rem;
-  }
-  .produto-preco-atual {
-    font-size: 1.1rem;
-    font-weight: 900;
-    color: #f97316;
-  }
-  .produto-preco-antigo {
-    font-size: 0.78rem;
-    color: #aaa;
-    text-decoration: line-through;
-  }
-  .produto-card-btn {
-    display: block;
-    text-align: center;
-    background: linear-gradient(135deg, #f97316, #ea580c);
-    color: #fff !important;
-    font-weight: 700;
-    font-size: 0.82rem;
-    padding: 0.55rem;
-    border-radius: 8px;
-    text-decoration: none !important;
-    margin-top: 0.5rem;
-    transition: opacity 0.2s;
-  }
-  .produto-card-btn:hover { opacity: 0.9; }
+  /* CATEGORIAS */
+  .cats { display: flex; gap: .6rem; flex-wrap: wrap; align-items: center; }
+  .cat-pet { display: inline-flex; align-items: center; gap: .6rem; background: linear-gradient(135deg, var(--o1), var(--o2)); color: #fff !important; padding: .85rem 1.3rem; border-radius: 14px; font-weight: 800; box-shadow: 0 6px 16px rgba(234,88,12,.28); }
+  .cat-pet small { font-weight: 600; opacity: .9; }
+  .cat-pill { background: #fff; border: 1px solid var(--bd); color: var(--tx) !important; padding: .55rem 1rem; border-radius: 999px; font-size: .85rem; font-weight: 600; }
+  .cat-pill:hover { border-color: #fdba74; background: var(--o3); }
+  .cat-pill span { color: var(--mut); font-weight: 500; margin-left: .25rem; }
+  .cats-label { width: 100%; font-size: .75rem; color: var(--mut); text-transform: uppercase; letter-spacing: .06em; font-weight: 700; margin: .4rem 0 0; }
 
-  /* BUSCA */
-  .busca-section {
-    max-width: 1200px;
-    margin: 2rem auto 0;
-    padding: 0 1.5rem;
-  }
-  .busca-wrapper {
-    background: #fff;
-    border-radius: 16px;
-    padding: 1rem 1.2rem;
-    border: 1.5px solid #f0ede8;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.04);
-    display: flex;
-    gap: 0.8rem;
-    flex-wrap: wrap;
-    align-items: center;
-  }
-  .busca-input-wrap {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    flex: 1;
-    min-width: 200px;
-  }
-  .busca-icon { font-size: 1rem; color: #aaa; }
-  .busca-input-wrap input {
-    border: none;
-    outline: none;
-    font-size: 0.95rem;
-    width: 100%;
-    color: #1a1a1a;
-    background: transparent;
-  }
-  .busca-filtros {
-    display: flex;
-    gap: 0.5rem;
-    flex-wrap: wrap;
-  }
-  .busca-filtros select {
-    border: 1.5px solid #f0ede8;
-    border-radius: 10px;
-    padding: 0.4rem 0.8rem;
-    font-size: 0.82rem;
-    color: #555;
-    outline: none;
-    background: #fafaf8;
-    cursor: pointer;
-  }
-  .busca-filtros select:focus { border-color: #f97316; }
-  .busca-resultado {
-    margin-top: 0.6rem;
-    font-size: 0.82rem;
-    color: #888;
-    padding: 0 0.2rem;
-  }
+  /* RESULTADOS DA BUSCA */
+  .res-h { display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin: 1.5rem 0 1rem; flex-wrap: wrap; }
+  .res-h strong { font-size: 1.1rem; }
+  .res-h button { cursor: pointer; background: #fff; border: 1px solid var(--bd); border-radius: 999px; padding: .45rem 1rem; font-weight: 600; font-size: .85rem; }
+  .res-vazio { background: #fff; border: 1px dashed #d6d3d1; border-radius: 14px; padding: 1.4rem; color: var(--mut); text-align: center; }
+  .res-vazio a { color: var(--o2) !important; font-weight: 700; }
 
-  /* BANNER OFERTA */
-  .banner-oferta {
-    max-width: 1200px;
-    margin: 0 auto 3rem;
-    padding: 0 1.5rem;
-  }
-  .banner-oferta-inner {
-    background: #1a1a1a;
-    border-radius: 24px;
-    padding: 2.5rem;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-    align-items: center;
-  }
-  .banner-oferta-texto .badge-oferta {
-    display: inline-block;
-    background: #f97316;
-    color: #fff;
-    font-size: 0.7rem;
-    font-weight: 700;
-    padding: 0.2rem 0.7rem;
-    border-radius: 999px;
-    margin-bottom: 0.8rem;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-  }
-  .banner-oferta-texto h2 {
-    font-size: 2rem;
-    font-weight: 900;
-    color: #fff;
-    line-height: 1.2;
-    margin-bottom: 0.5rem;
-  }
-  .banner-oferta-texto h2 span { color: #f97316; }
-  .banner-oferta-texto p {
-    color: #aaa;
-    font-size: 0.9rem;
-    margin-bottom: 1.5rem;
-  }
-  .banner-cats {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0.8rem;
-  }
-  .banner-cat {
-    background: #2a2a2a;
-    border-radius: 12px;
-    padding: 1rem;
-    text-align: center;
-    color: #fff;
-    font-size: 0.85rem;
-  }
-  .banner-cat-discount {
-    font-size: 1.5rem;
-    font-weight: 900;
-    color: #f97316;
-  }
+  /* LISTA GENÉRICA (tags etc.) */
+  .lista-h { padding: 2rem 0 .5rem; }
+  .lista-h h1 { font-size: 1.8rem; margin: 0 0 .3rem; font-weight: 800; }
+  .lista-h p { margin: 0; color: var(--mut); }
 
-  /* FOOTER */
-  .site-footer {
-    background: #1a1a1a;
-    color: #aaa;
-    padding: 3rem 1.5rem 1.5rem;
-    margin-top: 2rem;
-  }
-  .footer-inner {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr 1fr;
-    gap: 2rem;
-    margin-bottom: 2rem;
-  }
-  .footer-brand img {
-    height: 40px;
-    border-radius: 50%;
-    margin-bottom: 0.8rem;
-  }
-  .footer-brand p {
-    font-size: 0.85rem;
-    line-height: 1.6;
-    max-width: 280px;
-  }
-  .footer-col h4 {
-    color: #fff;
-    font-size: 0.9rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
-  }
-  .footer-col ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-  .footer-col ul li a {
-    color: #aaa !important;
-    text-decoration: none !important;
-    font-size: 0.85rem;
-    transition: color 0.2s;
-  }
-  .footer-col ul li a:hover { color: #f97316 !important; }
-  .footer-bottom {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding-top: 1.5rem;
-    border-top: 1px solid #2a2a2a;
-    text-align: center;
-    font-size: 0.8rem;
-  }
-
-  /* DIVIDER */
-  .section-divider {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 1.5rem;
-    border: none;
-    border-top: 1px solid #f0ede8;
-  }
+  /* RODAPÉ */
+  .site-footer { background: #1a1a1a; color: #aaa; padding: 3rem 1.5rem 1.5rem; margin-top: 3rem; }
+  .footer-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 2rem; margin-bottom: 2rem; }
+  .footer-brand img { height: 40px; border-radius: 50%; margin-bottom: .8rem; }
+  .footer-brand p { font-size: .85rem; line-height: 1.6; max-width: 300px; }
+  .footer-col h4 { color: #fff; font-size: .9rem; font-weight: 700; margin: 0 0 1rem; }
+  .footer-col ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: .5rem; }
+  .footer-col ul li a { color: #aaa !important; font-size: .85rem; transition: color .2s; }
+  .footer-col ul li a:hover { color: var(--o1) !important; }
+  .footer-bottom { max-width: 1200px; margin: 0 auto; padding-top: 1.5rem; border-top: 1px solid #2a2a2a; text-align: center; font-size: .8rem; }
+  .footer-bottom a { color: #aaa !important; text-decoration: underline !important; }
 
   @media (max-width: 768px) {
-    .hero h1 { font-size: 2rem; }
-    .banner-oferta-inner { grid-template-columns: 1fr; }
+    .hero-in { padding: 2rem 1rem 1.7rem; }
+    .hero p { font-size: .95rem; margin-bottom: 1.1rem; }
+    .chips { flex-wrap: nowrap; overflow-x: auto; justify-content: flex-start; padding-bottom: .3rem; -webkit-overflow-scrolling: touch; }
+    .chip { white-space: nowrap; flex: 0 0 auto; }
+    .pc-grid { grid-template-columns: repeat(2, 1fr); gap: .7rem; }
+    .pc-title { font-size: .82rem; }
+    .pc-price { font-size: 1.05rem; }
+    .sec-h h2 { font-size: 1.15rem; }
+    .trust-in { justify-content: flex-start; gap: .4rem 1.2rem; font-size: .78rem; }
     .footer-inner { grid-template-columns: 1fr; }
-    .beneficios-inner { grid-template-columns: 1fr 1fr; }
-    .categorias-grid { grid-template-columns: repeat(3, 1fr); }
-  }
-  @media (max-width: 480px) {
-    .categorias-grid { grid-template-columns: repeat(2, 1fr); }
-    .beneficios-inner { grid-template-columns: 1fr; }
   }
 </style>
+{{ if .IsHome }}
+<div class="home">
 
-<!-- HERO -->
-<div class="hero">
-  <div class="hero-bg"></div>
-  <div class="hero-overlay"></div>
-  <div class="hero-content">
-    <div class="hero-badge">✨ Novas ofertas toda semana</div>
-    <h1>Produtos que<br><span>você vai amar.</span></h1>
-    <p>Uma curadoria das melhores ofertas em tech, beleza, moda, casa e mais. Tudo garimpado, tudo aprovado.</p>
-    <div class="hero-btns">
-      <a href="/produtos/" class="btn-primary">Explorar produtos →</a>
-      <a href="/categories/" class="btn-secondary">Ver categorias</a>
+<section class="hero">
+  <div class="hero-in">
+    <span class="hero-badge">🐾 Achados pet toda semana</span>
+    <h1>Achados pet com <span>preço de pechincha</span></h1>
+    <p>Brinquedos, caminhas, higiene e mais para cães e gatos. A gente garimpa, você compra direto na loja.</p>
+    <form class="hero-busca" role="search" onsubmit="return false">
+      <input id="busca-input" type="search" placeholder="Buscar caminha, brinquedo, coleira…" aria-label="Buscar produtos" autocomplete="off">
+    </form>
+    <div class="chips" id="chips" role="group" aria-label="Filtros rápidos">
+      <button type="button" class="chip" data-k="caes" aria-pressed="false">🐶 Cães</button>
+      <button type="button" class="chip" data-k="gatos" aria-pressed="false">🐱 Gatos</button>
+      <button type="button" class="chip" data-k="brinquedos" aria-pressed="false">🧸 Brinquedos</button>
+      <button type="button" class="chip" data-k="camas" aria-pressed="false">🛏️ Camas</button>
+      <button type="button" class="chip" data-k="higiene" aria-pressed="false">🧼 Higiene</button>
+      <button type="button" class="chip" data-k="passeio" aria-pressed="false">🦮 Passeio</button>
+      <button type="button" class="chip" data-k="comida" aria-pressed="false">🍖 Comida e água</button>
     </div>
   </div>
-</div>
+</section>
 
-<!-- BARRA DE BENEFÍCIOS -->
-<div class="beneficios-bar">
-  <div class="beneficios-inner">
-    <div class="beneficio-item">
-      <div class="beneficio-icon">🔍</div>
-      <div class="beneficio-text">
-        <strong>Produtos garimpados</strong>
-        <span>Selecionamos as melhores ofertas</span>
-      </div>
-    </div>
-    <div class="beneficio-item">
-      <div class="beneficio-icon">💰</div>
-      <div class="beneficio-text">
-        <strong>Preço à vista</strong>
-        <span>Valor mostrado no dia da oferta</span>
-      </div>
-    </div>
-    <div class="beneficio-item">
-      <div class="beneficio-icon">🔒</div>
-      <div class="beneficio-text">
-        <strong>Compra na loja</strong>
-        <span>Você finaliza a compra no site da loja</span>
-      </div>
-    </div>
-    <div class="beneficio-item">
-      <div class="beneficio-icon">🚀</div>
-      <div class="beneficio-text">
-        <strong>Sempre novidade</strong>
-        <span>Novos achados toda semana</span>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- CATEGORIAS -->
-<div class="categorias-section">
-  <div class="section-header">
-    <span class="section-label">NAVEGUE POR</span>
-    <span class="section-title">Categorias</span>
-  </div>
-  <div class="categorias-grid">
-    {{ range .Site.Taxonomies.categories }}
-    <a href="{{ .Page.Permalink }}" class="categoria-item">
-      <span class="categoria-icon">
-        {{ if eq .Page.Title "Beleza" }}✨
-        {{ else if eq .Page.Title "Brinquedos" }}🧸
-        {{ else if eq .Page.Title "Casa & Cozinha" }}🏠
-        {{ else if eq .Page.Title "Esporte" }}🏋️
-        {{ else if eq .Page.Title "Ferramentas" }}🔧
-        {{ else if eq .Page.Title "Informática" }}💻
-        {{ else if eq .Page.Title "Moda" }}👗
-        {{ else if eq .Page.Title "Tecnologia" }}📱
-        {{ else if eq .Page.Title "Eletrônicos" }}🖥️
-        {{ else if eq .Page.Title "Livros" }}📚
-        {{ else }}🛍️
-        {{ end }}
-      </span>
-      <span class="categoria-nome">{{ .Page.Title }}</span>
-    </a>
-    {{ end }}
-  </div>
-</div>
-
-<!-- BUSCA -->
-<div class="busca-section">
-  <div class="busca-wrapper">
-    <div class="busca-input-wrap">
-      <span class="busca-icon">🔍</span>
-      <input
-        type="text"
-        id="busca-input"
-        placeholder="Buscar produtos, categorias ou lojas..."
-        oninput="filtrarProdutos()"
-      />
-    </div>
-    <div class="busca-filtros">
-      <select id="filtro-categoria" onchange="filtrarProdutos()">
-        <option value="">Todas as categorias</option>
-        <option value="beleza">Beleza</option>
-        <option value="brinquedos">Brinquedos</option>
-        <option value="casa & cozinha">Casa & Cozinha</option>
-        <option value="esporte">Esporte</option>
-        <option value="ferramentas">Ferramentas</option>
-        <option value="informática">Informática</option>
-        <option value="moda">Moda</option>
-        <option value="tecnologia">Tecnologia</option>
-      </select>
-      <select id="filtro-loja" onchange="filtrarProdutos()">
-        <option value="">Todas as lojas</option>
-        <option value="shopee">Shopee</option>
-        <option value="mercado livre">Mercado Livre</option>
-        <option value="magazine luiza">Magazine Luiza</option>
-        <option value="amazon">Amazon</option>
-      </select>
-    </div>
-  </div>
-  <div id="busca-resultado" class="busca-resultado" style="display:none;">
-    <span id="busca-count"></span>
-  </div>
-</div>
+<div class="trust"><div class="trust-in">
+  <span><b>Curadoria pet</b> toda semana</span>
+  <span><b>Compra direto</b> na loja</span>
+  <span><b>Sem custo extra</b> para você</span>
+</div></div>
 
 {{ partial "aviso-afiliado.html" . }}
 
-<!-- NOVIDADES -->
-{{ $todos := where .Site.RegularPages "Section" "produtos" }}
-{{ $novidades := first 5 $todos }}
-{{ if $novidades }}
-<div class="produtos-section">
-  <div class="produtos-section-header">
-    <h2>🆕 Novidades</h2>
-    <a href="/produtos/" class="ver-todos">Ver todos →</a>
+{{ $todos := sort (where .Site.RegularPages "Section" "produtos") "Date" "desc" }}
+{{ $pet := where $todos "Params.categories" "intersect" (slice "Pet") }}
+{{ $outros := complement $pet $todos }}
+
+<main class="wrap">
+
+  <div id="resultados" hidden>
+    <div class="res-h"><strong id="res-titulo"></strong><button type="button" id="res-limpar">Limpar busca</button></div>
+    <div class="pc-grid" id="res-grid"></div>
+    <div class="res-vazio" id="res-vazio" hidden>Nenhum achado encontrado. Tente outra palavra ou <a href="/categories/pet/">veja todos os achados pet</a>.</div>
   </div>
-  <div class="produtos-grid" id="grid-novidades">
-    {{ range $novidades }}
-    <div class="produto-card"
-      data-titulo="{{ .Title | lower }}"
-      data-categoria="{{ range .Params.categories }}{{ . | lower }}{{ end }}"
-      data-loja="{{ .Params.store | lower }}">
-      <div class="produto-card-img">
-        {{ if .Params.coverImage }}
-        <img src="{{ .Params.coverImage }}" alt="{{ .Title }}" loading="lazy" />
-        {{ else }}
-        <img src="https://placehold.co/400x300/f97316/white?text=Produto" alt="{{ .Title }}" loading="lazy" />
-        {{ end }}
-        <span class="badge-novo">NOVO</span>
+
+  <div id="secoes">
+
+    {{ if $pet }}
+    <section class="sec">
+      <div class="sec-h"><h2>🐾 Últimos achados pet</h2><a href="/categories/pet/">Ver todos ({{ len $pet }}) →</a></div>
+      <div class="pc-grid">
+        {{ range first 12 $pet }}{{ partial "card-produto.html" . }}{{ end }}
       </div>
-      <div class="produto-card-body">
-        {{ if .Params.store }}
-        <span class="produto-store-tag">{{ .Params.store }}</span>
-        {{ end }}
-        <div class="produto-card-title">{{ .Title }}</div>
-        {{ if .Params.price }}
-        <div class="produto-preco">
-          <span class="produto-preco-atual">R$ {{ .Params.price }}</span>
-          {{ if .Params.oldPrice }}
-          <span class="produto-preco-antigo">R$ {{ .Params.oldPrice }}</span>
-          {{ end }}
-        </div>
-        {{ end }}
-        <a class="produto-card-btn" href="{{ .Permalink }}">
-          🔍 Ver Detalhes →
-        </a>
-      </div>
-    </div>
+    </section>
     {{ end }}
-  </div>
-</div>
-{{ end }}
 
-<!-- MAIS VISTOS -->
-{{ $mais := after 5 $todos }}
-{{ if $mais }}
-<div class="produtos-section">
-  <div class="produtos-section-header">
-    <h2>🛍️ Mais ofertas</h2>
-    <a href="/produtos/" class="ver-todos">Ver todos →</a>
-  </div>
-  <div class="produtos-grid" id="grid-mais">
-    {{ range $mais }}
-    <div class="produto-card"
-      data-titulo="{{ .Title | lower }}"
-      data-categoria="{{ range .Params.categories }}{{ . | lower }}{{ end }}"
-      data-loja="{{ .Params.store | lower }}">
-      <div class="produto-card-img">
-        {{ if .Params.coverImage }}
-        <img src="{{ .Params.coverImage }}" alt="{{ .Title }}" loading="lazy" />
-        {{ else }}
-        <img src="https://placehold.co/400x300/f97316/white?text=Produto" alt="{{ .Title }}" loading="lazy" />
-        {{ end }}
-        {{ if .Params.badge }}
-        <span class="produto-badge">{{ .Params.badge }}</span>
-        {{ end }}
+    <section class="sec">
+      <div class="sec-h"><h2>Categorias</h2></div>
+      <div class="cats">
+        <a class="cat-pet" href="/categories/pet/">🐾 Pet <small>{{ len $pet }} achados</small></a>
+        <p class="cats-label">Outras categorias</p>
+        {{ range .Site.Taxonomies.categories.ByCount }}{{ if and (ne .Page.Title "Pet") (ge .Count 3) }}
+        <a class="cat-pill" href="{{ .Page.RelPermalink }}">{{ .Page.Title }}<span>{{ .Count }}</span></a>
+        {{ end }}{{ end }}
       </div>
-      <div class="produto-card-body">
-        {{ if .Params.store }}
-        <span class="produto-store-tag">{{ .Params.store }}</span>
-        {{ end }}
-        <div class="produto-card-title">{{ .Title }}</div>
-        {{ if .Params.price }}
-        <div class="produto-preco">
-          <span class="produto-preco-atual">R$ {{ .Params.price }}</span>
-          {{ if .Params.oldPrice }}
-          <span class="produto-preco-antigo">R$ {{ .Params.oldPrice }}</span>
-          {{ end }}
-        </div>
-        {{ end }}
-        <a class="produto-card-btn" href="{{ .Permalink }}">
-          🔍 Ver Detalhes →
-        </a>
+    </section>
+
+    {{ if $outros }}
+    <section class="sec">
+      <div class="sec-h"><h2>Outras ofertas</h2><a href="/produtos/">Ver todas →</a></div>
+      <div class="pc-grid">
+        {{ range first 8 $outros }}{{ partial "card-produto.html" . }}{{ end }}
       </div>
-    </div>
+    </section>
     {{ end }}
+
   </div>
-</div>
+</main>
+
+{{ $idx := slice }}
+{{ range $todos }}
+  {{ $cat := "" }}{{ with .Params.categories }}{{ if reflect.IsSlice . }}{{ $cat = index . 0 }}{{ end }}{{ end }}
+  {{ $idx = $idx | append (dict "t" .Title "u" .RelPermalink "p" (.Params.price | default "") "s" (.Params.store | default "") "c" $cat "i" (.Params.coverImage | default "")) }}
 {{ end }}
+<script type="application/json" id="busca-dados">{{ $idx | jsonify | safeJS }}</script>
 
-<!-- BANNER OFERTA -->
-<div class="banner-oferta">
-  <div class="banner-oferta-inner" style="grid-template-columns:1fr;">
-    <div class="banner-oferta-texto">
-      <span class="badge-oferta">Curadoria pet</span>
-      <h2>Achados <span>pet</span><br>da semana.</h2>
-      <p>Brinquedos, caminhas, higiene e mais para cães e gatos, com link direto para a loja.</p>
-      <a href="/categories/pet/" class="btn-primary">Ver achados pet →</a>
-    </div>
-  </div>
-</div>
-
-<!-- FOOTER -->
 <footer class="site-footer">
   <div class="footer-inner">
     <div class="footer-brand">
       <img src="/images/logo.jpg" alt="Os Pechincheiros" />
-      <p>Curadoria de ofertas. Os links são de afiliados: podemos receber comissão, sem custo extra para você.</p>
+      <p>Curadoria de achados pet e outras ofertas. Os links são de afiliados: podemos receber comissão, sem custo extra para você.</p>
     </div>
     <div class="footer-col">
       <h4>Explorar</h4>
       <ul>
-        <li><a href="/produtos/">Produtos</a></li>
+        <li><a href="/categories/pet/">Achados pet</a></li>
+        <li><a href="/produtos/">Todos os produtos</a></li>
         <li><a href="/categories/">Categorias</a></li>
       </ul>
     </div>
@@ -806,6 +199,7 @@
       <h4>Sobre</h4>
       <ul>
         <li><a href="/sobre/">Quem somos</a></li>
+        <li><a href="/politica-de-privacidade.html">Política de privacidade</a></li>
       </ul>
     </div>
     <div class="footer-col">
@@ -826,43 +220,113 @@
 </footer>
 
 <script>
-function filtrarProdutos() {
-  const busca = document.getElementById('busca-input').value.toLowerCase().trim();
-  const categoria = document.getElementById('filtro-categoria').value.toLowerCase();
-  const loja = document.getElementById('filtro-loja').value.toLowerCase();
+(function () {
+  var el = document.getElementById('busca-dados');
+  if (!el) return;
+  var dados = [];
+  try { dados = JSON.parse(el.textContent); } catch (e) {}
+  var norm = function (s) { return String(s || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase(); };
+  dados.forEach(function (d) { d.n = norm(d.t); d.pet = d.c === 'Pet'; });
 
-  const cards = document.querySelectorAll('.produto-card');
-  let visiveis = 0;
+  var CHIPS = {
+    caes: { nome: 'Cães', re: /\b(cachorro|cachorros|cachorrinho|cao|caes|cadela|filhote|filhotes|shih tzu|pinscher|golden)\b/ },
+    gatos: { nome: 'Gatos', re: /\b(gato|gatos|gata|gatinho|gatinhos|felino|felinos)\b/ },
+    brinquedos: { nome: 'Brinquedos', re: /(brinquedo|bola|bolinha|tunel|lancador|pelucia|mordedor|interativo)/ },
+    camas: { nome: 'Camas', re: /(cama|caminha|casinha|toca|iglu|rede de janela|colchao|almofada)/ },
+    higiene: { nome: 'Higiene', re: /(higienic|areia|escova|pelos|shampoo|banho|tosa|cata coco|sacola|removedor|lixeira)/ },
+    passeio: { nome: 'Passeio', re: /(coleira|guia|peitoral|bolsa|transporte|canguru|capa de|roupa)/ },
+    comida: { nome: 'Comida e água', re: /(comedouro|bebedouro|racao|petisco|bolo|fonte)/ }
+  };
 
-  cards.forEach(card => {
-    const titulo = (card.dataset.titulo || '').toLowerCase();
-    const cardCategoria = (card.dataset.categoria || '').toLowerCase();
-    const cardLoja = (card.dataset.loja || '').toLowerCase();
+  var $in = document.getElementById('busca-input'),
+      $res = document.getElementById('resultados'),
+      $grid = document.getElementById('res-grid'),
+      $tit = document.getElementById('res-titulo'),
+      $vazio = document.getElementById('res-vazio'),
+      $sec = document.getElementById('secoes'),
+      $chips = document.querySelectorAll('.chip'),
+      ativo = null;
 
-    const matchBusca = !busca || titulo.includes(busca);
-    const matchCategoria = !categoria || cardCategoria.includes(categoria);
-    const matchLoja = !loja || cardLoja.includes(loja);
-
-    if (matchBusca && matchCategoria && matchLoja) {
-      card.style.display = 'flex';
-      visiveis++;
-    } else {
-      card.style.display = 'none';
-    }
-  });
-
-  const resultado = document.getElementById('busca-resultado');
-  const count = document.getElementById('busca-count');
-
-  if (busca || categoria || loja) {
-    resultado.style.display = 'block';
-    count.textContent = visiveis === 0
-      ? 'Nenhum produto encontrado'
-      : `${visiveis} produto${visiveis !== 1 ? 's' : ''} encontrado${visiveis !== 1 ? 's' : ''}`;
-  } else {
-    resultado.style.display = 'none';
+  function criar(tag, cls, txt) {
+    var e = document.createElement(tag);
+    if (cls) e.className = cls;
+    if (txt) e.textContent = txt;
+    return e;
   }
-}
+
+  function preco(p) {
+    p = String(p);
+    if (p.indexOf(',') > -1 && p.indexOf('.') > -1) return p;
+    p = p.replace('.', ',');
+    if (/^\d+,\d$/.test(p)) p += '0'; else if (/^\d+$/.test(p)) p += ',00';
+    return p;
+  }
+
+  function card(d) {
+    var a = criar('a', 'pc'); a.href = d.u;
+    var img = criar('span', 'pc-img');
+    if (d.i) {
+      var im = new Image(); im.loading = 'lazy'; im.decoding = 'async'; im.alt = d.t; im.width = 400; im.height = 400; im.src = d.i;
+      img.appendChild(im);
+    } else { img.appendChild(criar('span', 'pc-ph', '🐾')); }
+    var body = criar('span', 'pc-body');
+    if (d.s) body.appendChild(criar('span', 'pc-store', d.s));
+    body.appendChild(criar('span', 'pc-title', d.t));
+    if (d.p) body.appendChild(criar('span', 'pc-price', 'R$ ' + preco(d.p)));
+    body.appendChild(criar('span', 'pc-cta', 'Ver oferta →'));
+    a.appendChild(img); a.appendChild(body);
+    return a;
+  }
+
+  function render() {
+    var q = norm($in.value).trim();
+    var termos = q.split(/\s+/).filter(Boolean);
+    if (!q && !ativo) { $res.hidden = true; $sec.hidden = false; return; }
+    var pool = ativo ? dados.filter(function (d) { return d.pet && CHIPS[ativo].re.test(d.n); }) : dados;
+    var out = pool.filter(function (d) { return termos.every(function (t) { return d.n.indexOf(t) !== -1; }); });
+    out.sort(function (a, b) { return (b.pet ? 1 : 0) - (a.pet ? 1 : 0); });
+    $grid.textContent = '';
+    out.slice(0, 48).forEach(function (d) { $grid.appendChild(card(d)); });
+    var rotulo = ativo ? CHIPS[ativo].nome + ': ' : '';
+    $tit.textContent = rotulo + out.length + (out.length === 1 ? ' resultado' : ' resultados') + (out.length > 48 ? ' (mostrando 48)' : '');
+    $vazio.hidden = out.length > 0;
+    $res.hidden = false; $sec.hidden = true;
+  }
+
+  $in.addEventListener('input', render);
+  $chips.forEach(function (c) {
+    c.addEventListener('click', function () {
+      var k = c.getAttribute('data-k');
+      ativo = (ativo === k) ? null : k;
+      $chips.forEach(function (x) { x.setAttribute('aria-pressed', x.getAttribute('data-k') === ativo ? 'true' : 'false'); });
+      render();
+      if (!$res.hidden) $res.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  });
+  document.getElementById('res-limpar').addEventListener('click', function () {
+    $in.value = ''; ativo = null;
+    $chips.forEach(function (x) { x.setAttribute('aria-pressed', 'false'); });
+    render();
+  });
+})();
 </script>
 
+</div>
+{{ else }}
+<div class="home">
+  <div class="wrap">
+    <div class="lista-h"><h1>{{ .Title }}</h1></div>
+    {{ if eq .Kind "taxonomy" }}
+      <div class="cats">
+        {{ range .Data.Terms.Alphabetical }}<a class="cat-pill" href="{{ .Page.RelPermalink }}">{{ .Page.Title }}<span>{{ .Count }}</span></a>{{ end }}
+      </div>
+    {{ else }}
+      {{ partial "aviso-afiliado.html" . }}
+      {{ $p := .Paginate (sort .Pages "Date" "desc") 24 }}
+      <div class="pc-grid">{{ range $p.Pages }}{{ partial "card-produto.html" . }}{{ end }}</div>
+      {{ partial "paginacao.html" . }}
+    {{ end }}
+  </div>
+</div>
+{{ end }}
 {{ end }}

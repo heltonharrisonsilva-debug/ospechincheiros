@@ -1,0 +1,20 @@
+{{- $novo := lt (now.Sub .Date).Hours 96.0 -}}
+<a class="pc" href="{{ .RelPermalink }}">
+  <span class="pc-img">
+    {{ if .Params.coverImage }}<img src="{{ .Params.coverImage }}" alt="{{ .Title }}" loading="lazy" decoding="async" width="400" height="400">{{ else }}<span class="pc-ph">🐾</span>{{ end }}
+    {{ if $novo }}<span class="pc-badge">Novo</span>{{ end }}
+  </span>
+  <span class="pc-body">
+    {{ with .Params.store }}<span class="pc-store">{{ . }}</span>{{ end }}
+    <span class="pc-title">{{ .Title }}</span>
+    {{ with .Params.price }}
+    {{- $p := string . -}}
+    {{- if not (and (in $p ",") (in $p ".")) -}}
+      {{- $p = replace $p "." "," -}}
+      {{- if findRE `^\d+,\d$` $p -}}{{- $p = printf "%s0" $p -}}{{- else if findRE `^\d+$` $p -}}{{- $p = printf "%s,00" $p -}}{{- end -}}
+    {{- end -}}
+    <span class="pc-price">R$ {{ $p }}</span>
+    {{ end }}
+    <span class="pc-cta">Ver oferta →</span>
+  </span>
+</a>

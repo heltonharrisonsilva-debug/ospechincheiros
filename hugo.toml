@@ -4,8 +4,8 @@ defaultContentLanguage = 'pt-br'
 title = 'Os Pechincheiros'
 
 [params]
-  description = "Os melhores produtos e ofertas da Shopee, Mercado Livre, Magazine Luiza e muito mais!"
-  keywords = ["afiliados", "ofertas", "shopee", "mercado livre", "magazine luiza", "pechincha"]
+  description = "Achados pet com preço de pechincha: brinquedos, caminhas, higiene e mais para cães e gatos, com links diretos para a loja."
+  keywords = ["achados pet", "pet", "cachorro", "gato", "ofertas", "shopee", "pechincha"]
   defaultTheme = "auto"
   disableThemeToggle = false
   ShowReadingTime = false
@@ -27,6 +27,10 @@ title = 'Os Pechincheiros'
     url = "/"
     weight = 10
   [[menu.main]]
+    name = "Achados Pet"
+    url = "/categories/pet/"
+    weight = 15
+  [[menu.main]]
     name = "Produtos"
     url = "/produtos/"
     weight = 20
@@ -38,6 +42,9 @@ title = 'Os Pechincheiros'
     name = "Sobre"
     url = "/sobre/"
     weight = 40
+
+[pagination]
+  pagerSize = 24
 
 [taxonomies]
   category = "categories"

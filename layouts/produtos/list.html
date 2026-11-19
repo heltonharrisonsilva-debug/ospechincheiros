@@ -114,7 +114,8 @@
 {{ partial "aviso-afiliado.html" . }}
 
 <div class="produtos-grid">
-  {{ range .Pages }}
+  {{ $pg := .Paginate (sort .Pages "Date" "desc") 24 }}
+  {{ range $pg.Pages }}
   <div class="produto-card">
     {{ if .Params.coverImage }}
     <img src="{{ .Params.coverImage }}" alt="{{ .Title }}" loading="lazy" />
@@ -137,4 +138,6 @@
   </div>
   {{ end }}
 </div>
+
+{{ partial "paginacao.html" . }}
 {{ end }}
