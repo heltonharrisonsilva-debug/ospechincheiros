@@ -1,6 +1,6 @@
 ---
 title: "Sobre"
-description: "Conheça Os Pechincheiros — a curadoria de ofertas que vai te ajudar a economizar de verdade"
+description: "Conheça Os Pechincheiros: achados pet com preço de pechincha, garimpados para quem tem cães e gatos"
 date: 2026-04-18
 draft: false
 layout: sobre
@@ -8,26 +8,34 @@ layout: sobre
 
 ## Quem somos
 
-Os Pechincheiros nasceu com uma missão simples: **garimpar as melhores ofertas da internet para você não perder tempo nem dinheiro**.
+Os Pechincheiros garimpa **achados para cães e gatos com preço de pechincha**: brinquedos, caminhas, higiene, passeio, comedouros e muito mais.
 
-Somos um canal dedicado a encontrar produtos com excelente custo-benefício nas maiores lojas online do Brasil — Shopee, Mercado Livre, Magazine Luiza e muito mais. Cada produto que aparece aqui foi selecionado com cuidado, pensando em qualidade, preço e relevância.
+A ideia é simples: poupar o seu tempo. Em vez de você vasculhar centenas de anúncios, a gente reúne aqui as ofertas que parecem valer a pena, com o preço, a loja e o link direto para comprar.
 
-## Como funciona
+## Como escolhemos
 
-Todos os dias garimpamos ofertas nas principais plataformas de e-commerce do Brasil. Quando encontramos algo que vale a pena, compartilhamos aqui no site e nas nossas redes sociais.
+Usamos ferramentas automáticas para encontrar e organizar as ofertas, principalmente na Shopee. Damos preferência a produtos com **boa avaliação, muitas vendas e preço acessível**.
 
-Os links dos produtos são **links de afiliados** — isso significa que quando você compra através dos nossos links, recebemos uma pequena comissão da loja, sem nenhum custo adicional para você. É assim que mantemos o site funcionando e continuamos trazendo as melhores ofertas.
+Não testamos os produtos pessoalmente: a nota e o número de vendas vêm da própria loja, e vale ler as avaliações antes de comprar. Alguns itens mais antigos do site são de outras categorias (casa, moda, tecnologia), de quando o projeto reunia ofertas em geral. Hoje o foco é pet.
+
+## Como mantemos o site
+
+Os links dos produtos são **links de afiliados**. Quando você compra por eles, podemos receber uma pequena comissão da loja, **sem nenhum custo extra para você**. É isso que mantém o site no ar.
 
 ## Nossa promessa
 
-- ✅ Só indicamos produtos que acreditamos ter bom custo-benefício
 - ✅ Mostramos o preço do dia em que encontramos a oferta; ele pode mudar na loja
-- ✅ Sem enrolação — direto ao ponto
-- ✅ Novidades toda semana
+- ✅ Você compra direto na loja: nós não vendemos nem enviamos nada
+- ✅ Avisamos claramente que os links são de afiliados
+- ✅ Novos achados toda semana
+
+## Um aviso importante
+
+Os produtos indicados aqui **não substituem a orientação de um veterinário**. Para saúde, alimentação especial, antiparasitários e medicamentos, converse com um profissional.
 
 ## Redes sociais
 
-Nos siga no Instagram **@ospechincheiros** para receber as ofertas em primeira mão!
+Siga **@os_pechincheiros** no Instagram para ver os achados pet em primeira mão.
 
 ## Contato
 
